@@ -1,7 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
+const Temporary= styled(Link)`
+  text-decoration: none;
+  color: black
+`
 
 const Diagonal = styled.div`
   position: relative;
@@ -21,12 +26,12 @@ const Header = styled.div`
 `
 const Name= styled.h1`
   transform: skewY(11deg); 
-  margin: 0 25vw;
+  margin: 0 28vw;
   font-size: 48px;
 `
 const Title = styled.h2`
   transform: skewY(11deg); 
-  margin: 0 25vw;
+  margin: 0 28vw;
   font-size: 28px;
 `
 
@@ -35,7 +40,7 @@ export default function Home() {
     <>
       <Diagonal>
         <Header>
-          <Name>Stefon Simmons </Name>
+          <Temporary to='/'><Name>Stefon Simmons </Name></Temporary>
           <Title>Software Developer</Title>
         </Header> 
       </Diagonal>
