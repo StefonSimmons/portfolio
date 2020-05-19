@@ -39,7 +39,9 @@ export default function Home() {
           <Title>Software Developer</Title>
         </Header> 
       </Diagonal>
-      <Navigation/>
+
+      <Navigation />
+      
     </>
   )
 }

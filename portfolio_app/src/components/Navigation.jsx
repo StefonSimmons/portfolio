@@ -6,7 +6,6 @@ const Nav = styled.nav`
   position: relative;
   transform: skewY(-11deg); 
   top: -19vh;
-  // background-color: rgba(220,220,220,.2)
 `
 
 const List = styled.ul`
@@ -31,13 +30,17 @@ const NavLink = styled(Link)`
 
 
 export default function Navigation() {
+
+  // STATELY UseState for dynamic nav bar
+
+
   return (
     <>
       <Nav>
         <List>
-          <NavItems><NavLink>Contact</NavLink></NavItems>
-          <NavItems><NavLink>Projects</NavLink></NavItems>
-          <NavItems><NavLink>Resume</NavLink></NavItems>
+          <NavItems><NavLink to='/contact-me'>Contact Me</NavLink></NavItems>
+          <NavItems><NavLink to='/projects'>Projects</NavLink></NavItems>
+          <NavItems><NavLink to='/'>Resume</NavLink></NavItems>
         </List>
       </Nav>
     </>
