@@ -41,6 +41,7 @@ const Header = styled.h1`
   letter-spacing: 3px;
   text-decoration: underline;
   line-height: 1.6;
+  color: black
 `
 
 export default function AboutMe() {
