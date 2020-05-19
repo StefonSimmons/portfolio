@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -31,16 +31,21 @@ const NavLink = styled(Link)`
 
 export default function Navigation() {
 
-  // STATELY UseState for dynamic nav bar
+  // STATELY UseState for dynamic nav bar 
 
+  const [firstLink, updateLink1] = useState({ contact: "Contact Me" })
+  const [secondLink, updateLink2] = useState({ projects: "Projects" })
+  const [thirdLink, updateLink3] = useState({ resume: "Resume" })
+
+  
 
   return (
     <>
       <Nav>
         <List>
-          <NavItems><NavLink to='/contact-me'>Contact Me</NavLink></NavItems>
-          <NavItems><NavLink to='/projects'>Projects</NavLink></NavItems>
-          <NavItems><NavLink to='/resume'>Resume</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(firstLink)}`}>{firstLink.contact}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(secondLink)}`}>{secondLink.projects}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`}>{thirdLink.resume}</NavLink></NavItems>
         </List>
       </Nav>
     </>

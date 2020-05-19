@@ -20,7 +20,7 @@ function App() {
           <Projects/>
         </Route>
           
-        <Route path= '/contact-me' exact>
+        <Route path= '/contact' exact>
           <ContactMe/>
         </Route>
 

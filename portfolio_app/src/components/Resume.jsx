@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const Border = styled.div`
   background-color: lightblue;
   height: 50vh;
+  position: relative;
+  top: -5vh;
 `
 const PDFContainer = styled.div`
   display: flex;
@@ -18,7 +20,7 @@ export default function Resume() {
   return (
     <Border >
       <PDFContainer>
-        <PDF src="https://www.docdroid.net/a3CUuk8/stefon-simmons-resume-2020-532020v-pdf" type="application/pdf"/>
+        <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/>
       </PDFContainer>
     </Border>
   )

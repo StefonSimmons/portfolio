@@ -39,6 +39,7 @@ const Title = styled.h2`
 const Divider = styled.hr`
   position: relative;
   top: -5vh;
+  width: 90%
 `
 export default function Home() {
   return (
