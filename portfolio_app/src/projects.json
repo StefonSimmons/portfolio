@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Cues",
+    "description": "'Cues' allows you to get quick data regarding film, television, and theater production activity in New York City. Select a NYC borough and at the flip of a card, filter through date ranges and discover the most popular location and time of year for the dramatic arts' exclusive use of NYC properties.",
+    "image": "https://imgur.com/o6hDZmu.png"
+  },
+  {
+    "name": "World Tour",
+    "description": "'World Tour' allows users to take a satellite journey to both familiar and foreign lands of Earth. You can randomly teleport or get specific in your search for regional data.",
+    "image": "https://imgur.com/51PaEZf.png"
+  }
+
+]
