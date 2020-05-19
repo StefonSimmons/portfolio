@@ -1,31 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const AboutContainer = styled.main`
-  border: green solid 3px;
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: -3vh;
+  top: -6vh;
   font-family: 'Ubuntu Condensed', sans-serif;
 
 `
 const AboutSection = styled.section`
-  border: orange solid 3px;
   margin: 0 25px;
   width: 300px;
-  padding: 15px;
+  padding: 10px 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
 
 const Statement = styled.p`
-
+  font-size: 18px
 `
 const TechSection = styled.section`
-  border: blue solid 3px;
   margin: 0 25px;
-  padding: 15px;
+  padding: 10px 15px;
 `
 const ToolBelt = styled.div`
   display: grid;
@@ -33,7 +31,7 @@ const ToolBelt = styled.div`
   grid-gap: 35px
 `
 const Icon = styled.i`
-  font-size: 5em;
+  font-size: 4.5em;
   color: black;
 `
 const Header = styled.h1`

@@ -36,7 +36,10 @@ const Title = styled.h2`
   letter-spacing: 3.5px;
   color: #333333
 `
-
+const Divider = styled.hr`
+  position: relative;
+  top: -5vh;
+`
 export default function Home() {
   return (
     <>
@@ -49,6 +52,7 @@ export default function Home() {
 
       <Navigation />
       
+      <Divider/>
     </>
   )
 }
