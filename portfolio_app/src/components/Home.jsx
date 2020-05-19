@@ -3,34 +3,33 @@ import AboutMe from './AboutMe'
 import styled from 'styled-components'
 
 
+const Diagonal = styled.div`
+  position: relative;
+  top: -150px;
+  transform: skewY(-11deg); 
+  background-color: lightblue;
+  height: 60vh;
+`
 const Header = styled.div`
   display: flex;
   flex-direction: column;
   height: 50vh;
-  justify-content: center;
+  justify-content: flex-end;
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 3.5px;
-  line-height: 1.2;
+  line-height: 1.4;
 `
 const Name= styled.h1`
   transform: skewY(11deg); 
-  margin: 0 auto;
+  margin: 0 25vw;
   font-size: 48px;
 
 `
 const Title = styled.h2`
   transform: skewY(11deg); 
-  margin: 0 auto;  
-  font-size: 32px;
+  margin: 0 25vw;
+  font-size: 28px;
 
-`
-
-const Diagonal = styled.div`
-  position: relative;
-  top: -60px;
-  transform: skewY(-11deg); 
-  background-color: lightblue;
-  height: 50vh;
 `
 
 export default function Home() {
