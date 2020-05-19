@@ -13,26 +13,28 @@ const Diagonal = styled.div`
   top: -150px;
   transform: skewY(-11deg); 
   background-color: lightblue;
-  height: 55vh;
+  height: 40vh;
 `
 const Header = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 38.5vh;
   justify-content: flex-end;
   font-family: 'Permanent Marker', cursive;
-  letter-spacing: 3.5px;
-  line-height: 1.4;
+  line-height: 1.3;
 `
-const Name= styled.h1`
+const Name = styled.h1`
   transform: skewY(11deg); 
-  margin: 0 28vw;
+  margin: 0 22vw;
   font-size: 48px;
+  letter-spacing: 4px;
 `
 const Title = styled.h2`
   transform: skewY(11deg); 
   margin: 0 28vw;
   font-size: 28px;
+  letter-spacing: 3.5px;
+  color: #333333
 `
 
 export default function Home() {
