@@ -40,7 +40,7 @@ export default function Navigation() {
         <List>
           <NavItems><NavLink to='/contact-me'>Contact Me</NavLink></NavItems>
           <NavItems><NavLink to='/projects'>Projects</NavLink></NavItems>
-          <NavItems><NavLink to='/'>Resume</NavLink></NavItems>
+          <NavItems><NavLink to='/resume'>Resume</NavLink></NavItems>
         </List>
       </Nav>
     </>
