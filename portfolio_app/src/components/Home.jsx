@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutMe from './AboutMe'
+import Navigation from './Navigation'
 import styled from 'styled-components'
 
 
@@ -39,7 +39,7 @@ export default function Home() {
           <Title>Software Developer</Title>
         </Header> 
       </Diagonal>
-      <AboutMe/>
+      <Navigation/>
     </>
   )
 }
