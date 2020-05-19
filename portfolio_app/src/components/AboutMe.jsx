@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const AboutContainer = styled.main`
   border: green solid 3px;
   display: flex;
@@ -27,7 +26,15 @@ const TechSection = styled.section`
   border: blue solid 3px;
   margin: 0 25px;
   padding: 15px;
-
+`
+const ToolBelt = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 35px
+`
+const Icon = styled.i`
+  font-size: 5em;
+  color: black;
 `
 const Header = styled.h1`
   margin-bottom: 15px;
@@ -39,6 +46,7 @@ const Header = styled.h1`
 `
 
 export default function AboutMe() {
+
   return (
     <>
       <AboutContainer>
@@ -49,7 +57,21 @@ export default function AboutMe() {
         </AboutSection>
 
         <TechSection>
-          <Header>Technical Utility Belt</Header>        
+          <Header>Technical Utility Belt</Header>  
+          <ToolBelt>
+            <Icon className="devicon-react-plain-wordmark"></Icon>
+            <Icon className="devicon-javascript-plain"></Icon>
+            <Icon className="devicon-python-plain-wordmark"></Icon>
+            <Icon className="devicon-html5-plain-wordmark"></Icon>
+            <Icon className="devicon-css3-plain-wordmark"></Icon>
+            <Icon className="devicon-nodejs-plain-wordmark"></Icon>
+            <Icon className="devicon-express-original-wordmark"></Icon>
+            <Icon className="devicon-mysql-plain-wordmark"></Icon>
+            <Icon className="devicon-mongodb-plain-wordmark"></Icon>
+            <Icon className="devicon-visualstudio-plain-wordmark"></Icon>
+            <Icon className="devicon-git-plain-wordmark"></Icon>
+            <Icon className="devicon-github-plain-wordmark"></Icon>
+          </ToolBelt>
         </TechSection>
 
       </AboutContainer>
