@@ -8,7 +8,7 @@ const Diagonal = styled.div`
   top: -150px;
   transform: skewY(-11deg); 
   background-color: lightblue;
-  height: 60vh;
+  height: 55vh;
 `
 const Header = styled.div`
   display: flex;
@@ -23,18 +23,16 @@ const Name= styled.h1`
   transform: skewY(11deg); 
   margin: 0 25vw;
   font-size: 48px;
-
 `
 const Title = styled.h2`
   transform: skewY(11deg); 
   margin: 0 25vw;
   font-size: 28px;
-
 `
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Diagonal>
         <Header>
           <Name>Stefon Simmons </Name>
@@ -42,6 +40,6 @@ export default function Home() {
         </Header> 
       </Diagonal>
       <AboutMe/>
-    </div>
+    </>
   )
 }
