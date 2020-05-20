@@ -74,7 +74,6 @@ export default function AboutMe() {
         </TechSection>
 
       </AboutContainer>
-      {/* <Redirect to='/about'/> */}
     </>
   )
 }
