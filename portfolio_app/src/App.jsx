@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom'
-import Home from './components/Home'
+import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
@@ -9,7 +9,7 @@ import Resume from './components/Resume'
 function App() {
   return (
     <> 
-      <Home />
+      <Header />
       <Switch>
 
         <Route path='/' exact>
