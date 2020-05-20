@@ -43,32 +43,26 @@ export default function Navigation() {
 
   const [tempLinkStore, setTempLink] = useState(window.location.pathname)
 
-  // i click on project and it shows project and changes to the name of the page I was just on
-  // HOW?
-  //click on project. Apply a onClick on each Link. ** DONE
-  // HOW DO I change the state of the specific link
-  //update state to window.location.pathname to grab the pathname(/about)which excludes the '/ on path'
-  //filter the results from the array of objects
-  // I will need to update the 
-  //then, I need to 
 
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
-  // const [tempLinkStore, setTempLink] = useState(window.location.pathname)
   
   function handleNewLink(command) {
-    // const linkKey = key[0]
-    // const linkValue = value[0]
+
     setTempLink(window.location.pathname)
     console.log(tempLinkStore)
 
-    const pathKey = tempLinkStore.split('').slice(1).join('')
+    let pathKey = tempLinkStore.split('').slice(1).join('')
     console.log(pathKey)
+    if (pathKey === '') {
+      pathKey = 'about'
+    }
+    console.log('after path ->',pathKey)
+    const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
+    const linkName = Object.values(linkData[0])
+    console.log(linkName)
 
-    const linkName = linkLookup.filter(l => l.pathKey === pathKey)
-    // const linkName = linkData[0]
-    console.log(linkName[0])
 
     if (command === "updateLinkOne") {
       // console.log({[linkKey]:linkValue})
@@ -82,7 +76,6 @@ export default function Navigation() {
       updateLinkThree({ [pathKey]: linkName })
     }
   }
-
 
 
   return (
