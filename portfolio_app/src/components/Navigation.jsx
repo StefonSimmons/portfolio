@@ -42,7 +42,9 @@ export default function Navigation() {
 
   // i click on project and it shows project and changes to the name of the page I was just on
   // HOW?
-  //click on project. Use window.location.pathname to grab the pathname (/about)
+  //click on project. Apply a onClick on each Link. 
+  // HOW DO I GET change the state of the specific link
+  //update state of  window.location.pathname to grab the pathname(/about)which excludes the '/ on path'
 
   const [firstLink, updateLink1] = useState({ contact: "Contact Me" })
   const [secondLink, updateLink2] = useState({ projects: "Projects" })
@@ -50,7 +52,7 @@ export default function Navigation() {
   const [tempLinkStore, setTempLink] = useState(window.location.pathname)
   
   function handleNewLink(e) {
-    // console.log(e.target.value)
+    console.log(e.target.value)
     setTempLink(window.location.pathname)
 
   }
@@ -61,9 +63,11 @@ export default function Navigation() {
     <>
       <Nav>
         <List>
-          <NavItems><NavLink to={`/${Object.keys(firstLink)}`} value= 'first' onClick= {(e) => handleNewLink(e)}>{firstLink.contact}</NavLink></NavItems>
-          <NavItems><NavLink to={`/${Object.keys(secondLink)}`} value= 'second' onClick= {(e) => handleNewLink(e)}>{secondLink.projects}</NavLink></NavItems>
-          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} value= 'third' onClick= {(e) => handleNewLink(e)}>{thirdLink.resume}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(firstLink)}`} value={Object.values(firstLink)} onClick={(e) => handleNewLink(Object.values(firstLink))}>{Object.values(firstLink)}</NavLink></NavItems>
+          
+          <NavItems><NavLink to={`/${Object.keys(secondLink)}`} value={Object.values(secondLink)} onClick={(e) => handleNewLink(Object.values(secondLink))}>{Object.values(secondLink)}</NavLink></NavItems>
+          
+          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} value= {Object.values(thirdLink)} onClick= {(e) => handleNewLink(Object.values(thirdLink))}>{Object.values(thirdLink)}</NavLink></NavItems>
         </List>
       </Nav>
       {tempLinkStore}
