@@ -32,37 +32,55 @@ const NavLink = styled(Link)`
 export default function Navigation() {
 
   // STATELY UseState for dynamic nav bar 
-  // const [link, updateLink] = useState([
-  //   { contact: "Contact Me" },
-  //   { projects: "Projects" },
-  //   { resume: "Resume" },
-  //   { about: "About Me"}
 
-  // ])
+  //for the windowpath search/ filter
+  const linkLookup = [
+    { contact: "Contact Me" },
+    { projects: "Projects" },
+    { resume: "Resume" },
+    { about: "About Me"}
+  ]
+
+  const [tempLinkStore, setTempLink] = useState(window.location.pathname)
 
   // i click on project and it shows project and changes to the name of the page I was just on
   // HOW?
   //click on project. Apply a onClick on each Link. ** DONE
   // HOW DO I change the state of the specific link
   //update state to window.location.pathname to grab the pathname(/about)which excludes the '/ on path'
+  //filter the results from the array of objects
+  // I will need to update the 
+  //then, I need to 
 
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
-  const [tempLinkStore, setTempLink] = useState(window.location.pathname)
+  // const [tempLinkStore, setTempLink] = useState(window.location.pathname)
   
-  function handleNewLink(num, key, value) {
-    // console.log(value[0])
-    const linkKey = key[0]
-    // console.log(linkKey)
-    const linkValue = value[0]
-    // console.log(linkValue)
-    // const updateLink = 'updateLink' + num
-    // console.log(updateLink)
-    updateLinkOne({ [linkKey]: linkValue})
+  function handleNewLink(command) {
+    // const linkKey = key[0]
+    // const linkValue = value[0]
+    setTempLink(window.location.pathname)
+    console.log(tempLinkStore)
 
-    console.log(firstLink)
-    // setTempLink(window.location.pathname)
+    const pathKey = tempLinkStore.split('').slice(1).join('')
+    console.log(pathKey)
+
+    const linkName = linkLookup.filter(l => l.pathKey === pathKey)
+    // const linkName = linkData[0]
+    console.log(linkName[0])
+
+    if (command === "updateLinkOne") {
+      // console.log({[linkKey]:linkValue})
+      updateLinkOne({ [pathKey]: linkName })
+    }
+    else if (command === "updateLinkTwo") {
+      // console.log({[pathKey]:linkName})
+      updateLinkTwo({ [pathKey]: linkName })
+    }
+    else {
+      updateLinkThree({ [pathKey]: linkName })
+    }
   }
 
 
@@ -71,11 +89,11 @@ export default function Navigation() {
     <>
       <Nav>
         <List>
-          <NavItems><NavLink to={`/${Object.keys(firstLink)}`} value={Object.values(firstLink)} onClick={(e) => handleNewLink("One", Object.keys(firstLink),Object.values(firstLink ))}>{Object.values(firstLink)}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItems>
           
-          <NavItems><NavLink to={`/${Object.keys(secondLink)}`} value={Object.values(secondLink)} onClick={(e) => handleNewLink("Two", Object.keys(secondLink),Object.values(secondLink))}>{Object.values(secondLink)}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(secondLink)}`} onClick={(e) => handleNewLink("updateLinkTwo")}>{Object.values(secondLink)}</NavLink></NavItems>
           
-          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} value= {Object.values(thirdLink)} onClick= {(e) => handleNewLink("Three", Object.keys(thirdLink),Object.values(thirdLink))}>{Object.values(thirdLink)}</NavLink></NavItems>
+          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} onClick= {(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItems>
         </List>
       </Nav>
       {tempLinkStore}
