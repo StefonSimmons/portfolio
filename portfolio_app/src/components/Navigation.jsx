@@ -44,15 +44,15 @@ export default function Navigation() {
   // HOW?
   //click on project. Apply a onClick on each Link. 
   // HOW DO I GET change the state of the specific link
-  //update state of  window.location.pathname to grab the pathname(/about)which excludes the '/ on path'
+  //update state to window.location.pathname to grab the pathname(/about)which excludes the '/ on path'
 
   const [firstLink, updateLink1] = useState({ contact: "Contact Me" })
   const [secondLink, updateLink2] = useState({ projects: "Projects" })
   const [thirdLink, updateLink3] = useState({ resume: "Resume" })
   const [tempLinkStore, setTempLink] = useState(window.location.pathname)
   
-  function handleNewLink(e) {
-    console.log(e.target.value)
+  function handleNewLink(value) {
+    console.log(value[0])
     setTempLink(window.location.pathname)
 
   }

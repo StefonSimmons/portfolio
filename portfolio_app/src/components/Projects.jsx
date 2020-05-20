@@ -36,7 +36,7 @@ export default function Projects() {
 
   const projects = project.map((p, id) => {
     return (
-      <Prj>
+      <Prj key= {id}>
         <PrjName>{p.name}</PrjName>
         <Thumbnail src={p.image} alt={p.name} />
         <Description>{p.description}</Description>
