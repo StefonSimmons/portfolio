@@ -41,7 +41,7 @@ export default function Navigation() {
     { about: "About Me"}
   ]
 
-  const [tempLinkStore, setTempLink] = useState(window.location.pathname)
+  const [tempLinkStore, setTempLink] = useState("/about")
 
 
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
@@ -51,13 +51,13 @@ export default function Navigation() {
   function handleNewLink(command) {
 
     setTempLink(window.location.pathname)
-    console.log(tempLinkStore)
+    console.log('the start st ->',tempLinkStore)
 
     let pathKey = tempLinkStore.split('').slice(1).join('')
     console.log(pathKey)
-    if (pathKey === '') {
-      pathKey = 'about'
-    }
+    // if (pathKey === '') {
+    //   pathKey = 'about'
+    // }
     console.log('after path ->',pathKey)
     const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
     const linkName = Object.values(linkData[0])
@@ -75,6 +75,12 @@ export default function Navigation() {
     else {
       updateLinkThree({ [pathKey]: linkName })
     }
+    getCurrentPath()
+  }
+
+  function getCurrentPath(){
+    setTempLink(window.location.pathname)
+    console.log('the new new st ->',tempLinkStore)
   }
 
 
@@ -89,6 +95,7 @@ export default function Navigation() {
           <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} onClick= {(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItems>
         </List>
       </Nav>
+      {console.log('in render ->',tempLinkStore)}
       {tempLinkStore}
     </>
   )

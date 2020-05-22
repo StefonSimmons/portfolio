@@ -28,12 +28,19 @@ const TechSection = styled.section`
 const ToolBelt = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 35px
+  grid-gap: 35px;
 `
 const Icon = styled.i`
   font-size: 4.5em;
-  color: black;
+  padding: 10px;
+
+  &:hover{
+    border-radius: 10px;
+    background-image: radial-gradient(rgb(100,150,250), rgba(100,150,250,.7), rgba(100,150,250,.2225));
+    box-shadow: 0px 0px 50px rgb(100,150,250);
+  }
 `
+
 const Header = styled.h1`
   margin-bottom: 15px;
   text-align: center;

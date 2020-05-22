@@ -17,6 +17,7 @@ const Prj = styled.div`
   text-align: center;
   letter-spacing: 3px;
   font-family: 'Ubuntu Condensed', sans-serif;
+
 `
 const PrjName = styled.h1`
   font-size: 24px;
