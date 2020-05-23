@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ export default function Navigation() {
     { contact: "Contact Me" },
     { projects: "Projects" },
     { resume: "Resume" },
-    { about: "About Me"}
+    { about: "About Me" }
   ]
 
   const [tempLinkStore, setTempLink] = useState("/about")
@@ -47,22 +47,26 @@ export default function Navigation() {
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
-  
+
+  useEffect(() => {
+    setTempLink(window.location.pathname)
+    // console.log('setState in useEffect->', tempLinkStore)
+  },[handleNewLink])
+
   function handleNewLink(command) {
 
     setTempLink(window.location.pathname)
-    console.log('the start st ->',tempLinkStore)
+    // console.log('setState top of func ->', tempLinkStore)
 
     let pathKey = tempLinkStore.split('').slice(1).join('')
-    console.log(pathKey)
+    // console.log('1 pathkeyname created ->', pathKey)
     // if (pathKey === '') {
     //   pathKey = 'about'
     // }
-    console.log('after path ->',pathKey)
+    // console.log('2pathkeyname created->', pathKey)
     const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
     const linkName = Object.values(linkData[0])
-    console.log(linkName)
-
+    // console.log('1linkname filtered', linkName)
 
     if (command === "updateLinkOne") {
       // console.log({[linkKey]:linkValue})
@@ -75,12 +79,6 @@ export default function Navigation() {
     else {
       updateLinkThree({ [pathKey]: linkName })
     }
-    getCurrentPath()
-  }
-
-  function getCurrentPath(){
-    setTempLink(window.location.pathname)
-    console.log('the new new st ->',tempLinkStore)
   }
 
 
@@ -89,14 +87,14 @@ export default function Navigation() {
       <Nav>
         <List>
           <NavItems><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItems>
-          
+
           <NavItems><NavLink to={`/${Object.keys(secondLink)}`} onClick={(e) => handleNewLink("updateLinkTwo")}>{Object.values(secondLink)}</NavLink></NavItems>
-          
-          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} onClick= {(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItems>
+
+          <NavItems><NavLink to={`/${Object.keys(thirdLink)}`} onClick={(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItems>
         </List>
       </Nav>
-      {console.log('in render ->',tempLinkStore)}
-      {tempLinkStore}
+      {/* {console.log('in return ->', tempLinkStore)} */}
+      {/* {tempLinkStore} */}
     </>
   )
 }
