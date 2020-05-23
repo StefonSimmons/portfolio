@@ -2,26 +2,44 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Border = styled.div`
-  background-color: lightblue;
-  height: 50vh;
-  position: relative;
-  top: -5vh;
-`
-const PDFContainer = styled.div`
   display: flex;
-  justify-content: center
+  justify-content: center;
+  background-color: lightblue;
 `
-const PDF = styled.embed`
-  height: 50vh;
-  width: 50vw
+const Page = styled.main`
+  width: 816px; 
+  margin: 25px 96px;
+  padding: 48px; 
+  background-color: white;
+
 `
+// const PDFContainer = styled.div`
+//   display: flex;
+//   justify-content: center
+// `
+// const PDF = styled.embed`
+//   height: 50vh;
+//   width: 50vw
+// `
+
+
 
 export default function Resume() {
   return (
-    <Border >
-      <PDFContainer>
-        <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/>
-      </PDFContainer>
-    </Border>
+    <>
+      <Border >
+        <Page>  
+          ndnfjsnjjjnj
+        </Page>
+      </Border>
+    </>
+
+
+
+    // <Border >
+    //   <PDFContainer>
+    //     {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
+    //   </PDFContainer>
+    // </Border>
   )
 }

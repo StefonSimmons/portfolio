@@ -31,7 +31,15 @@ const Description = styled.p`
   text-align: left;
   line-height: 1.5;
 `
-
+const Header = styled.h1`
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 3px;
+  text-decoration: underline;
+  line-height: 1.6;
+  color: black
+`
 
 export default function Projects() {
 
@@ -46,8 +54,11 @@ export default function Projects() {
   })
 
   return (
-    <Main>
-      {projects}
-    </Main>
+    <>
+      <Header>My Projects</Header>
+      <Main>
+        {projects}
+      </Main>
+    </>
   )
 }
