@@ -5,7 +5,7 @@ import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
-import Resume from './components/Resume'
+import Resume from './components/Resume/Resume'
 
 function App() {
   return (

@@ -1,5 +1,7 @@
 import React from 'react'
+import Skills from './Skills'
 import styled from 'styled-components'
+
 
 const Border = styled.div`
   display: flex;
@@ -33,6 +35,19 @@ const Divider = styled.hr`
   height: 1.5px;
   margin-top: 5px;
 `
+const SkillsSection = styled.div`
+  text-align: left;
+  margin-top: 25px;
+`
+const BrandStatement = styled.p`
+  text-align: left
+`
+
+const SkillsHeader = styled.h1`
+font-weight: 700;
+font-size: 16px;
+`
+
 // const PDFContainer = styled.div`
 //   display: flex;
 //   justify-content: center
@@ -45,6 +60,8 @@ const Divider = styled.hr`
 
 
 export default function Resume() {
+
+
   return (
     <>
       <Border >
@@ -59,6 +76,20 @@ export default function Resume() {
             </Title>
           </Header>
           <Divider></Divider>
+
+          <BrandStatement>
+            I’m a self-motivated creator with over 6 years of experience working within higher education administration as a College Registrar and 15 years as a recording artist. My creativity as an artist and organization as an administrator feed greatly into my passion for software development. Currently, I am seeking to work with people and companies who, like myself, are determined to learn and develop others and their products/services. I consistently contribute strong problem-solving and interpersonal skills as well as an ad/aptive mindset for new processes and technology that may increase productivity.
+          </BrandStatement>
+
+          <SkillsSection>
+
+            <SkillsHeader>
+              Skills & Abilities
+            </SkillsHeader>
+
+            <Skills />
+
+          </SkillsSection>
 
         </Page>
       </Border>
