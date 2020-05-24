@@ -1,7 +1,8 @@
 import React from 'react'
 import Skills from './Skills'
-import styled from 'styled-components'
 import BrandStatement from './BrandStatement'
+import Experience from './Experience'
+import styled from 'styled-components'
 
 const Border = styled.div`
   display: flex;
@@ -12,43 +13,47 @@ const Page = styled.main`
   width: 816px; 
   margin: 25px 96px;
   padding: 48px; 
-  text-align: center;
+  text-align: left;
   background-color: white;
   font-family: 'Fira Sans', sans-serif;
 `
 const Header = styled.header`
   letter-spacing: 1px;
   line-height: 1.5;
+  text-align: center;
 `
 const Name = styled.h1`
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32x;
 `
 const Title = styled.h2`
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
   text-transform: uppercase;
 `
 const Divider = styled.hr`
-  background-color: #F09609;
-  border-color: #FFF09609;
+  background-color: #E86A28;
+  border-color: #E86A28;
   height: 1.5px;
   margin-top: 5px;
 `
-const SkillsSection = styled.div`
-  text-align: left;
+const Section = styled.div`
   margin-top: 25px;
-  text
+
 `
 const BrandStatementSect = styled.p`
-  text-align: left
 `
 
-const SkillsHeader = styled.h1`
+const DetailsHeader = styled.h4`
 font-weight: 700;
 font-size: 16px;
-`
+text-transform: uppercase;
 
+`
+const SectionHeader = styled.h3`
+  color: #E86A28;
+  font-size: 18px;
+`
 // const PDFContainer = styled.div`
 //   display: flex;
 //   justify-content: center
@@ -78,19 +83,23 @@ export default function Resume() {
           </Header>
           <Divider></Divider>
 
-          <BrandStatementSect>
+          <Section>
             <BrandStatement />
-          </BrandStatementSect>
+          </Section>
 
-          <SkillsSection>
-
-            <SkillsHeader>
+          <Section>
+            <DetailsHeader>
               Skills & Abilities
-            </SkillsHeader>
-
+            </DetailsHeader>
             <Skills />
+          </Section>
 
-          </SkillsSection>
+          <Section>
+            <SectionHeader>
+              Experience
+            </SectionHeader>
+            <Experience />
+          </Section>
 
         </Page>
       </Border>

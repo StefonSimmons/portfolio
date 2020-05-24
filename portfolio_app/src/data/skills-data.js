@@ -15,6 +15,6 @@ export const skills = [
   "Data Warehousing",
   "Interactive designing/prototyping",
   "APIs",
-  "SQL Server Integration Services for ETL"
+  "SQL Server Integration Services for ETL",
 ]
 
