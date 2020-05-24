@@ -14,9 +14,9 @@ const Skill = styled.h4`
 
 export default function Skills() {
 
-  const skillset = skills.map(skill => {
+  const skillset = skills.map((skill,id) => {
     return (
-      <Skill>{ skill }</Skill>
+      <Skill key={id}>{ skill }</Skill>
     )
   })
 

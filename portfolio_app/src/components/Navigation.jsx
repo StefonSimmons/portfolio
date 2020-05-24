@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const Nav = styled.nav`
-  position: relative;
-  background-color: rgb(100,150,250);
-  // position: fixed;
-  top: 0;
-  width: 100%
-`
 
 const List = styled.ul`
   display: flex;
@@ -23,7 +16,12 @@ const NavItem = styled.li`
   font-family: 'Permanent Marker', cursive;
 
 `
-
+const Nav = styled.nav`
+  // position: fixed;
+  background-color: rgb(100,150,250);
+  top: 0;
+  width: 100%
+`
 const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 21px;
@@ -33,6 +31,28 @@ const NavLink = styled(Link)`
 
 
 export default function Navigation() {
+
+  // ====DELETE LATER ====//
+  const navRef = useRef(null)
+  console.log('this here=>',navRef.current)
+  // ====DELETE LATER ====//
+  
+
+  //for sticky header
+
+  const [fixed, toggleFixed] = useState(false)
+
+  useEffect(() => {
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 303) {
+        toggleFixed(true)
+      } else {
+        toggleFixed(false)
+      }
+      console.log("use ->", fixed)
+    })
+  }, [])
 
   //for the windowpath search/filter
   const linkLookup = [
@@ -44,14 +64,13 @@ export default function Navigation() {
 
   const [tempLinkStore, setTempLink] = useState("/about")
 
-
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
 
   useEffect(() => {
     setTempLink(window.location.pathname)
-    console.log('setState in useEffect->', tempLinkStore)
+    // console.log('setState in useEffect->', tempLinkStore)
   },[handleNewLink])
 
   function handleNewLink(command) {
@@ -82,7 +101,11 @@ export default function Navigation() {
 
   return (
     <>
-      <Nav>
+        {console.log(navRef)}
+
+      <Nav ref= {navRef} style= {fixed ? { position: "fixed" } : { position: "" }}>
+        {console.log("render", fixed)}
+
         <List>
           <NavItem><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItem>
 

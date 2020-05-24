@@ -8,9 +8,9 @@ const Location = Dates
 
 export default function Education() {
 
-  const education = educationData.map(ed => {
+  const education = educationData.map(( ed, id ) => {
     return (
-      <Block>
+      <Block key={id}>
         <FlexBlock>
           <DetailsHeader>{ed.institution},</DetailsHeader>
           <Location>{ed.location}</Location>

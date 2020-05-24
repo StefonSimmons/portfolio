@@ -3,11 +3,11 @@ import Navigation from './Navigation'
 import styled from 'styled-components'
 
 const DiagonalBlock = styled.div`
-  position: relative;
+  // position: relative;
   top: -150px;
   // transform: skewY(-11deg); 
   background-color: rgb(100,150,250);
-  height: 40vh;
+  // height: 40vh;
 `
 const Header = styled.div`
   display: flex;
