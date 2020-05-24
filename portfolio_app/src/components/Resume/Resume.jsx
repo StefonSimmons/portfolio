@@ -3,9 +3,9 @@ import Skills from './Skills'
 import BrandStatement from './BrandStatement'
 import Experience from './Experience'
 import Education from './Education'
+import { Phrase, List, Block } from './Experience'
 import styled from 'styled-components'
-import educationData from '../../data/education-data.json'
-  
+
 const Border = styled.div`
   display: flex;
   justify-content: center;
@@ -62,10 +62,7 @@ const SectionHeader = styled.h3`
 //   width: 50vw
 // `
 
-
-
 export default function Resume() {
-
 
   return (
     <>
@@ -105,6 +102,19 @@ export default function Resume() {
               Education
             </SectionHeader>
             <Education />
+          </Section>
+
+          <Section>
+            <SectionHeader>
+              Personal Interests
+            </SectionHeader>
+            <Block>
+              <List>
+                <Phrase>Singer, Songwriter, Performer, Recording Artist</Phrase>
+                <Phrase>Painter</Phrase>
+                <Phrase>Theater Photography</Phrase>
+              </List>
+            </Block>
           </Section>
 
         </Page>
