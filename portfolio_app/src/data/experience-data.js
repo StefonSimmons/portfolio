@@ -13,13 +13,13 @@ const experience = [{
   business: "GENERAL ASSEMBLY",
   startDate: "March 2020",
   endDate: "Present",
-  phrases: (softwareEngPhrases)
+  phrases: softwareEngPhrases
 }, {
   title: "registrar",
   business: "THE NEW YORK CONSERVATORY FOR DRAMATIC ARTS",
   startDate: "November 2013",
   endDate: "March 2020",
-  phrases: (registrarPhrases)
+  phrases: registrarPhrases
 }
 
 ]
