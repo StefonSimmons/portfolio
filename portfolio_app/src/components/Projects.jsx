@@ -1,5 +1,6 @@
 import React from 'react'
-import project from '../projects.json'
+import {Header} from './AboutMe'
+import project from '../data/projects.json'
 import styled from 'styled-components'
 
 
@@ -31,16 +32,6 @@ const Description = styled.p`
   text-align: left;
   line-height: 1.5;
 `
-const Header = styled.h1`
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 3px;
-  text-decoration: underline;
-  line-height: 1.6;
-  color: black
-`
-
 export default function Projects() {
 
   const projects = project.map((p, id) => {

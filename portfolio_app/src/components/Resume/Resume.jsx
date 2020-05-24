@@ -4,29 +4,30 @@ import BrandStatement from './BrandStatement'
 import Experience from './Experience'
 import Education from './Education'
 import { Phrase, List, Block } from './Experience'
+import {Header} from '../AboutMe'
 import styled from 'styled-components'
 
 const Border = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: lightblue;
 `
 const Page = styled.main`
-  width: 816px; 
   margin: 25px 96px;
   padding: 48px; 
   text-align: left;
   background-color: white;
   font-family: 'Fira Sans', sans-serif;
 `
-const Header = styled.header`
+const ResumeHeader = styled.header`
   letter-spacing: 1px;
   line-height: 1.5;
   text-align: center;
 `
 const Name = styled.h1`
   font-weight: 700;
-  font-size: 32x;
+  font-size: 32px;
 `
 const Title = styled.h2`
   font-weight: 400;
@@ -67,16 +68,17 @@ export default function Resume() {
   return (
     <>
       <Border >
+        <Header> Resume </Header>
         <Page>
 
-          <Header>
+          <ResumeHeader>
             <Name>
               Stefon Simmons
             </Name>
             <Title>
               Software Engineer
             </Title>
-          </Header>
+          </ResumeHeader>
           <Divider></Divider>
 
           <Section>

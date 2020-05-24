@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const AboutContainer = styled.main`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  flex-direction: column;
   position: relative;
   top: -6vh;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -17,13 +17,25 @@ const AboutSection = styled.section`
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
-
+export const Header = styled.h1`
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 3px;
+  // text-decoration: underline;
+  line-height: 1.6;
+  color: rgb(100,150,250)
+`
 const Statement = styled.p`
-  font-size: 18px
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #e8eddf
 `
 const TechSection = styled.section`
   margin: 0 25px;
   padding: 10px 15px;
+  background: white;
+  width: max-content;
 `
 const ToolBelt = styled.div`
   display: grid;
@@ -40,18 +52,8 @@ const Icon = styled.i`
     box-shadow: 0px 0px 50px rgb(100,150,250);
   }
 `
-
-const Header = styled.h1`
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 3px;
-  text-decoration: underline;
-  line-height: 1.6;
-  color: black
-`
-
 export default function AboutMe() {
+
 
   return (
     <>
@@ -59,7 +61,7 @@ export default function AboutMe() {
 
         <AboutSection>
           <Header>About Me</Header>
-          <Statement>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore inventore non eius fugit qui, iusto magni nemo nisi blanditiis aperiam sequi reprehenderit minima pariatur quos ad sit accusamus aliquam voluptates.</Statement>
+          <Statement>Welcome to my home on the web! </Statement>
         </AboutSection>
 
         <TechSection>

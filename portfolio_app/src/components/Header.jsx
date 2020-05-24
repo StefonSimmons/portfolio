@@ -1,18 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
-const Temporary= styled(Link)`
-  text-decoration: none;
-  color: black
-`
-
-const Diagonal = styled.div`
+const DiagonalBlock = styled.div`
   position: relative;
   top: -150px;
   transform: skewY(-11deg); 
-  background-color: lightblue;
+  background-color: rgb(100,150,250);
   height: 40vh;
 `
 const Header = styled.div`
@@ -22,6 +16,7 @@ const Header = styled.div`
   justify-content: flex-end;
   font-family: 'Permanent Marker', cursive;
   line-height: 1.3;
+  color: #333333
 `
 const Name = styled.h1`
   transform: skewY(11deg); 
@@ -34,26 +29,17 @@ const Title = styled.h2`
   margin: 0 28vw;
   font-size: 28px;
   letter-spacing: 3.5px;
-  color: #333333
-`
-const Divider = styled.hr`
-  position: relative;
-  top: -5vh;
-  width: 90%
 `
 export default function Home() {
   return (
     <>
-      <Diagonal>
+      <DiagonalBlock>
         <Header>
-          <Temporary to='/'><Name>Stefon Simmons </Name></Temporary>
+          <Name>Stefon Simmons </Name>
           <Title>Software Developer</Title>
         </Header> 
-      </Diagonal>
-
-      <Navigation />
-      
-      <Divider/>
+        <Navigation />  
+      </DiagonalBlock>    
     </>
   )
 }
