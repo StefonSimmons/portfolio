@@ -9,7 +9,7 @@ const Main = styled.main`
   justify-content: center;
 `
 const Prj = styled.div`
-  background: rgba(3,3,3,.4); 
+  background: #e8eddf; 
   width: 350px;
   padding: 15px 35px;
   margin: 0 35px;

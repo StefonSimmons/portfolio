@@ -11,13 +11,13 @@ const Border = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: lightblue;
 `
 const Page = styled.main`
   margin: 25px 96px;
   padding: 48px; 
   text-align: left;
-  background-color: white;
+  background-color: #e8eddf;
+  border-radius: 15px;
   font-family: 'Fira Sans', sans-serif;
 `
 const ResumeHeader = styled.header`

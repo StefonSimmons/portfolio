@@ -3,15 +3,12 @@ import styled from 'styled-components'
 
 const AboutContainer = styled.main`
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  position: relative;
-  top: -6vh;
+  justify-content: center;
   font-family: 'Ubuntu Condensed', sans-serif;
 
 `
 const AboutSection = styled.section`
-  margin: 0 25px;
+  margin: 0px 25px;
   width: 300px;
   padding: 10px 15px;
   letter-spacing: 1.5px;
@@ -22,7 +19,6 @@ export const Header = styled.h1`
   text-align: center;
   font-size: 32px;
   letter-spacing: 3px;
-  // text-decoration: underline;
   line-height: 1.6;
   color: rgb(100,150,250)
 `
@@ -32,10 +28,10 @@ const Statement = styled.p`
   color: #e8eddf
 `
 const TechSection = styled.section`
-  margin: 0 25px;
+  margin: 0 35px;
+  border-radius: 10px;
   padding: 10px 15px;
-  background: white;
-  width: max-content;
+  background: #e8eddf
 `
 const ToolBelt = styled.div`
   display: grid;

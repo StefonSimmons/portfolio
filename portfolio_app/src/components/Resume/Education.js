@@ -12,8 +12,8 @@ export default function Education() {
     return (
       <Block>
         <FlexBlock>
-          <DetailsHeader>{ed.institution}</DetailsHeader>
-          <Location>{ed.conferralDate}</Location>
+          <DetailsHeader>{ed.institution},</DetailsHeader>
+          <Location>{ed.location}</Location>
         </FlexBlock>
       <List>
         <Phrase>{ed.major}</Phrase>

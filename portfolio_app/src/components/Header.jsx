@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const DiagonalBlock = styled.div`
   position: relative;
   top: -150px;
-  transform: skewY(-11deg); 
+  // transform: skewY(-11deg); 
   background-color: rgb(100,150,250);
   height: 40vh;
 `
@@ -19,13 +19,13 @@ const Header = styled.div`
   color: #333333
 `
 const Name = styled.h1`
-  transform: skewY(11deg); 
+  // transform: skewY(11deg); 
   margin: 0 22vw;
   font-size: 48px;
   letter-spacing: 4px;
 `
 const Title = styled.h2`
-  transform: skewY(11deg); 
+  // transform: skewY(11deg); 
   margin: 0 28vw;
   font-size: 28px;
   letter-spacing: 3.5px;

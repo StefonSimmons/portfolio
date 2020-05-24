@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 const Nav = styled.nav`
   position: relative;
   background-color: rgb(100,150,250);
+  // position: fixed;
+  top: 0;
+  width: 100%
 `
 
 const List = styled.ul`
@@ -12,7 +15,6 @@ const List = styled.ul`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-
 `
 const NavItem = styled.li`
   padding: 15px;
@@ -76,6 +78,7 @@ export default function Navigation() {
     }
   }
 
+  // CHANGE OBJECT NAMES BELOW TO SYMANTIC NAMES
 
   return (
     <>
