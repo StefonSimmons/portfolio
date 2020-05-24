@@ -2,8 +2,10 @@ import React from 'react'
 import Skills from './Skills'
 import BrandStatement from './BrandStatement'
 import Experience from './Experience'
+import Education from './Education'
 import styled from 'styled-components'
-
+import educationData from '../../data/education-data.json'
+  
 const Border = styled.div`
   display: flex;
   justify-content: center;
@@ -41,10 +43,7 @@ const Section = styled.div`
   margin-top: 25px;
 
 `
-const BrandStatementSect = styled.p`
-`
-
-const DetailsHeader = styled.h4`
+export const DetailsHeader = styled.h4`
 font-weight: 700;
 font-size: 16px;
 text-transform: uppercase;
@@ -105,7 +104,7 @@ export default function Resume() {
             <SectionHeader>
               Education
             </SectionHeader>
-            <Projects />
+            <Education />
           </Section>
 
         </Page>
