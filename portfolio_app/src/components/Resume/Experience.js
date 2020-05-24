@@ -1,7 +1,33 @@
 import React from 'react'
 import Jobs from '../../data/experience-data'
+import styled from 'styled-components'
 
-
+const JobBlock = styled.div`
+  margin-top: 20px
+`
+const JobTitle = styled.h1`
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+`
+const LongevityBlock = styled.div`
+  display: flex;
+`
+const Business = styled.h2`
+  text-transform: uppercase;
+  padding-right: 5px
+`
+const Dates = styled.h2`
+  text-transform: uppercase;
+  padding-left: 5px
+`
+const List = styled.ul`
+  margin-left: 18px;
+  line-height: 1.4
+`
+const Phrase = styled.li`
+  list-style-type: disc;
+`
 
 export default function Experience() {
 
@@ -10,16 +36,20 @@ export default function Experience() {
     console.log(phrasesArray)
     return (
       <>
-      <h1>{job.title}</h1>
-      <div>
-        <h2>{job.business}</h2>
-          <h2>{job.startDate} - {job.endDate}</h2>
-          <ul>
-            {phrasesArray.map(phrase =>
-              <li>{phrase}</li>
-            )}
-          </ul>
-      </div>
+      <JobBlock>
+        <JobTitle>{job.title}</JobTitle>
+        <LongevityBlock>
+          <Business>{job.business}</Business>
+            |
+          <Dates>{job.startDate} - {job.endDate}</Dates>
+        </LongevityBlock>
+        <List>
+          {phrasesArray.map(phrase =>
+            <Phrase>{phrase}</Phrase>
+          )}
+        </List>
+      </JobBlock>
+
       </>
     )
   })
@@ -27,7 +57,6 @@ export default function Experience() {
   return (
     <>
       {experience}
-      {console.log(typeof experience, Object.values(Jobs))}
     </>
   )
 }

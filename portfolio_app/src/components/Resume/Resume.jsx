@@ -101,6 +101,13 @@ export default function Resume() {
             <Experience />
           </Section>
 
+          <Section>
+            <SectionHeader>
+              Education
+            </SectionHeader>
+            <Projects />
+          </Section>
+
         </Page>
       </Border>
     </>
