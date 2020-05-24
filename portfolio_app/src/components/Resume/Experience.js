@@ -6,7 +6,7 @@ import Jobs from '../../data/experience-data'
 export default function Experience() {
 
   const experience = Jobs.map(job => {
-    const phrasesArray = job.phrases.split('.')
+    const phrasesArray = job.phrases.split(';')
     console.log(phrasesArray)
     return (
       <>
@@ -15,9 +15,9 @@ export default function Experience() {
         <h2>{job.business}</h2>
           <h2>{job.startDate} - {job.endDate}</h2>
           <ul>
-            {/* {job.phrases.map(phrase =>
+            {phrasesArray.map(phrase =>
               <li>{phrase}</li>
-            )} */}
+            )}
           </ul>
       </div>
       </>
