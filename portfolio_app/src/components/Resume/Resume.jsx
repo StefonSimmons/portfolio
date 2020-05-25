@@ -19,6 +19,20 @@ const Page = styled.main`
   background-color: #e8eddf;
   border-radius: 15px;
   font-family: 'Ubuntu Condensed', sans-serif;
+
+  &:hover{
+    background: rgba(232, 237, 223, .6);
+
+  }
+`
+const Download = styled.a`
+  position: absolute;
+  text-decoration: none;
+  background-color: #e8eddf;
+  color: black;
+  border: 2px #E86A28 solid;
+  border-radius: 15px;
+  padding: 5px   
 `
 const Embed = styled.span`
   color: rgb(82,150,250);
@@ -80,15 +94,28 @@ const Span = styled.span`
 
 export default function Resume() {
 
-  // const [switch, toggle] = useState()
+  const [display, updateDisplay] = useState(false)
 
   return (
     <>
       <Border >
         <Header> My Resume </Header>
-        <Embed>{`<embed `}<Src>src</Src><Span>=</Span></Embed>
+        <Embed>{`<${display ? 'Download ' : 'embed '}`}
+          <Src>src</Src>
+          <Span>=</Span>
+        </Embed>
 
-        <Page>
+        <Page
+          onMouseEnter={() => updateDisplay(true)}
+          onMouseLeave={() => updateDisplay(false)}
+        >
+          {display ? 
+          <Download href="https://www.docdroid.net/KUStH4b/stefon-simmons-resume-2020-pdf" target="_blank" rel="noopener noreferrer">
+              Download my Resume ⬇  
+              {console.log("something")}
+          </Download>
+            : ''
+          }
           <ResumeHeader>
             <Name>
               Stefon Simmons
@@ -134,10 +161,9 @@ export default function Resume() {
                 <Phrase>Painter</Phrase>
                 <Phrase>Theater Photography</Phrase>
               </List>
-              
+
             </Block>
           </Section>
-
         </Page>
         <EmbedBttm>{`/>`}</EmbedBttm>
 
@@ -148,7 +174,7 @@ export default function Resume() {
 
     // <Border >
     //   <PDFContainer>
-        // {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
+    // {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
     //   </PDFContainer>
     // </Border>
   )

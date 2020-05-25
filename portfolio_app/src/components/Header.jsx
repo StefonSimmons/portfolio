@@ -45,7 +45,7 @@ export default function Home() {
           <Title>
             <Const>const</Const>
             <Name>Stefon Simmons</Name>
-            <Position><Span>= {`{ `}</Span>'Software Developer'<Span> :</Span></Position>
+            <Position><Span>= {`{ `}</Span>'Software Engineer'<Span> :</Span></Position>
           </Title>
           {/* <Name>Stefon Simmons </Name> */}
         </Header> 
