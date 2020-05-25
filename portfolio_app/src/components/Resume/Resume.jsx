@@ -5,7 +5,7 @@ import Experience from './Experience'
 import Education from './Education'
 import { Phrase, List, Block } from './Experience'
 import { Header } from '../AboutMe'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 const Border = styled.div`
   display: flex;
@@ -19,20 +19,43 @@ const Page = styled.main`
   background-color: #e8eddf;
   border-radius: 15px;
   font-family: 'Ubuntu Condensed', sans-serif;
-
   &:hover{
     background: rgba(232, 237, 223, .6);
 
   }
 `
+
+const DwnldShake = keyframes`
+  0% { transform: translate(1px, 1px) rotate(0deg)}
+  10% { transform: translate(-1px, -2px) rotate(-1deg)}
+  20% { transform: translate(-3px, 0px) rotate(1deg)}
+  30% { transform: translate(3px, 2px) rotate(0deg)}
+  40% { transform: translate(1px, -1px) rotate(1deg)}
+  50% { transform: translate(-1px, 2px) rotate(-1deg)}
+  60% { transform: translate(-3px, 1px) rotate(0deg)}
+  70% { transform: translate(3px, 1px) rotate(-1deg)}
+  80% { transform: translate(-1px, -1px) rotate(1deg)}
+  90% { transform: translate(1px, 2px) rotate(0deg)}
+  100% { transform: translate(1px, -2px) rotate(-1deg)}
+`
+
 const Download = styled.a`
-  position: absolute;
+  position: static;
   text-decoration: none;
+  font-size: 18px;
   background-color: #e8eddf;
   color: black;
   border: 2px #E86A28 solid;
   border-radius: 15px;
-  padding: 5px   
+  padding: 5px 15px;
+
+  &:hover{
+    animation: ${DwnldShake} .5s;
+    animation-iteration-count: 1;
+  }
+`
+const Arrow = styled.span`
+  border-bottom: black solid 2px;
 `
 const Embed = styled.span`
   color: rgb(82,150,250);
@@ -83,6 +106,7 @@ const Src = styled.span`
 const Span = styled.span`
   color: #e8eddf;
 `
+
 // const PDFContainer = styled.div`
 //   display: flex;
 //   justify-content: center
@@ -111,8 +135,8 @@ export default function Resume() {
         >
           {display ? 
           <Download href="https://www.docdroid.net/KUStH4b/stefon-simmons-resume-2020-pdf" target="_blank" rel="noopener noreferrer">
-              Download my Resume ⬇  
-              {console.log("something")}
+              Download my Resume <Arrow>⬇</Arrow>
+              {/* <img src="https://imgur.com/qbXZwZz.png" alt="download-icon"></img>   */}
           </Download>
             : ''
           }
