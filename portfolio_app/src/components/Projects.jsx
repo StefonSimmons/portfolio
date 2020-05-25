@@ -14,7 +14,6 @@ const Prj = styled.div`
   width: 350px;
   padding: 15px 35px;
   margin: 0px 35px 50px 35px;
-
   border-radius: 10px;
   box-shadow: 5px 10px 20px rgb(20,20,20);
   text-align: center;
@@ -33,6 +32,7 @@ const Description = styled.p`
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
+  margin-bottom: 15px
 `
 export default function Projects() {
 
@@ -42,6 +42,7 @@ export default function Projects() {
         <PrjName>{p.name}</PrjName>
         <Thumbnail src={p.image} alt={p.name} />
         <Description>{p.description}</Description>
+        <hr/>
       </Prj>
     )
   })
