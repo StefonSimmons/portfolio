@@ -18,13 +18,24 @@ const Const = styled.span`
   color: rgb(82,150,250)
 `
 const Name = styled.h1`
-  margin: 0 30px;
+  // margin: 0 30px;
   font-size: 28px;
   letter-spacing: 4px;
 `
 const Title = styled.h2`
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 3.5px;
+  line-height: 1.5;
+`
+const Span = styled.span`
+  color: #e8eddf;
+  font-size: 16px;
+`
+
+const Position = styled.h3`
+  font-size: 16px;
+  letter-spacing: 3.5px;
+  color: rgb(232,106,40)
 `
 export default function Home() {
   return (
@@ -34,7 +45,7 @@ export default function Home() {
           <Title>
             <Const>const</Const>
             <Name>Stefon Simmons</Name>
-            = "Software Developer"
+            <Position><Span>= {`{ `}</Span>'Software Developer'<Span> :</Span></Position>
           </Title>
           {/* <Name>Stefon Simmons </Name> */}
         </Header> 
@@ -44,3 +55,4 @@ export default function Home() {
     </>
   )
 }
+// const Stef = {"stefon": stef}

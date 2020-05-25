@@ -46,7 +46,7 @@ export default function Navigation() {
   useEffect(() => {
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 90) {
+      if (window.scrollY > 110) {
         toggleFixed(true)
       } else {
         toggleFixed(false)

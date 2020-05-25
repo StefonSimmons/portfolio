@@ -19,7 +19,6 @@ const Prj = styled.div`
   text-align: center;
   letter-spacing: 3px;
   font-family: 'Ubuntu Condensed', sans-serif;
-
 `
 const PrjName = styled.h1`
   font-size: 24px;
@@ -34,6 +33,24 @@ const Description = styled.p`
   line-height: 1.5;
   margin-bottom: 15px
 `
+const List = styled.ul`
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 9px
+`
+const HeaderTools = styled.h6`
+  font-size: 18px;
+  text-align: left;
+  font-weight: 900;
+  text-decoration: underline;
+  margin-bottom: 10px;
+
+`
+const Tech = styled.li`
+  line-height: 1.5;
+  font-size: 16px;
+`
 export default function Projects() {
 
   const projects = project.map((p, id) => {
@@ -42,7 +59,13 @@ export default function Projects() {
         <PrjName>{p.name}</PrjName>
         <Thumbnail src={p.image} alt={p.name} />
         <Description>{p.description}</Description>
-        <hr/>
+        <hr />
+        <HeaderTools>Tech</HeaderTools>
+        <List>
+          {p.tech.map(tech => 
+            <Tech>{tech}</Tech>
+          )}
+        </List>
       </Prj>
     )
   })

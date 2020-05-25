@@ -32,6 +32,7 @@ const Statement = styled.p`
 const Code = styled.span`
   background: #e8eddf;
   color: rgb(210, 40, 90);
+  font-weight: 900;
   border-radius: 5px;
   padding: 3px;
   border: solid grey .5px
@@ -40,7 +41,8 @@ const TechSection = styled.section`
   margin: 0 35px;
   border-radius: 10px;
   padding: 5px;
-  background: #e8eddf
+  background: #e8eddf;
+  z-index: 1
 `
 const ToolBelt = styled.div`
   display: grid;
@@ -67,7 +69,7 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home on the web! I’m a self-motivated creator and administrator. My creativity as an artist and organization as an administrator feed greatly into my passion for <Code>software development</Code>. I consistently contribute strong problem-solving and interpersonal skills as well as an adaptive mindset for new processes and technology thatmay increase productivity.
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator feed greatly into my passion for <Code>software development</Code>. <br></br><br></br> I consistently contribute strong problem-solving and interpersonal skills as well as an adaptive mindset for new processes and technology that improves productivity.
           </Statement>
         </AboutSection>
 

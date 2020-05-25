@@ -1,7 +1,7 @@
 [
   {
     "name": "Instacart-Costco",
-    "description": "'Instacart-Costco'. A recreation of Instacart's website proposing a layout that enhances the findability of specific items through navigation, personalization, flow and accessibility.",
+    "description": "'Instacart-Costco'. A recreation of Instacart's website. Enhanced layout regarding the findability of specific items via navigation, personalization, flow and accessibility.",
     "image": "https://media.giphy.com/media/MF1XrtS1F0YrC21R3K/giphy.gif",
     "tech": ["React.js", "Axios", "Node.js", "Express.js", "MongoDB","mongoosejs", "morgan", "JSON Web Token", "bcrypt"]
   },
@@ -9,11 +9,11 @@
     "name": "World Tour",
     "description": "'World Tour' allows users to take a satellite journey to both familiar and foreign lands of Earth. You can randomly teleport or get specific in your search for regional data.",
     "image": "https://imgur.com/51PaEZf.png",
-    "tech": ["React.js", "Styled-Components","Axios", "Node.js","restcountries RESTful API","Jest Snapshot Testing"]
+    "tech": ["React.js", "Axios","Snapshot Testing","RESTful API","Node.js", "Styled-Components"]
   },
   {
     "name": "Cues",
-    "description": "'Cues' allows you to get quick data regarding film, television, and theater production activity in New York City. Discover when NYC properties are utilized by the dramatic arts.",
+    "description": "'Cues' allows you to get quick data regarding film, television, and theater production activity in New York City. Discover when NYC properties are utilized by the dramatic arts industry.",
     "image": "https://imgur.com/o6hDZmu.png",
     "tech": ["HTML", "CSS","Javascript","Axios","Node.js", "Socrata Open Data API"]
 
