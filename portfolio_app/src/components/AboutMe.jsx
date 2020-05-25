@@ -85,7 +85,7 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've worked with say that I'm a strong problem-solver and nice to work with. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together!
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've worked with say that I'm a strong problem-solver and am nice to work with. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
           </Statement>
         </AboutSection>
         <Divider/>
