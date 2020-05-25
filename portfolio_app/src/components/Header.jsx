@@ -3,7 +3,6 @@ import Navigation from './Navigation'
 import styled from 'styled-components'
 
 const DiagonalBlock = styled.div`
-  margin-bottom: 70px
 `
 const Header = styled.div`
   display: flex;

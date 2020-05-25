@@ -4,8 +4,9 @@ import styled from 'styled-components'
 const AboutContainer = styled.main`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: 'Ubuntu Condensed', sans-serif;
-
+  height: 80vh;
 `
 const AboutSection = styled.section`
   margin: 0px 25px;
@@ -15,11 +16,12 @@ const AboutSection = styled.section`
   line-height: 1.5;
 `
 export const Header = styled.h1`
-  margin-bottom: 15px;
+  margin: 15px 0px;
   text-align: center;
   font-size: 32px;
   letter-spacing: 3px;
   line-height: 1.6;
+  font-family: 'Ubuntu Condensed', sans-serif;
   color: rgb(100,150,250)
 `
 const Statement = styled.p`

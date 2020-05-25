@@ -6,6 +6,7 @@ import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
 import Resume from './components/Resume/Resume'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         </Route>
           
       </Switch>
+      <Footer/>
     </>
   );
 }

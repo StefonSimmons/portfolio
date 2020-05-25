@@ -7,12 +7,14 @@ import styled from 'styled-components'
 const Main = styled.main`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px
 `
 const Prj = styled.div`
   background: #e8eddf; 
   width: 350px;
   padding: 15px 35px;
-  margin: 0 35px;
+  margin: 0px 35px 50px 35px;
+
   border-radius: 10px;
   box-shadow: 5px 10px 20px rgb(20,20,20);
   text-align: center;

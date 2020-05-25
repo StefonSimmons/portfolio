@@ -53,7 +53,7 @@ export default function Navigation() {
       }
       console.log("use ->", fixed)
     })
-  }, [])
+  })
 
   //for the windowpath search/filter
   const linkLookup = [
