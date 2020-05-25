@@ -87,7 +87,12 @@ export default function Projects() {
     return (
       <Prj key={id}>
         <PrjName>{p.name}</PrjName>
-        <a href={p.deployedURL} target= '_blank' rel="noopener noreferrer"><Thumbnail src={p.image} alt={p.name} /></a>
+        <a href={p.deployedURL} target='_blank' rel="noopener noreferrer"><Thumbnail src={p.image} alt={p.name} /></a>
+        <SiteContainer>
+          <Site href={p.deployedURL} target= '_blank' rel="noopener noreferrer">Live</Site>
+          <Site href={p.ghRepoURL} target= '_blank' rel="noopener noreferrer">Github</Site>
+        </SiteContainer>
+        <Divider />
         <Description>{p.description}</Description>
         <Divider />
         <HeaderTools>Tech</HeaderTools>
@@ -96,11 +101,6 @@ export default function Projects() {
             <Tech>{tech}</Tech>
           )}
         </List>
-        <Divider />
-        <SiteContainer>
-          <Site href={p.deployedURL} target= '_blank' rel="noopener noreferrer">Live</Site>
-          <Site href={p.ghRepoURL} target= '_blank' rel="noopener noreferrer">Github</Site>
-        </SiteContainer>
       </Prj>
     )
   })

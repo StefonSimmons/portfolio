@@ -8,8 +8,8 @@ const Foot = styled.footer`
   text-align: center;
 `
 const Bottom = styled.div`
-  background-color: rgb(82,139,201);
-  padding: 10px 0; 
+background-color: rgb(0,139,201);
+padding: 10px 0; 
 `
 const Text = styled.h6`
   font-family: 'Merriweather Sans', sans-serif;

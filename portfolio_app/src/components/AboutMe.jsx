@@ -13,7 +13,7 @@ const AboutContainer = styled.main`
 const AboutSection = styled.section`
   // margin: 4em 0 0 0;
   width: 600px;
-  padding: 10px 15px;
+  padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
@@ -27,7 +27,7 @@ export const Header = styled.h1`
   color: rgb(82,150,250)
 `
 const Statement = styled.p`
-  font-size: 20px;
+  font-size: 23px;
   text-align: center;
   margin-bottom: 20px;
   color: #e8eddf
@@ -37,7 +37,7 @@ const Code = styled.span`
   color: rgb(210, 40, 90);
   font-weight: 900;
   border-radius: 5px;
-  padding: 3px;
+  padding: 3px 6px;
   border: solid grey .5px
 `
 const Linked = styled(Link)`
@@ -71,6 +71,10 @@ const Icon = styled.i`
     box-shadow: 0px 0px 50px rgb(100,150,250);
   }
 `
+const Divider = styled.hr`
+  margin: 15px;
+  width: 8%
+`
 export default function AboutMe() {
 
 
@@ -81,10 +85,10 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator feed greatly into my passion for <Code>software development</Code>. <br></br><br></br> I consistently contribute strong problem-solving and interpersonal skills as well as an adaptive mindset for new processes and technology.<br></br><br></br>Feel free to <Linked to='/contact'>Contact Me</Linked> to work together!
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've worked with say that I'm a strong problem-solver and nice to work with. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together!
           </Statement>
         </AboutSection>
-
+        <Divider/>
         <TechSection>
           <Header>Technical Utility Belt</Header>  
           <ToolBelt>
