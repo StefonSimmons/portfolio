@@ -67,6 +67,7 @@ const Site = styled.a`
   font-weight: 900;
   font-size: 20px;
   color: black;
+  background: #d7dcce;  
   border: solid 1px grey;
   border-radius: 5px;
   padding: 5px 15px;

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const Contact = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;  
 `
