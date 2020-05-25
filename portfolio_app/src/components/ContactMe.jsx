@@ -15,6 +15,11 @@ const Icon = styled.img`
   background-image: radial-gradient(rgb(0,150,250), rgba(0,150,250,.7445), rgba(0,150,250,.2225));
   box-shadow: 0px 0px 50px rgb(0,150,250);
   padding: 10px;
+
+  &:hover{
+    box-shadow: 0px 0px 60px rgb(250,150,0);
+    background-image: radial-gradient(rgb(250,150,0), rgba(250,150,0,.723445), rgba(250,150,0,.2225));
+  }
 ` 
 const Word = styled.h3`
   color: #e8eddf;

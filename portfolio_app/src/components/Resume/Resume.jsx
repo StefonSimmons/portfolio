@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Skills from './Skills'
 import BrandStatement from './BrandStatement'
 import Experience from './Experience'
@@ -24,6 +24,7 @@ const Embed = styled.span`
   color: rgb(82,150,250);
   font-size: 72px;
   font-family: 'Ubuntu Condensed', sans-serif;
+  margin-left: 50px;
 `
 const EmbedBttm = styled(Embed)`
   margin-bottom: 50px
@@ -62,6 +63,12 @@ const SectionHeader = styled.h3`
   color: #E86A28;
   font-size: 18px;
 `
+const Src = styled.span`
+  color: rgb(0,139,201)
+`
+const Span = styled.span`
+  color: #e8eddf;
+`
 // const PDFContainer = styled.div`
 //   display: flex;
 //   justify-content: center
@@ -73,11 +80,13 @@ const SectionHeader = styled.h3`
 
 export default function Resume() {
 
+  // const [switch, toggle] = useState()
+
   return (
     <>
       <Border >
-        <Header> Resume </Header>
-        <Embed>{`<embed>`}</Embed>
+        <Header> My Resume </Header>
+        <Embed>{`<embed `}<Src>src</Src><Span>=</Span></Embed>
 
         <Page>
           <ResumeHeader>
@@ -130,7 +139,7 @@ export default function Resume() {
           </Section>
 
         </Page>
-        <EmbedBttm>{`</embed>`}</EmbedBttm>
+        <EmbedBttm>{`/>`}</EmbedBttm>
 
       </Border>
     </>
@@ -139,7 +148,7 @@ export default function Resume() {
 
     // <Border >
     //   <PDFContainer>
-    //     {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
+        // {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
     //   </PDFContainer>
     // </Border>
   )
