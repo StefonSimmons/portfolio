@@ -15,7 +15,7 @@ const Header = styled.div`
 
 `
 const Const = styled.span`
-  color: rgb(82,139,201)
+  color: rgb(82,150,250)
 `
 const Name = styled.h1`
   margin: 0 30px;

@@ -22,7 +22,7 @@ export const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: rgb(100,150,250)
+  color: rgb(82,150,250)
 `
 const Statement = styled.p`
   font-size: 18px;
@@ -39,7 +39,7 @@ const Code = styled.span`
 const TechSection = styled.section`
   margin: 0 35px;
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 5px;
   background: #e8eddf
 `
 const ToolBelt = styled.div`

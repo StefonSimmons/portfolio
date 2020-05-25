@@ -17,7 +17,7 @@ const NavItem = styled.li`
 
 `
 const Nav = styled.nav`
-  background-color: rgb(82,139,201);
+  background-color: rgb(0,139,201);
   top: 0;
   width: 100%;
   margin-bottom: 0px

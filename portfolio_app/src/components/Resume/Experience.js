@@ -31,7 +31,7 @@ export default function Experience() {
     const phrasesArray = job.phrases.split(';')
     return (
       <>
-      <Block keyid={`${1}${idx}`}>
+      <Block keyid={idx}>
         <DetailsHeader>{job.title}</DetailsHeader>
         <FlexBlock>
           <Business>{job.business}</Business>

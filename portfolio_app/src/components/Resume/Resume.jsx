@@ -4,7 +4,7 @@ import BrandStatement from './BrandStatement'
 import Experience from './Experience'
 import Education from './Education'
 import { Phrase, List, Block } from './Experience'
-import {Header} from '../AboutMe'
+import { Header } from '../AboutMe'
 import styled from 'styled-components'
 
 const Border = styled.div`
@@ -18,7 +18,15 @@ const Page = styled.main`
   text-align: left;
   background-color: #e8eddf;
   border-radius: 15px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Ubuntu Condensed', sans-serif;
+`
+const Embed = styled.span`
+  color: rgb(82,150,250);
+  font-size: 72px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+`
+const EmbedBttm = styled(Embed)`
+  margin-bottom: 50px
 `
 const ResumeHeader = styled.header`
   letter-spacing: 1px;
@@ -69,8 +77,9 @@ export default function Resume() {
     <>
       <Border >
         <Header> Resume </Header>
-        <Page>
+        <Embed>{`<embed>`}</Embed>
 
+        <Page>
           <ResumeHeader>
             <Name>
               Stefon Simmons
@@ -116,10 +125,13 @@ export default function Resume() {
                 <Phrase>Painter</Phrase>
                 <Phrase>Theater Photography</Phrase>
               </List>
+              
             </Block>
           </Section>
 
         </Page>
+        <EmbedBttm>{`</embed>`}</EmbedBttm>
+
       </Border>
     </>
 
