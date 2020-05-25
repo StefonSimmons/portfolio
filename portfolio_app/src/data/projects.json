@@ -1,7 +1,7 @@
 [
   {
     "name": "Instacart-Costco",
-    "description": "'Instacart-Costco'. A recreation of Instacart's website. Enhanced layout regarding the findability of specific items via navigation, personalization, flow and accessibility.",
+    "description": "'Instacart-Costco'. A re-creation of Instacart's website. Proposes a layout that enhances the navigation, personalization, flow and accessibility of the site.",
     "image": "https://media.giphy.com/media/MF1XrtS1F0YrC21R3K/giphy.gif",
     "tech": ["React.js", "Axios", "Node.js", "Express.js", "MongoDB","mongoosejs", "morgan", "JSON Web Token", "bcrypt"],
     "deployedURL": "http://instacart-costco.surge.sh/",
