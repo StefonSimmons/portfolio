@@ -8,10 +8,8 @@ const AboutContainer = styled.main`
   align-items: center;
   flex-direction: column;
   font-family: 'Ubuntu Condensed', sans-serif;
-  // height: 80vh;
 `
 const AboutSection = styled.section`
-  // margin: 4em 0 0 0;
   width: 600px;
   padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;

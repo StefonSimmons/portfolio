@@ -20,7 +20,6 @@ const Nav = styled.nav`
   background-color: rgb(0,139,201);
   top: 0;
   width: 100%;
-  margin-bottom: 0px
 
 `
 const NavLink = styled(Link)`
@@ -98,7 +97,7 @@ export default function Navigation() {
     }
   }
 
-  // CHANGE OBJECT NAMES BELOW TO SYMANTIC NAMES
+  // CHANGE OBJECT NAMES BELOW TO SEMANTIC NAMES
 
   return (
     <>

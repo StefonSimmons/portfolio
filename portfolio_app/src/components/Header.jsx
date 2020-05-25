@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
 const DiagonalBlock = styled.div`
+  margin-bottom: 40px;
 `
 const Header = styled.div`
   display: flex;
@@ -12,7 +13,6 @@ const Header = styled.div`
   line-height: 1.3;
   color: #e8eddf;
   background-color: #111111;
-
 `
 const Const = styled.span`
   color: rgb(82,150,250)
@@ -39,10 +39,25 @@ const Position = styled.h3`
   color: rgb(232,106,40)
 `
 export default function Home() {
+
+
+  const [margin, addMargin] = useState(false)
+
+  useEffect(() => {
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 110) {
+        addMargin(true)
+      } else {
+        addMargin(false)
+      }
+    })
+  })
+
   return (
     <>
       <DiagonalBlock>
-        <Header>
+        <Header style={margin ? { marginBottom: "91px" } : { marginBottom: "0" }}>
           <Title>
             <Const>const</Const>
             <Name>Stefon Simmons</Name>
