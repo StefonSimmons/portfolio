@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header} from './AboutMe'
+import { Header } from './AboutMe'
 import project from '../data/projects.json'
 import styled from 'styled-components'
 
@@ -19,6 +19,8 @@ const Prj = styled.div`
   text-align: center;
   letter-spacing: 3px;
   font-family: 'Ubuntu Condensed', sans-serif;
+  box-shadow: 0px 0px 15px rgb(250,150,0);
+  // background-image: radial-gradient(rgb(250,150,0), rgba(250,150,0,.723445), rgba(250,150,0,.2225));
 `
 const PrjName = styled.h1`
   font-size: 24px;
@@ -55,17 +57,19 @@ export default function Projects() {
 
   const projects = project.map((p, id) => {
     return (
-      <Prj key= {id}>
+      <Prj key={id}>
         <PrjName>{p.name}</PrjName>
         <Thumbnail src={p.image} alt={p.name} />
         <Description>{p.description}</Description>
         <hr />
         <HeaderTools>Tech</HeaderTools>
         <List>
-          {p.tech.map(tech => 
+          {p.tech.map(tech =>
             <Tech>{tech}</Tech>
           )}
         </List>
+        <hr />
+        
       </Prj>
     )
   })
