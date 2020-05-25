@@ -3,31 +3,28 @@ import Navigation from './Navigation'
 import styled from 'styled-components'
 
 const DiagonalBlock = styled.div`
-  // position: relative;
-  top: -150px;
-  // transform: skewY(-11deg); 
-  background-color: rgb(100,150,250);
-  // height: 40vh;
+  margin-bottom: 70px
 `
 const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  height: 38.5vh;
   justify-content: flex-end;
+  padding: 10px 0px;
   font-family: 'Permanent Marker', cursive;
   line-height: 1.3;
-  color: #333333
+  color: #e8eddf;
+  background-color: #111111;
+
+`
+const Const = styled.span`
+  color: rgb(82,139,201)
 `
 const Name = styled.h1`
-  // transform: skewY(11deg); 
-  margin: 0 22vw;
-  font-size: 48px;
+  margin: 0 30px;
+  font-size: 28px;
   letter-spacing: 4px;
 `
 const Title = styled.h2`
-  // transform: skewY(11deg); 
-  margin: 0 28vw;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 3.5px;
 `
 export default function Home() {
@@ -35,10 +32,15 @@ export default function Home() {
     <>
       <DiagonalBlock>
         <Header>
-          <Name>Stefon Simmons </Name>
-          <Title>Software Developer</Title>
+          <Title>
+            <Const>const</Const>
+            <Name>Stefon Simmons</Name>
+            = "Software Developer"
+          </Title>
+          {/* <Name>Stefon Simmons </Name> */}
         </Header> 
         <Navigation />  
+
       </DiagonalBlock>    
     </>
   )

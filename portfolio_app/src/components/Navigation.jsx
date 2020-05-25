@@ -10,17 +10,18 @@ const List = styled.ul`
   align-items: flex-start;
 `
 const NavItem = styled.li`
-  padding: 15px;
-  margin: 15px;
-  transform: skewY(11deg); 
+  padding: 10px;
+  margin: 5px;
+  // transform: skewY(11deg); 
   font-family: 'Permanent Marker', cursive;
 
 `
 const Nav = styled.nav`
-  // position: fixed;
-  background-color: rgb(100,150,250);
+  background-color: rgb(82,139,201);
   top: 0;
-  width: 100%
+  width: 100%;
+  margin-bottom: 0px
+
 `
 const NavLink = styled(Link)`
   text-decoration: none;
@@ -45,7 +46,7 @@ export default function Navigation() {
   useEffect(() => {
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 303) {
+      if (window.scrollY > 90) {
         toggleFixed(true)
       } else {
         toggleFixed(false)
