@@ -6,12 +6,13 @@ const AboutContainer = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: 'Ubuntu Condensed', sans-serif;
-  height: 80vh;
+  // height: 80vh;
 `
 const AboutSection = styled.section`
-  margin: 0px 25px;
-  width: 300px;
+  // margin: 4em 0 0 0;
+  width: 600px;
   padding: 10px 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
@@ -26,7 +27,8 @@ export const Header = styled.h1`
   color: rgb(82,150,250)
 `
 const Statement = styled.p`
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
   margin-bottom: 20px;
   color: #e8eddf
 `
@@ -48,19 +50,19 @@ const Linked = styled(Link)`
   border: solid grey .5px
 `
 const TechSection = styled.section`
-  margin: 0 35px;
+  margin: 1em 0 8em 0;
   border-radius: 10px;
   padding: 5px;
   background: #e8eddf;
-  z-index: 1
+  // z-index: 1
 `
 const ToolBelt = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 35px;
 `
 const Icon = styled.i`
-  font-size: 4.5em;
+  font-size: 3.25em;
   padding: 10px;
 
   &:hover{

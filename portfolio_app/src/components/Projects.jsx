@@ -87,7 +87,7 @@ export default function Projects() {
     return (
       <Prj key={id}>
         <PrjName>{p.name}</PrjName>
-        <Thumbnail src={p.image} alt={p.name} />
+        <a href={p.deployedURL} target= '_blank' rel="noopener noreferrer"><Thumbnail src={p.image} alt={p.name} /></a>
         <Description>{p.description}</Description>
         <Divider />
         <HeaderTools>Tech</HeaderTools>
@@ -98,8 +98,8 @@ export default function Projects() {
         </List>
         <Divider />
         <SiteContainer>
-          <Site href={p.deployedURL}>Live</Site>
-          <Site href={p.ghRepoURL}>Github</Site>
+          <Site href={p.deployedURL} target= '_blank' rel="noopener noreferrer">Live</Site>
+          <Site href={p.ghRepoURL} target= '_blank' rel="noopener noreferrer">Github</Site>
         </SiteContainer>
       </Prj>
     )
