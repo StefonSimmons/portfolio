@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const Main = styled.main`
   display: flex;
   justify-content: center;
-  margin-bottom: 30px
+  margin-bottom: 60px
 `
 const Prj = styled.div`
   background: #e8eddf; 
@@ -69,7 +69,8 @@ export default function Projects() {
           )}
         </List>
         <hr />
-        
+        <a href={p.deployedURL}>Live</a>
+        <a href={p.ghRepoURL}>GH</a>
       </Prj>
     )
   })
