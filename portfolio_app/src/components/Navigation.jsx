@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const List = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 `
 const NavItem = styled.li`
@@ -35,7 +35,7 @@ export default function Navigation() {
 
   // ====DELETE LATER ====//
   const navRef = useRef(null)
-  console.log('this here=>',navRef.current)
+  // console.log('this here=>',navRef.current)
   // ====DELETE LATER ====//
   
 

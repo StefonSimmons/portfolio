@@ -79,7 +79,7 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator feed greatly into my passion for <Code>software development</Code>. <br></br><br></br> I consistently contribute strong problem-solving and interpersonal skills as well as an adaptive mindset for new processes and technology. Feel free to <Linked to='/contact'>Contact Me</Linked> to work together!
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator feed greatly into my passion for <Code>software development</Code>. <br></br><br></br> I consistently contribute strong problem-solving and interpersonal skills as well as an adaptive mindset for new processes and technology.<br></br><br></br>Feel free to <Linked to='/contact'>Contact Me</Linked> to work together!
           </Statement>
         </AboutSection>
 

@@ -22,7 +22,7 @@ export default function Footer() {
     <>
       <Foot>
         <Bottom>
-          <Text>&copy; Stefon Simmons</Text>
+          <Text>&copy; Stefon Simmons | Built in React.js</Text>
         </Bottom>
       </Foot>
     </>
