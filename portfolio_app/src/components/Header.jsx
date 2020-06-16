@@ -7,9 +7,11 @@ const DiagonalBlock = styled.div`
 `
 const Header = styled.div`
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
+  justify-content: center;
   padding: 10px 0px;
-  font-family: 'Permanent Marker', cursive;
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Montserrat', sans-serif;
   line-height: 1.3;
   color: #e8eddf;
   background-color: #111111;
@@ -18,15 +20,14 @@ const Const = styled.span`
   color: rgb(82,150,250)
 `
 const Name = styled.h1`
-  // margin: 0 30px;
   font-size: 28px;
+  font-weight: 200;
   letter-spacing: 4px;
 `
 const Title = styled.h2`
   font-size: 16px;
   letter-spacing: 3.5px;
   line-height: 1.5;
-  padding-right: 15px
 `
 const Span = styled.span`
   color: #e8eddf;

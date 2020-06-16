@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -13,11 +13,12 @@ const NavItem = styled.li`
   padding: 10px;
   margin: 5px;
   // transform: skewY(11deg); 
-  font-family: 'Permanent Marker', cursive;
-
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Montserrat', sans-serif;
 `
 const Nav = styled.nav`
-  background-color: rgb(0,139,201);
+  // background-color: rgb(0,139,201);
+  background-color: rgb(0,39,101);
   top: 0;
   width: 100%;
 
@@ -33,7 +34,8 @@ const NavLink = styled(Link)`
 export default function Navigation() {
 
   // ====DELETE LATER ====//
-  const navRef = useRef(null)
+  // const navRef = useRef(null)
+  // ref= {navRef} //<-- this would go in NAV to reference the DOM element nav
   // console.log('this here=>',navRef.current)
   // ====DELETE LATER ====//
   
@@ -50,11 +52,10 @@ export default function Navigation() {
       } else {
         toggleFixed(false)
       }
-      console.log("use ->", fixed)
+      // console.log("use ->", fixed)
     })
-  })
+  },[])
 
-  //for the windowpath search/filter
   const linkLookup = [
     { contact: "Contact Me" },
     { projects: "Projects" },
@@ -62,7 +63,9 @@ export default function Navigation() {
     { about: "About Me" }
   ]
 
-  const [tempLinkStore, setTempLink] = useState("/about")
+  const [tempLinkStore, setTempLink] = useState(window.location.pathname)
+
+  //need to set the init state of these to a random value in the link lookup that's not the current pathname
 
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
@@ -70,7 +73,7 @@ export default function Navigation() {
 
   useEffect(() => {
     setTempLink(window.location.pathname)
-    // console.log('setState in useEffect->', tempLinkStore)
+    console.log('setState in useEffect->', tempLinkStore)
   },[handleNewLink])
 
   function handleNewLink(command) {
@@ -97,15 +100,12 @@ export default function Navigation() {
     }
   }
 
-  // CHANGE OBJECT NAMES BELOW TO SEMANTIC NAMES
-
   return (
     <>
-        {console.log(navRef)}
+        {/* {console.log(navRef)} */}
 
-      <Nav ref= {navRef} style= {fixed ? { position: "fixed" } : { position: "" }}>
-        {console.log("render", fixed)}
-
+      <Nav style= {fixed ? { position: "fixed" } : { position: "" }}>
+        {/* {console.log("render", fixed)} */}
         <List>
           <NavItem><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItem>
 
@@ -114,7 +114,7 @@ export default function Navigation() {
           <NavItem><NavLink to={`/${Object.keys(thirdLink)}`} onClick={(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItem>
         </List>
       </Nav>
-      {/* {console.log('in return ->', tempLinkStore)} */}
+      {console.log('in return ->', tempLinkStore)}
       {/* {tempLinkStore} */}
     </>
   )

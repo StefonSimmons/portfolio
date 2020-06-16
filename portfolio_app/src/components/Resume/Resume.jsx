@@ -48,6 +48,7 @@ const Download = styled.a`
   border: 2px #E86A28 solid;
   border-radius: 15px;
   padding: 5px 15px;
+  font-family: 'Permanent Marker', cursive;
 
   &:hover{
     animation: ${DwnldShake} .5s;
@@ -60,8 +61,10 @@ const Arrow = styled.span`
 const Embed = styled.span`
   color: rgb(82,150,250);
   font-size: 72px;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  margin-left: 50px;
+  // font-family: 'Ubuntu Condensed', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  margin-left: 48px;
 `
 const EmbedBttm = styled(Embed)`
   margin-bottom: 50px
