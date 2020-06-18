@@ -1,5 +1,5 @@
-import React from 'react';
-import {Route, Switch} from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
@@ -11,36 +11,42 @@ import MyArt from './components/MyArt/MyArt';
 
 function App() {
 
-  return (
-    <> 
-      <Header />
-      <Switch>
+  const [ role, changeRole ] = useState('Software Engineer')
 
+
+  return (
+    <>
+      <Header
+        role={role}
+      />
+      <Switch>
         <Route path='/' exact>
-          <Home/>
+          <Home />
         </Route>
 
         <Route path='/about' exact>
-          <AboutMe/>
+          <AboutMe />
         </Route>
 
-        <Route path= '/webapps' exact>
-          <WebApps/>
-        </Route>
-          
-        <Route path= '/contact' exact>
-          <ContactMe/>
+        <Route path='/webapps' exact>
+          <WebApps />
         </Route>
 
-        <Route path= '/resume' exact>
-          <Resume/>
+        <Route path='/contact' exact>
+          <ContactMe />
         </Route>
-          
-        <Route path= '/myart' exact>
-          <MyArt/>
+
+        <Route path='/resume' exact>
+          <Resume />
+        </Route>
+
+        <Route path='/myart' exact>
+          <MyArt
+            changeRole= {changeRole}
+          />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </>
   );
 }

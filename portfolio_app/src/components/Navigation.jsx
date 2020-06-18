@@ -71,7 +71,6 @@ export default function Navigation() {
     setTempLink(window.location.pathname)
 
     let pathKey = tempLinkStore.split('').slice(1).join('')
-    console.log(pathKey)
     const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
     const linkName = Object.values(linkData[0])
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
 
@@ -40,7 +40,7 @@ const Position = styled.h3`
   letter-spacing: 3.5px;
   color: rgb(232,106,40)
 `
-export default function Home() {
+export default function Home({role}) {
 
 
   const [margin, addMargin] = useState(false)
@@ -63,12 +63,12 @@ export default function Home() {
           <Title>
             <Const>let</Const>
             <Name>Stefon Simmons</Name>
-            <Position><Span>= {`{ `}</Span>'Software Engineer'<Span> :</Span></Position>
+            <Position><Span>= {`{ `}</Span>'{role}'<Span> :</Span></Position>
           </Title>
-        </Header> 
-        <Navigation />  
+        </Header>
+        <Navigation/>
 
-      </DiagonalBlock>    
+      </DiagonalBlock>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import CDDescription from './CDDescription'
 
@@ -25,7 +25,7 @@ export const Header = styled.h1`
   font-family: 'Ubuntu Condensed', sans-serif;
   color: rgb(82,150,250)
 `
-const MusicTitle = styled.h2`
+const HeaderTwo = styled.h2`
   margin: 15px 0px;
   text-align: center;
   font-size: 24px;
@@ -80,14 +80,26 @@ const Divider = styled.hr`
   margin: 15px;
   width: 8%
 `
-export default function MyArt() {
+export default function MyArt({ changeRole }) {
+
+  useEffect(() => {
+    if (window.location.pathname === '/myart') {
+      changeRole('Singer')
+    } 
+    return () => {
+      changeRole('Software Engineer')
+    }
+  }, [])
+
+
+
   return (
     <div>
       <ArtContainer>
 
         <ArtSection>
           <Header>My Art</Header>
-          <MusicTitle>Listen to the "Appreciated" EP</MusicTitle>
+          <HeaderTwo>Listen to my "Appreciated" EP</HeaderTwo>
           <AppreciatedEP>
             <EPArt src='https://i.imgur.com/chpYvXn.png' alt='appreciated ep' />
 
@@ -106,7 +118,7 @@ export default function MyArt() {
               </StoreLnk>
               <StoreLnk href='https://amzn.to/2YMeF6p' target='_blank' rel='noopener noreferrer'>
                 <StoreLogo src="https://imgur.com/GJpA6K5.png" alt="amazon music" />
-              </StoreLnk>     
+              </StoreLnk>
             </StoreSection>
 
           </AppreciatedEP>
@@ -114,10 +126,10 @@ export default function MyArt() {
         </ArtSection>
         <Divider />
         <ListingSection>
-          <Header>Appreciated Track Listing</Header>
+          <HeaderTwo>Appreciated Track Listing</HeaderTwo>
           <ToolBelt>
             <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
-            <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' /> 
+            <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' />
             <CDDescription />
           </ToolBelt>
         </ListingSection>
