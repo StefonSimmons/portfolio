@@ -48,6 +48,7 @@ const StoreSection = styled.div`
   display: flex;
   flex-wrapper: wrap;
   justify-content: center;
+  align-items: center;
   margin-top: 25px;
 `
 const StoreLnk = styled.a`
@@ -56,6 +57,11 @@ const StoreLnk = styled.a`
 const StoreLogo = styled.img`
   border-radius: 10px;
   width: 200px;
+  transition: transform .5s;
+
+  &:hover{
+    transform: scale(1.25)
+  }
 `
 const TechSection = styled.section`
   margin: 1em 0 8em 0;
@@ -105,7 +111,7 @@ export default function MyArt() {
                 <StoreLogo src="https://imgur.com/k3G2C5e.png" alt="spotify" />
               </StoreLnk>
               <StoreLnk href='https://play.google.com/store/music/album/Stefon_Simmons_Appreciated?id=Bi6k4veuseh4xvacyfia2smp45e' target='_blank' rel='noopener noreferrer'>
-                <StoreLogo src="https://imgur.com/4cqzvFh.png" alt="google play" />
+                <StoreLogo src="https://imgur.com/6XTu30o.png" alt="google play" />
               </StoreLnk>
               <StoreLnk href='https://amzn.to/2YMeF6p' target='_blank' rel='noopener noreferrer'>
                 <StoreLogo src="https://imgur.com/GJpA6K5.png" alt="amazon music" />
