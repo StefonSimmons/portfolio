@@ -73,6 +73,7 @@ const Divider = styled.hr`
   margin: 15px;
   width: 8%
 `
+
 export default function AboutMe() {
 
 
@@ -83,10 +84,10 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organization as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've worked with say that I'm a strong problem-solver and am nice to work with. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organizational skills as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, creative and ambitious. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
           </Statement>
         </AboutSection>
-        <Divider/>
+        <Divider />
         <TechSection>
           <Header>Technical Utility Belt</Header>  
           <ToolBelt>
@@ -97,7 +98,7 @@ export default function AboutMe() {
             <Icon className="devicon-css3-plain-wordmark"></Icon>
             <Icon className="devicon-nodejs-plain-wordmark"></Icon>
             <Icon className="devicon-express-original-wordmark"></Icon>
-            <Icon className="devicon-mysql-plain-wordmark"></Icon>
+            <Icon className="devicon-postgresql-plain-wordmark"></Icon>
             <Icon className="devicon-mongodb-plain-wordmark"></Icon>
             <Icon className="devicon-visualstudio-plain-wordmark"></Icon>
             <Icon className="devicon-git-plain-wordmark"></Icon>
