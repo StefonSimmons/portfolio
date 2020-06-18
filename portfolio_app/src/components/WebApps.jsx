@@ -108,7 +108,7 @@ export default function Projects() {
 
   return (
     <>
-      <Header>My Projects</Header>
+      <Header>My Web Apps</Header>
       <Main>
         {projects}
       </Main>

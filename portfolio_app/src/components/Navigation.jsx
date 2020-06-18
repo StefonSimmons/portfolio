@@ -49,7 +49,7 @@ export default function Navigation() {
 
   const linkLookup = [
     { contact: "Contact Me" },
-    { projects: "Projects" },
+    { webapps: "Web Apps" },
     { resume: "Resume" },
     { about: "About Me" },
     { myart: "My Art" }
@@ -58,7 +58,7 @@ export default function Navigation() {
   const [tempLinkStore, setTempLink] = useState(window.location.pathname)
 
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
-  const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
+  const [secondLink, updateLinkTwo] = useState({ webapps: "Web Apps" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
   const [fourthLink, updateLinkFour] = useState({ myart: "My Art" })
 

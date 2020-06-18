@@ -3,11 +3,11 @@ import {Route, Switch} from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
-import Projects from './components/Projects'
+import WebApps from './components/WebApps'
 import ContactMe from './components/ContactMe'
 import Resume from './components/Resume/Resume'
 import Footer from './components/Footer'
-import MyArt from './components/MyArt';
+import MyArt from './components/MyArt/MyArt';
 
 function App() {
 
@@ -24,8 +24,8 @@ function App() {
           <AboutMe/>
         </Route>
 
-        <Route path= '/projects' exact>
-          <Projects/>
+        <Route path= '/webapps' exact>
+          <WebApps/>
         </Route>
           
         <Route path= '/contact' exact>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CDDescription from './CDDescription'
 
 
 const ArtContainer = styled.main`
@@ -63,27 +64,17 @@ const StoreLogo = styled.img`
     transform: scale(1.25)
   }
 `
-const TechSection = styled.section`
+const ListingSection = styled.section`
   margin: 1em 0 8em 0;
   border-radius: 10px;
   padding: 5px;
-  background: #e8eddf;
-  // z-index: 1
 `
 const ToolBelt = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 35px;
+  display: flex;
+  
 `
-const Icon = styled.i`
-  font-size: 3.25em;
-  padding: 10px;
-
-  &:hover{
-    border-radius: 10px;
-    background-image: radial-gradient(rgb(100,150,250), rgba(100,150,250,.7), rgba(100,150,250,.2225));
-    box-shadow: 0px 0px 50px rgb(100,150,250);
-  }
+const CDCover = styled.img`
+  width: 300px
 `
 const Divider = styled.hr`
   margin: 15px;
@@ -96,7 +87,7 @@ export default function MyArt() {
 
         <ArtSection>
           <Header>My Art</Header>
-          <MusicTitle>Download the "Appreciated" EP</MusicTitle>
+          <MusicTitle>Listen to the "Appreciated" EP</MusicTitle>
           <AppreciatedEP>
             <EPArt src='https://i.imgur.com/chpYvXn.png' alt='appreciated ep' />
 
@@ -122,23 +113,14 @@ export default function MyArt() {
 
         </ArtSection>
         <Divider />
-        <TechSection>
-          <Header>Technical Utility Belt</Header>
+        <ListingSection>
+          <Header>Appreciated Track Listing</Header>
           <ToolBelt>
-            <Icon className="devicon-react-plain-wordmark"></Icon>
-            <Icon className="devicon-javascript-plain"></Icon>
-            <Icon className="devicon-python-plain-wordmark"></Icon>
-            <Icon className="devicon-html5-plain-wordmark"></Icon>
-            <Icon className="devicon-css3-plain-wordmark"></Icon>
-            <Icon className="devicon-nodejs-plain-wordmark"></Icon>
-            <Icon className="devicon-express-original-wordmark"></Icon>
-            <Icon className="devicon-postgresql-plain-wordmark"></Icon>
-            <Icon className="devicon-mongodb-plain-wordmark"></Icon>
-            <Icon className="devicon-visualstudio-plain-wordmark"></Icon>
-            <Icon className="devicon-git-plain-wordmark"></Icon>
-            <Icon className="devicon-github-plain-wordmark"></Icon>
+            <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
+            <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' /> 
+            <CDDescription />
           </ToolBelt>
-        </TechSection>
+        </ListingSection>
 
       </ArtContainer>
     </div>
