@@ -61,11 +61,10 @@ export default function Home() {
       <DiagonalBlock>
         <Header style={margin ? { marginBottom: "91px" } : { marginBottom: "0" }}>
           <Title>
-            <Const>const</Const>
+            <Const>let</Const>
             <Name>Stefon Simmons</Name>
             <Position><Span>= {`{ `}</Span>'Software Engineer'<Span> :</Span></Position>
           </Title>
-          {/* <Name>Stefon Simmons </Name> */}
         </Header> 
         <Navigation />  
 
@@ -73,4 +72,3 @@ export default function Home() {
     </>
   )
 }
-// const Stef = {"stefon": stef}

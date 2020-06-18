@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -33,14 +33,6 @@ const NavLink = styled(Link)`
 
 export default function Navigation() {
 
-  // ====DELETE LATER ====//
-  // const navRef = useRef(null)
-  // ref= {navRef} //<-- this would go in NAV to reference the DOM element nav
-  // console.log('this here=>',navRef.current)
-  // ====DELETE LATER ====//
-  
-
-  //for sticky header
 
   const [fixed, toggleFixed] = useState(false)
 
@@ -52,70 +44,65 @@ export default function Navigation() {
       } else {
         toggleFixed(false)
       }
-      // console.log("use ->", fixed)
     })
-  },[])
+  }, [])
 
   const linkLookup = [
     { contact: "Contact Me" },
     { projects: "Projects" },
     { resume: "Resume" },
-    { about: "About Me" }
+    { about: "About Me" },
+    { myart: "My Art" }
   ]
 
   const [tempLinkStore, setTempLink] = useState(window.location.pathname)
 
-  //need to set the init state of these to a random value in the link lookup that's not the current pathname
-
   const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
   const [secondLink, updateLinkTwo] = useState({ projects: "Projects" })
   const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
+  const [fourthLink, updateLinkFour] = useState({ myart: "My Art" })
 
   useEffect(() => {
     setTempLink(window.location.pathname)
-    console.log('setState in useEffect->', tempLinkStore)
-  },[handleNewLink])
+  }, [handleNewLink])
 
-  function handleNewLink(command) {
+  function handleNewLink(updateLink) {
 
     setTempLink(window.location.pathname)
-    // console.log('setState top of func ->', tempLinkStore)
 
     let pathKey = tempLinkStore.split('').slice(1).join('')
-    // console.log('1 pathkeyname created ->', pathKey)
+    console.log(pathKey)
     const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
     const linkName = Object.values(linkData[0])
-    // console.log('1linkname filtered', linkName)
 
-    if (command === "updateLinkOne") {
-      // console.log({[linkKey]:linkValue})
+    if (updateLink === "updateLinkOne") {
       updateLinkOne({ [pathKey]: linkName })
     }
-    else if (command === "updateLinkTwo") {
-      // console.log({[pathKey]:linkName})
+    else if (updateLink === "updateLinkTwo") {
       updateLinkTwo({ [pathKey]: linkName })
     }
-    else {
+    else if (updateLink === "updateLinkThree") {
       updateLinkThree({ [pathKey]: linkName })
+    }
+    else {
+      updateLinkFour({ [pathKey]: linkName })
     }
   }
 
   return (
     <>
-        {/* {console.log(navRef)} */}
 
-      <Nav style= {fixed ? { position: "fixed" } : { position: "" }}>
-        {/* {console.log("render", fixed)} */}
+      <Nav style={fixed ? { position: "fixed" } : { position: "" }}>
         <List>
           <NavItem><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItem>
 
           <NavItem><NavLink to={`/${Object.keys(secondLink)}`} onClick={(e) => handleNewLink("updateLinkTwo")}>{Object.values(secondLink)}</NavLink></NavItem>
 
           <NavItem><NavLink to={`/${Object.keys(thirdLink)}`} onClick={(e) => handleNewLink("updateLinkThree")}>{Object.values(thirdLink)}</NavLink></NavItem>
+
+          <NavItem><NavLink to={`/${Object.keys(fourthLink)}`} onClick={(e) => handleNewLink("updateLinkFour")}>{Object.values(fourthLink)}</NavLink></NavItem>
         </List>
       </Nav>
-      {console.log('in return ->', tempLinkStore)}
-      {/* {tempLinkStore} */}
     </>
   )
 }

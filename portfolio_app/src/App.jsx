@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
 import Resume from './components/Resume/Resume'
 import Footer from './components/Footer'
+import MyArt from './components/MyArt';
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
           <Resume/>
         </Route>
           
+        <Route path= '/myart' exact>
+          <MyArt/>
+        </Route>
       </Switch>
       <Footer/>
     </>
