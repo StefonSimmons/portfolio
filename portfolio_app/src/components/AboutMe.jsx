@@ -14,6 +14,14 @@ const AboutSection = styled.section`
   padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
+
+  @media(max-width: 620px){
+    width: 500px
+  }
+
+  @media(max-width: 515px){
+    width: 300px
+  }
 `
 export const Header = styled.h1`
   margin: 15px 0px;
@@ -22,13 +30,25 @@ export const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: rgb(82,150,250)
+  color: rgb(82,150,250);
+
+  @media(max-width: 620px){
+    font-size: 28px;
+  }
 `
 const Statement = styled.p`
   font-size: 23px;
   text-align: center;
   margin-bottom: 20px;
-  color: #e8eddf
+  color: #e8eddf;
+
+  @media(max-width: 620px){
+    font-size: 18px
+  }
+
+  @media(max-width: 515px){
+    font-size: 18px
+  }
 `
 const Code = styled.span`
   background: #e8eddf;
@@ -52,12 +72,21 @@ const TechSection = styled.section`
   border-radius: 10px;
   padding: 5px;
   background: #e8eddf;
-  // z-index: 1
 `
 const ToolBelt = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 35px;
+
+  @media(max-width: 620px){
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media(max-width: 515px){
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 15px;
+  }
 `
 const Icon = styled.i`
   font-size: 3.25em;
