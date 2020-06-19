@@ -11,7 +11,6 @@ const ArtContainer = styled.main`
   font-family: 'Ubuntu Condensed', sans-serif;
 `
 const ArtSection = styled.section`
-  width: 600px;
   padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
@@ -44,16 +43,20 @@ const AppreciatedEP = styled.div`
 `
 const EPArt = styled.img`
   width: 400px;
+
+  @media(max-width: 415px){
+    width: 300px;
+  }
 `
 const StoreSection = styled.div`
   display: flex;
-  flex-wrapper: wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 `
 const StoreLnk = styled.a`
-  margin: 0 20px;
+  margin: 10px 20px;
 `
 const StoreLogo = styled.img`
   border-radius: 10px;
@@ -72,9 +75,12 @@ const ListingSection = styled.section`
 const ToolBelt = styled.div`
   display: flex;
   
+  @media(max-width: 770px){
+    flex-direction: column;
+  }
 `
 const CDCover = styled.img`
-  width: 300px
+  width: 300px;
 `
 const DividerArt = styled.hr`
   margin: 15px;

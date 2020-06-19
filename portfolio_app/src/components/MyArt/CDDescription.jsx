@@ -5,10 +5,18 @@ const Description = styled.div`
   margin-left: 30px;
   display: flex;
   align-items: center;
+
+  @media(max-width: 415px){
+    justify-content: center;
+  }
 `
 const Listing = styled.li`
   padding: 10px 0px;
   color: #e8eddf;
+  
+  @media(max-width: 415px){
+    text-align: center;
+  }
 
 `
 export default function CDDescription() {
