@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import Navigation from './Navigation'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const DiagonalBlock = styled.div`
+const HeaderContainer = styled.div`
   margin-bottom: 40px;
+`
+const Lnk = styled(Link)`
+  text-decoration: none;
 `
 const Header = styled.div`
   display: flex;
-  // justify-content: flex-end;
   justify-content: center;
   padding: 10px 0px;
-  // font-family: 'Permanent Marker', cursive;
-  // font-family: 'Montserrat', sans-serif;
   line-height: 1.3;
   color: #e8eddf;
   background-color: #111111;
@@ -58,17 +59,18 @@ export default function Home({ role }) {
 
   return (
     <>
-      <DiagonalBlock>
-        <Header style={margin ? { marginBottom: "91px" } : { marginBottom: "0" }}>
-          <Title>
-            <Const>let</Const>
-            <Name>Stefon Simmons</Name>
-            <Position><Span>= {`{ `}</Span>'{role}'<Span> :</Span></Position>
-          </Title>
-        </Header>
+      <HeaderContainer>
+        <Lnk to='/'>
+          <Header style={margin ? { marginBottom: "91px" } : { marginBottom: "0" }}>
+            <Title>
+              <Const>let</Const>
+              <Name>Stefon Simmons</Name>
+              <Position><Span>= {`{ `}</Span>'{role}'<Span> :</Span></Position>
+            </Title>
+          </Header>
+        </Lnk>
         <Navigation />
-
-      </DiagonalBlock>
+      </HeaderContainer>
     </>
   )
 }
