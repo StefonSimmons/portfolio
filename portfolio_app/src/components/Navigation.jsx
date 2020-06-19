@@ -13,11 +13,11 @@ const Nav = styled.nav`
 const List = styled.ul`
   display: flex;
   flex-direction: row;
-  align-items: space-around
+  align-items: space-around;
 `
 const Hamburger = styled.span`
   display: none;
-  color: #111111;
+  color: rgb(232, 237, 220);
 
   @media(max-width: 700px){
     display: inline-block;
@@ -26,7 +26,6 @@ const Hamburger = styled.span`
 `
 const DropDownMenu = styled.div`
   display: flex;
-
   @media(max-width: 700px){
     display: inline-block;
     text-align: center;
@@ -41,6 +40,7 @@ const NavLink = styled(Link)`
   @media(max-width: 700px){
     display: none;
     border-right: none;
+    transition: display 400ms
   }
 `
 const NavItem = styled.li`
@@ -101,18 +101,18 @@ export default function Navigation() {
                 menu ?
                   <i className="material-icons w3-xxxlarge">close</i>
                   :
-                  <i class="material-icons w3-xxxlarge">menu</i>
+                  <i className="material-icons w3-xxxlarge">menu</i>
               }
             </Hamburger>
-            <NavLink to={`/about`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>About</NavItem></NavLink>
+            <NavLink to={`/about`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>About</NavItem></NavLink>
 
-            <NavLink to={`/contact`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>Contact Me</NavItem></NavLink>
+            <NavLink to={`/contact`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Contact Me</NavItem></NavLink>
 
-            <NavLink to={`/webapps`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>My Web Apps</NavItem></NavLink>
+            <NavLink to={`/webapps`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Web Apps</NavItem></NavLink>
 
-            <NavLink to={`/resume`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>Resume</NavItem></NavLink>
+            <NavLink to={`/resume`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Resume</NavItem></NavLink>
 
-            <NavLink to={`/myart`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>My Art</NavItem></NavLink>
+            <NavLink to={`/myart`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Art</NavItem></NavLink>
           </DropDownMenu>
         </List>
       </Nav>
