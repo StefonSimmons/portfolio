@@ -16,7 +16,7 @@ const ArtSection = styled.section`
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
-export const Header = styled.h1`
+const Header = styled.h1`
   margin: 15px 0px;
   text-align: center;
   font-size: 32px;
@@ -76,7 +76,7 @@ const ToolBelt = styled.div`
 const CDCover = styled.img`
   width: 300px
 `
-const Divider = styled.hr`
+const DividerArt = styled.hr`
   margin: 15px;
   width: 8%
 `
@@ -124,7 +124,7 @@ export default function MyArt({ changeRole }) {
           </AppreciatedEP>
 
         </ArtSection>
-        <Divider />
+        <DividerArt />
         <ListingSection>
           <HeaderTwo>Appreciated Track Listing</HeaderTwo>
           <ToolBelt>
