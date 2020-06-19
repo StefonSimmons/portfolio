@@ -27,7 +27,7 @@ const Hamburger = styled.span`
 const DropDownMenu = styled.div`
   display:flex;
   align-items: center;
-
+  
   @media(max-width: 700px){
     display: inline-block;
     text-align: center;
@@ -98,15 +98,15 @@ export default function Navigation() {
             <Hamburger onClick={toggleHamburgerMenu}>
               <i className="material-icons w3-xxxlarge">menu</i>
             </Hamburger>
-            <NavLink to={`/about`} style={menu ? { display: 'block' } : { display: 'none' }}><NavItem>About</NavItem></NavLink>
+            <NavLink to={`/about`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>About</NavItem></NavLink>
 
-            <NavLink to={`/contact`} style={menu ? { display: 'block' } : { display: 'none' }}><NavItem>Contact Me</NavItem></NavLink>
+            <NavLink to={`/contact`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>Contact Me</NavItem></NavLink>
 
-            <NavLink to={`/webapps`} style={menu ? { display: 'block' } : { display: 'none' }}><NavItem>My Web Apps</NavItem></NavLink>
+            <NavLink to={`/webapps`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>My Web Apps</NavItem></NavLink>
 
-            <NavLink to={`/resume`} style={menu ? { display: 'block' } : { display: 'none' }}><NavItem>Resume</NavItem></NavLink>
+            <NavLink to={`/resume`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>Resume</NavItem></NavLink>
 
-            <NavLink to={`/myart`} style={menu ? { display: 'block' } : { display: 'none' }}><NavItem>My Art</NavItem></NavLink>
+            <NavLink to={`/myart`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>My Art</NavItem></NavLink>
           </DropDownMenu>
         </List>
       </Nav>
