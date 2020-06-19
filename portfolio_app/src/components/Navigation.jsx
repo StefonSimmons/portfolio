@@ -15,7 +15,6 @@ const NavItem = styled.li`
 
   &:hover{
     background: rgb(232, 237, 220);
-    // rgb(82,150,250);
     color: #111111;
   }
 `
