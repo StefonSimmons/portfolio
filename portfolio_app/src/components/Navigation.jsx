@@ -87,7 +87,9 @@ export default function Navigation() {
 
 
   function toggleHamburgerMenu() {
-    toggleMenu(!menu)
+    if (window.innerWidth < 701) {
+      toggleMenu(!menu)
+    }
   }
 
   return (
