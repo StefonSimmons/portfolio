@@ -47,51 +47,53 @@ export default function Navigation() {
     })
   }, [])
 
-  const linkLookup = [
-    { contact: "Contact Me" },
-    { webapps: "Web Apps" },
-    { resume: "Resume" },
-    { about: "About Me" },
-    { myart: "My Art" }
-  ]
+  // DYNAMIC NAVIGATION FUNCTIONALITY
+  // const linkLookup = [
+  //   { contact: "Contact Me" },
+  //   { webapps: "Web Apps" },
+  //   { resume: "Resume" },
+  //   { about: "About Me" },
+  //   { myart: "My Art" }
+  // ]
 
-  const [tempLinkStore, setTempLink] = useState(window.location.pathname)
+  // const [tempLinkStore, setTempLink] = useState(window.location.pathname)
 
-  const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
-  const [secondLink, updateLinkTwo] = useState({ webapps: "Web Apps" })
-  const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
-  const [fourthLink, updateLinkFour] = useState({ myart: "My Art" })
+  // const [firstLink, updateLinkOne] = useState({ contact: "Contact Me" })
+  // const [secondLink, updateLinkTwo] = useState({ webapps: "Web Apps" })
+  // const [thirdLink, updateLinkThree] = useState({ resume: "Resume" })
+  // const [fourthLink, updateLinkFour] = useState({ myart: "My Art" })
 
-  useEffect(() => {
-    setTempLink(window.location.pathname)
-  }, [handleNewLink])
+  // useEffect(() => {
+  //   setTempLink(window.location.pathname)
+  // }, [handleNewLink])
 
-  function handleNewLink(updateLink) {
+  // function handleNewLink(updateLink) {
 
-    setTempLink(window.location.pathname)
+  //   setTempLink(window.location.pathname)
 
-    let pathKey = tempLinkStore.split('').slice(1).join('')
-    const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
-    const linkName = Object.values(linkData[0])
+  //   let pathKey = tempLinkStore.split('').slice(1).join('')
+  //   const linkData = linkLookup.filter(l => Object.keys(l)[0] === pathKey)
+  //   const linkName = Object.values(linkData[0])
 
-    if (updateLink === "updateLinkOne") {
-      updateLinkOne({ [pathKey]: linkName })
-    }
-    else if (updateLink === "updateLinkTwo") {
-      updateLinkTwo({ [pathKey]: linkName })
-    }
-    else if (updateLink === "updateLinkThree") {
-      updateLinkThree({ [pathKey]: linkName })
-    }
-    else {
-      updateLinkFour({ [pathKey]: linkName })
-    }
-  }
+  //   if (updateLink === "updateLinkOne") {
+  //     updateLinkOne({ [pathKey]: linkName })
+  //   }
+  //   else if (updateLink === "updateLinkTwo") {
+  //     updateLinkTwo({ [pathKey]: linkName })
+  //   }
+  //   else if (updateLink === "updateLinkThree") {
+  //     updateLinkThree({ [pathKey]: linkName })
+  //   }
+  //   else {
+  //     updateLinkFour({ [pathKey]: linkName })
+  //   }
+  // }
+  // DYNAMIC NAVIGATION FUNCTIONALITY
 
   return (
     <>
 
-      <Nav style={fixed ? { position: "fixed" } : { position: "" }}>
+      {/* <Nav style={fixed ? { position: "fixed" } : { position: "" }}>
         <List>
           <NavItem><NavLink to={`/${Object.keys(firstLink)}`} onClick={(e) => handleNewLink("updateLinkOne")}>{Object.values(firstLink)}</NavLink></NavItem>
 
@@ -101,7 +103,22 @@ export default function Navigation() {
 
           <NavItem><NavLink to={`/${Object.keys(fourthLink)}`} onClick={(e) => handleNewLink("updateLinkFour")}>{Object.values(fourthLink)}</NavLink></NavItem>
         </List>
+      </Nav> */}
+
+      <Nav style={fixed ? { position: "fixed" } : { position: "" }}>
+        <List>
+          <NavItem><NavLink to={`/about`}>About</NavLink></NavItem>
+
+          <NavItem><NavLink to={`/contact`}>Contact Me</NavLink></NavItem>
+
+          <NavItem><NavLink to={`/webapps`}>Web Apps</NavLink></NavItem>
+
+          <NavItem><NavLink to={`/resume`}>Resume</NavLink></NavItem>
+
+          <NavItem><NavLink to={`/myart`}>My Art</NavLink></NavItem>
+        </List>
       </Nav>
+
     </>
   )
 }

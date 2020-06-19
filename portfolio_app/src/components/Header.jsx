@@ -24,7 +24,7 @@ const Name = styled.h1`
   font-weight: 200;
   letter-spacing: 4px;
 `
-const Title = styled.h2`
+const Title = styled.div`
   font-size: 16px;
   letter-spacing: 3.5px;
   line-height: 1.5;
@@ -35,12 +35,12 @@ const Span = styled.span`
   font-size: 16px;
 `
 
-const Position = styled.h3`
+const Position = styled.h2`
   font-size: 16px;
   letter-spacing: 3.5px;
   color: rgb(232,106,40)
 `
-export default function Home({role}) {
+export default function Home({ role }) {
 
 
   const [margin, addMargin] = useState(false)
@@ -66,7 +66,7 @@ export default function Home({role}) {
             <Position><Span>= {`{ `}</Span>'{role}'<Span> :</Span></Position>
           </Title>
         </Header>
-        <Navigation/>
+        <Navigation />
 
       </DiagonalBlock>
     </>

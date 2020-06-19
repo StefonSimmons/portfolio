@@ -83,13 +83,13 @@ const Divider = styled.hr`
 export default function MyArt({ changeRole }) {
 
   useEffect(() => {
-    if (window.location.pathname === '/myart') {
+    if (window.location.pathname === '/myart'){
       changeRole('Singer')
     } 
     return () => {
       changeRole('Software Engineer')
     }
-  }, [])
+  })
 
 
 

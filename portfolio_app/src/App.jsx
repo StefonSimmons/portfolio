@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
@@ -10,8 +10,10 @@ import Footer from './components/Footer'
 import MyArt from './components/MyArt/MyArt';
 
 function App() {
+  const [role, changeRole] = useState('Software Engineer')
 
-  const [ role, changeRole ] = useState('Software Engineer')
+
+
 
 
   return (
@@ -42,7 +44,7 @@ function App() {
 
         <Route path='/myart' exact>
           <MyArt
-            changeRole= {changeRole}
+            changeRole={changeRole}
           />
         </Route>
       </Switch>

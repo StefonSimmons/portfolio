@@ -40,7 +40,7 @@ export default function Experience() {
         </FlexBlock>
         <List>
           {phrasesArray.map((phrase,id) =>
-            <Phrase key={id}>{phrase}</Phrase>
+            <Phrase key={`${id}`}>{phrase}</Phrase>
           )}
         </List>
       </Block>
