@@ -19,8 +19,18 @@ const Page = styled.main`
   background-color: #e8eddf;
   border-radius: 15px;
   font-family: 'Ubuntu Condensed', sans-serif;
+  
   &:hover{
     background: rgba(232, 237, 223, .6);
+  }
+  @media(max-width: 700px){
+    margin: 25px 40px;
+    padding: 28px; 
+  }
+
+  @media(max-width: 550px){
+    margin: 25px 5px;
+    padding: 10px; 
   }
 `
 const Download = styled.a`
@@ -40,13 +50,21 @@ const Arrow = styled.span`
 const Embed = styled.span`
   color: rgb(82,150,250);
   font-size: 72px;
-  // font-family: 'Ubuntu Condensed', sans-serif;
-  // font-family: 'Montserrat', sans-serif;
   font-family: 'Permanent Marker', cursive;
   margin-left: 48px;
+
+  @media(max-width: 550px){
+    margin-left: 24px;
+    font-size: 48px;
+  }
+
+  @media(max-width: 350px){
+    margin-left: 24px;
+    font-size: 32px;
+  }
 `
 const EmbedBttm = styled(Embed)`
-  margin-bottom: 50px
+  margin-bottom: 50px;
 `
 const ResumeHeader = styled.header`
   letter-spacing: 1px;
@@ -72,9 +90,9 @@ const Section = styled.div`
   margin-top: 25px;
 `
 export const DetailsHeader = styled.h4`
-font-weight: 700;
-font-size: 16px;
-text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 
 `
 const SectionHeader = styled.h3`

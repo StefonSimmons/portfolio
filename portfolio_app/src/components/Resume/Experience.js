@@ -11,11 +11,19 @@ export const FlexBlock = styled.div`
 `
 const Business = styled.h2`
   text-transform: uppercase;
-  padding-right: 5px
+  padding-right: 5px;
+
+  @media(max-width: 550px){
+    font-size: 12px
+  }
 `
 export const Dates = styled.h2`
   text-transform: uppercase;
-  padding-left: 5px
+  padding-left: 5px;
+  
+  @media(max-width: 550px){
+    font-size: 12px
+  }
 `
 export const List = styled.ul`
   margin-left: 18px;

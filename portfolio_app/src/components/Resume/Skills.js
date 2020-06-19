@@ -5,7 +5,12 @@ import styled from 'styled-components'
 const SkillsTable = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
-  margin-top: 15px
+  margin-top: 15px;
+
+  @media(max-width: 550px){
+    grid-template-columns: repeat(2, auto);
+
+  }
 `
 const Skill = styled.h4`
   padding: 5px;

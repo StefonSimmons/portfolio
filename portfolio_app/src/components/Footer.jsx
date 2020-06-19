@@ -3,12 +3,11 @@ import styled from 'styled-components'
 
 const Foot = styled.footer`
   position: fixed;
-  bottom: 0px;
+  bottom: -1px;
   width: 100%;
   text-align: center;
 `
 const Bottom = styled.div`
-// background-color: rgb(0,139,201);
 background-color: rgb(0,39,101);
 padding: 10px 0; 
 `
