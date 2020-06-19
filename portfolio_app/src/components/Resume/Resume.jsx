@@ -21,7 +21,6 @@ const Page = styled.main`
   font-family: 'Ubuntu Condensed', sans-serif;
   &:hover{
     background: rgba(232, 237, 223, .6);
-
   }
 `
 const Download = styled.a`
@@ -71,7 +70,6 @@ const Divider = styled.hr`
 `
 const Section = styled.div`
   margin-top: 25px;
-
 `
 export const DetailsHeader = styled.h4`
 font-weight: 700;
@@ -89,15 +87,6 @@ const Src = styled.span`
 const Span = styled.span`
   color: #e8eddf;
 `
-
-// const PDFContainer = styled.div`
-//   display: flex;
-//   justify-content: center
-// `
-// const PDF = styled.embed`
-//   height: 50vh;
-//   width: 50vw
-// `
 
 export default function Resume() {
 
@@ -117,9 +106,8 @@ export default function Resume() {
           onMouseLeave={() => updateDisplay(false)}
         >
           {display ? 
-          <Download href="https://www.docdroid.net/9JxSF8U/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
+          <Download href="https://www.docdroid.net/RmHsnh7/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
               Download my Resume <Arrow>⬇</Arrow>
-              {/* <img src="https://imgur.com/qbXZwZz.png" alt="download-icon"></img>   */}
           </Download>
             : ''
           }
@@ -177,12 +165,5 @@ export default function Resume() {
       </Border>
     </>
 
-
-
-    // <Border >
-    //   <PDFContainer>
-    // {/* <PDF src="https://docdro.id/KUStH4b" type="application/pdf"/> */}
-    //   </PDFContainer>
-    // </Border>
   )
 }

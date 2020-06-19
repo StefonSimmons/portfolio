@@ -13,7 +13,7 @@ const experience = [{
   title: "software engineering fellow",
   business: "GENERAL ASSEMBLY",
   startDate: "March 2020",
-  endDate: "Present",
+  endDate: "June 2020",
   phrases: softwareEngPhrases
 }, {
   title: "registrar",
