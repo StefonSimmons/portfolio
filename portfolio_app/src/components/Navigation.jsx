@@ -13,7 +13,7 @@ const Nav = styled.nav`
 const List = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: space-around
 `
 const Hamburger = styled.span`
   display: none;
@@ -25,9 +25,8 @@ const Hamburger = styled.span`
   }
 `
 const DropDownMenu = styled.div`
-  display:flex;
-  align-items: center;
-  
+  display: flex;
+
   @media(max-width: 700px){
     display: inline-block;
     text-align: center;
@@ -39,10 +38,6 @@ const NavLink = styled(Link)`
   font-size: 21px;
   letter-spacing: 3.5px;
 
-  @media(max-width: 750px){
-    border-right: 2px #111111 solid;
-    border-radius: 10px
-  }
   @media(max-width: 700px){
     display: none;
     border-right: none;
@@ -50,7 +45,7 @@ const NavLink = styled(Link)`
 `
 const NavItem = styled.li`
   padding: 10px;
-  margin: 0 5px;
+  margin: 0 30px;
   color: #e8eddf;
 
   &:hover{
@@ -58,6 +53,12 @@ const NavItem = styled.li`
     color: #111111;
   }
 
+  @media(max-width: 940px){
+    margin: 0 15px;
+  }
+  @media(max-width: 785px){
+    margin: 0 5px;
+  }
   @media(max-width: 750px){
     &:hover{
       background-color: rgb(0,39,101);
@@ -96,7 +97,12 @@ export default function Navigation() {
         <List>
           <DropDownMenu>
             <Hamburger onClick={toggleHamburgerMenu}>
-              <i className="material-icons w3-xxxlarge">menu</i>
+              {
+                menu ?
+                  <i className="material-icons w3-xxxlarge">close</i>
+                  :
+                  <i class="material-icons w3-xxxlarge">menu</i>
+              }
             </Hamburger>
             <NavLink to={`/about`} style={menu ? { display: 'block'} : { display: '' }}><NavItem>About</NavItem></NavLink>
 
