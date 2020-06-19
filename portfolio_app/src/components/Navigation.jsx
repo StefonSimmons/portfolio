@@ -7,27 +7,27 @@ const List = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start;
 `
 const NavItem = styled.li`
   padding: 10px;
-  margin: 5px;
-  // transform: skewY(11deg); 
-  // font-family: 'Permanent Marker', cursive;
-  // font-family: 'Montserrat', sans-serif;
+  margin: 0 5px;
+  color: #e8eddf;
+
+  &:hover{
+    background: rgb(232, 237, 220);
+    // rgb(82,150,250);
+    color: #111111;
+  }
 `
 const Nav = styled.nav`
-  // background-color: rgb(0,139,201);
   background-color: rgb(0,39,101);
   top: 0;
   width: 100%;
-
 `
 const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 21px;
   letter-spacing: 3.5px;
-  color: #e8eddf;
 `
 
 
@@ -107,15 +107,15 @@ export default function Navigation() {
 
       <Nav style={fixed ? { position: "fixed" } : { position: "" }}>
         <List>
-          <NavItem><NavLink to={`/about`}>About</NavLink></NavItem>
+          <NavLink to={`/about`}><NavItem>About</NavItem></NavLink>
 
-          <NavItem><NavLink to={`/contact`}>Contact Me</NavLink></NavItem>
+          <NavLink to={`/contact`}><NavItem>Contact Me</NavItem></NavLink>
 
-          <NavItem><NavLink to={`/webapps`}>Web Apps</NavLink></NavItem>
+          <NavLink to={`/webapps`}><NavItem>My Web Apps</NavItem></NavLink>
 
-          <NavItem><NavLink to={`/resume`}>Resume</NavLink></NavItem>
+          <NavLink to={`/resume`}><NavItem>Resume</NavItem></NavLink>
 
-          <NavItem><NavLink to={`/myart`}>My Art</NavLink></NavItem>
+          <NavLink to={`/myart`}><NavItem>My Art</NavItem></NavLink>
         </List>
       </Nav>
 

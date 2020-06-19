@@ -1,5 +1,13 @@
 [
   {
+    "name": "Gig-A-Bit",
+    "description": "'Gig-A-Bit'. The talent-board app for artistic individuals and small groups. Register and post your art, project ideas and/or portfolio to be seen by talent-seekers online.",
+    "image": "https://imgur.com/A3F9TWu.png",
+    "tech": ["React.js", "Ruby on Rails", "Axios", "PostgreSQL", "JSON Web Token", "bcrypt"],
+    "deployedURL": "https://gig-a-bit.surge.sh/",
+    "ghRepoURL": "https://github.com/StefonSimmons/gig-a-bit"
+  },
+  {
     "name": "Instacart-Costco",
     "description": "'Instacart-Costco'. A re-creation of Instacart's website. Proposes a layout that enhances the navigation, personalization, flow and accessibility of the site.",
     "image": "https://media.giphy.com/media/MF1XrtS1F0YrC21R3K/giphy.gif",
@@ -14,15 +22,6 @@
     "tech": ["React.js", "Axios","Snapshot Testing","RESTful API","Node.js", "Styled-Components"],
     "deployedURL": "https://worldtourapp.netlify.app/",
     "ghRepoURL": "https://github.com/StefonSimmons/world-tour"
-  },
-  {
-    "name": "Cues",
-    "description": "'Cues' allows you to get quick data regarding film, television, and theater production activity in New York City. Discover when NYC properties are utilized by the dramatic arts industry.",
-    "image": "https://imgur.com/o6hDZmu.png",
-    "tech": ["HTML", "CSS","Javascript","Axios","Node.js", "Socrata Open Data API"],
-    "deployedURL": "https://stefonsimmons.github.io/Cues/",
-    "ghRepoURL": "https://github.com/StefonSimmons/Cues"
-
   }
 
 ]

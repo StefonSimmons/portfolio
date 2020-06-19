@@ -5,7 +5,7 @@ import Experience from './Experience'
 import Education from './Education'
 import { Phrase, List, Block } from './Experience'
 import { Header } from '../AboutMe'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 const Border = styled.div`
   display: flex;
@@ -24,21 +24,6 @@ const Page = styled.main`
 
   }
 `
-
-const DwnldShake = keyframes`
-  0% { transform: translate(1px, 1px) rotate(0deg)}
-  10% { transform: translate(-1px, -2px) rotate(-1deg)}
-  20% { transform: translate(-3px, 0px) rotate(1deg)}
-  30% { transform: translate(3px, 2px) rotate(0deg)}
-  40% { transform: translate(1px, -1px) rotate(1deg)}
-  50% { transform: translate(-1px, 2px) rotate(-1deg)}
-  60% { transform: translate(-3px, 1px) rotate(0deg)}
-  70% { transform: translate(3px, 1px) rotate(-1deg)}
-  80% { transform: translate(-1px, -1px) rotate(1deg)}
-  90% { transform: translate(1px, 2px) rotate(0deg)}
-  100% { transform: translate(1px, -2px) rotate(-1deg)}
-`
-
 const Download = styled.a`
   position: static;
   text-decoration: none;
@@ -49,11 +34,6 @@ const Download = styled.a`
   border-radius: 15px;
   padding: 5px 15px;
   font-family: 'Permanent Marker', cursive;
-
-  &:hover{
-    animation: ${DwnldShake} .5s;
-    animation-iteration-count: 1;
-  }
 `
 const Arrow = styled.span`
   border-bottom: black solid 2px;
@@ -137,7 +117,7 @@ export default function Resume() {
           onMouseLeave={() => updateDisplay(false)}
         >
           {display ? 
-          <Download href="https://www.docdroid.net/KUStH4b/stefon-simmons-resume-2020-pdf" target="_blank" rel="noopener noreferrer">
+          <Download href="https://www.docdroid.net/9JxSF8U/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
               Download my Resume <Arrow>⬇</Arrow>
               {/* <img src="https://imgur.com/qbXZwZz.png" alt="download-icon"></img>   */}
           </Download>
