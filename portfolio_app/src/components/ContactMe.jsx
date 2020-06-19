@@ -7,6 +7,10 @@ const Contact = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;  
+
+  @media(max-width: 375px){
+    margin-bottom: 50px;
+  }
 `
 const Block = styled.div`
   margin: 30px 45px;
@@ -50,6 +54,5 @@ export default function ContactMe() {
       </Contact>
     </>
 
-// https://imgur.com/hL6OLih.png
   )
 }
