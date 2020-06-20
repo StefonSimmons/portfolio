@@ -110,6 +110,7 @@ export default function Resume() {
 
   const [display, updateDisplay] = useState(false)
 
+
   return (
     <>
       <Border >
@@ -123,10 +124,10 @@ export default function Resume() {
           onMouseEnter={() => updateDisplay(true)}
           onMouseLeave={() => updateDisplay(false)}
         >
-          {display ? 
-          <Download href="https://www.docdroid.net/RmHsnh7/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
+          {display ?
+            <Download href="https://www.docdroid.net/RmHsnh7/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
               Download my Resume <Arrow>⬇</Arrow>
-          </Download>
+            </Download>
             : ''
           }
           <ResumeHeader>
