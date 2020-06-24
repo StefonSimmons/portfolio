@@ -125,7 +125,7 @@ export default function Resume() {
           onMouseLeave={() => updateDisplay(false)}
         >
           {display ?
-            <Download href="https://www.docdroid.net/RmHsnh7/stefon-simmons-resume-2020-6182020-pdf" target="_blank" rel="noopener noreferrer">
+            <Download href="https://drive.google.com/file/d/1726ngryg-Ro6nbQ5p3TISu59oPYqsXvy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               Download my Resume <Arrow>⬇</Arrow>
             </Download>
             : ''
