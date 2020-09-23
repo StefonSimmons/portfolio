@@ -1,6 +1,6 @@
 import React from 'react'
 import Jobs from '../../data/experience-data'
-import {DetailsHeader} from './Resume'
+import { DetailsHeader } from './Resume'
 import styled from 'styled-components'
 
 export const Block = styled.div`
@@ -39,22 +39,21 @@ export default function Experience() {
   const experience = Jobs.map((job, idx) => {
     const phrasesArray = job.phrases.split(';')
     return (
-      <>
-      <Block keyid={idx}>
-        <DetailsHeader>{job.title}</DetailsHeader>
-        <FlexBlock>
-          <Business>{job.business}</Business>
+      <React.Fragment key={idx}>
+        <Block >
+          <DetailsHeader>{job.title}</DetailsHeader>
+          <FlexBlock>
+            <Business>{job.business}</Business>
             |
           <Dates>{job.startDate} - {job.endDate}</Dates>
-        </FlexBlock>
-        <List>
-          {phrasesArray.map((phrase,id) =>
-            <Phrase key={`${id}`}>{phrase}</Phrase>
-          )}
-        </List>
-      </Block>
-
-      </>
+          </FlexBlock>
+          <List>
+            {phrasesArray.map((phrase, id) =>
+              <Phrase key={`${id}`}>{phrase}</Phrase>
+            )}
+          </List>
+        </Block>
+      </React.Fragment>
     )
   })
 

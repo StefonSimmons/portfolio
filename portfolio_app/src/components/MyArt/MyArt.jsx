@@ -89,9 +89,9 @@ const DividerArt = styled.hr`
 export default function MyArt({ changeRole }) {
 
   useEffect(() => {
-    if (window.location.pathname === '/myart'){
+    if (window.location.pathname === '/myart') {
       changeRole('Singer')
-    } 
+    }
     return () => {
       changeRole('Software Engineer')
     }
@@ -141,6 +141,7 @@ export default function MyArt({ changeRole }) {
         </ListingSection>
 
       </ArtContainer>
+
     </div>
   )
 }
