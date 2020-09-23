@@ -25,7 +25,7 @@ const experience = [{
   endDate: "June 2020",
   phrases: softwareEngPhrases
 }, {
-  title: "registrar",
+  title: "registrar / FRONTEND DEVELOPER / SQL SCRIPTING SPECIALIST",
   business: "THE NEW YORK CONSERVATORY FOR DRAMATIC ARTS",
   startDate: "November 2013",
   endDate: "March 2020",

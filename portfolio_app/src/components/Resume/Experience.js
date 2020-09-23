@@ -12,7 +12,7 @@ export const FlexBlock = styled.div`
 const Business = styled.h2`
   text-transform: uppercase;
   padding-right: 5px;
-
+  font-size: 14px;
   @media(max-width: 550px){
     font-size: 12px
   }
@@ -20,7 +20,8 @@ const Business = styled.h2`
 export const Dates = styled.h2`
   text-transform: uppercase;
   padding-left: 5px;
-  
+  font-size: 14px;
+
   @media(max-width: 550px){
     font-size: 12px
   }

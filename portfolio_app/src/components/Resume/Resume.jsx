@@ -92,6 +92,7 @@ const Section = styled.div`
 export const DetailsHeader = styled.h4`
   font-weight: 700;
   font-size: 16px;
+  margin-bottom: 5px;
   text-transform: uppercase;
 
 `
@@ -145,9 +146,9 @@ export default function Resume() {
           </Section>
 
           <Section>
-            <DetailsHeader>
+            <SectionHeader>
               Skills & Abilities
-            </DetailsHeader>
+            </SectionHeader>
             <Skills />
           </Section>
 
