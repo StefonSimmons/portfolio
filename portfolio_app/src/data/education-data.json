@@ -1,7 +1,7 @@
 [
   {
     "institution": "General Assembly",
-    "location": "New York, NY",
+    "location": ", New York, NY",
     "major": "Software Engineering",
     "GPA": null,
     "award": "Certificate of Completion",
@@ -9,24 +9,23 @@
   },
   {
     "institution": "Udemy",
-    "location": "Online",
-    "major": "The Ultimate MySQL Bootcamp",
+    "location": null,
+    "major": "JavaScript Algorithms and Data Structures Masterclass",
+    "major2": "The Ultimate MySQL Bootcamp",
+    "major3": "Microsoft SQL from A to Z",    
     "GPA": null,
-    "award": "Certificate of Completion",
-    "conferralDate": "August 2019"
-  },
-  {
-    "institution": "Udemy",
-    "location": "Online",
-    "major": "Microsoft SQL from A to Z",
-    "GPA": null,
-    "award": "Certificate of Completion",
-    "conferralDate": "July 2019"
+    "award": "Anticipated Completion",
+    "award2": "Certificate of Completion",
+    "award3": "Certificate of Completion",
+    "conferralDate": "October 2020",
+    "conferralDate2": "August 2019",
+    "conferralDate3": "July 2019"
+
   },
   {
     "institution": "Norfolk State University",
-    "location": "Norfolk, VA",
-    "major": "Business Management (AACSB Accredited School of Business)",
+    "location": ", Norfolk, VA",
+    "major": "Business Management",
     "GPA": "3.64/4.0 (Magna Cum Laude)",
     "award": "Bachelor of Science",
     "conferralDate": "May 2012"
