@@ -122,8 +122,12 @@ export default function Projects() {
           <Thumbnail src={p.image} alt={p.name} />
         </a>
         <SiteContainer>
-          <Site href={p.deployedURL} target= '_blank' rel="noopener noreferrer">Live</Site>
-          <Site href={p.ghRepoURL} target= '_blank' rel="noopener noreferrer">Github</Site>
+          {p.deployedURL ?
+            <Site href={p.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
+            :
+            null
+          }
+          <Site href={p.ghRepoURL} target='_blank' rel="noopener noreferrer">Github</Site>
         </SiteContainer>
         <Divider />
         <Description>{p.description}</Description>
