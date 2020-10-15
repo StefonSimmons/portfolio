@@ -1,9 +1,9 @@
 [
   {
     "name": "The Poem Club",
-    "description": "A community-driven app for wordsmiths and lovers of poetry. The app is a work in progress and set for MVP by the end of Fall 2020. I'm collaborating with web developer, Lia Kapanadze and UX Designer, Adam Lempel to build this app.",
+    "description": "'Poem Club'. A community-driven app for wordsmiths and lovers of poetry. I am actively collaborating with web developer, Lia Kapanadze and UX Designer, Adam Lempel to build this app.",
     "image": "https://imgur.com/S9FSmnA.png",
-    "tech": ["React.js", "Ruby on Rails", "PostgreSQL", "Draft.js", "JSON Web Token", "bcrypt"],
+    "tech": ["React.js", "Ruby on Rails", "PostgreSQL", "Draft.js", "EmailJS","JSON Web Token"],
     "deployedURL": "https://www.thepoemclub.com/",
     "ghRepoURL": "https://github.com/likunamatata/poetryclub"
   },{
