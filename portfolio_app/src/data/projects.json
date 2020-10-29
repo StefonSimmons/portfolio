@@ -1,23 +1,63 @@
 [
   {
+    "name": "Ashlea A. Morgan (Website)",
+    "description": "Ashlea is a Neuroscientist, Ph.D Candidate, and Writer. This website establishes her professional brand in these areas. The site is responsive to mobile, tablet, and desktop devices.",
+    "image": "https://imgur.com/XneYr8b.png",
+    "tech": [
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "Nodemailer",
+      "animation keyframes"
+    ],
+    "deployedURL": "https://www.ashleaamorgan.com/",
+    "ghRepoURL": "https://github.com/StefonSimmons/mango-main"
+  },
+  {
     "name": "The Poem Club",
     "description": "'Poem Club'. A community-driven app for wordsmiths and lovers of poetry. I am actively collaborating with web developer, Lia Kapanadze and UX Designer, Adam Lempel to build this app.",
     "image": "https://imgur.com/S9FSmnA.png",
-    "tech": ["React.js", "Ruby on Rails", "PostgreSQL", "Draft.js", "EmailJS","JSON Web Token"],
+    "tech": [
+      "React.js",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Draft.js",
+      "EmailJS",
+      "JSON Web Token"
+    ],
     "deployedURL": "https://www.thepoemclub.com/",
     "ghRepoURL": "https://github.com/likunamatata/poetryclub"
-  },{
+  },
+  {
     "name": "Gig-A-Bit",
     "description": "'Gig-A-Bit'. The talent-board app for artistic individuals and small groups. Register and post your art, project ideas and/or portfolio to be seen by talent-seekers online.",
     "image": "https://imgur.com/A3F9TWu.png",
-    "tech": ["React.js", "Ruby on Rails", "Axios", "PostgreSQL", "JSON Web Token", "bcrypt"],
+    "tech": [
+      "React.js",
+      "Ruby on Rails",
+      "Axios",
+      "PostgreSQL",
+      "JSON Web Token",
+      "bcrypt"
+    ],
     "deployedURL": "https://gig-a-bit.surge.sh/",
     "ghRepoURL": "https://github.com/StefonSimmons/gig-a-bit"
-  },{
+  },
+  {
     "name": "Instacart-Costco",
     "description": "'Instacart-Costco'. A re-creation of Instacart's website. Proposes a layout that enhances the navigation, personalization, flow and accessibility of the site.",
     "image": "https://media.giphy.com/media/MF1XrtS1F0YrC21R3K/giphy.gif",
-    "tech": ["React.js", "Axios", "Node.js", "Express.js", "MongoDB","mongoosejs", "morgan", "JSON Web Token", "bcrypt"],
+    "tech": [
+      "React.js",
+      "Axios",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "mongoosejs",
+      "morgan",
+      "JSON Web Token",
+      "bcrypt"
+    ],
     "deployedURL": "http://instacart-costco.surge.sh/",
     "ghRepoURL": "https://github.com/StefonSimmons/instacart-costco"
   },
@@ -25,9 +65,15 @@
     "name": "World Tour",
     "description": "'World Tour' allows users to take a satellite journey to both familiar and foreign lands of Earth. You can randomly teleport or get specific in your search for regional data.",
     "image": "https://imgur.com/51PaEZf.png",
-    "tech": ["React.js", "Axios","Snapshot Testing","RESTful API","Node.js", "Styled-Components"],
+    "tech": [
+      "React.js",
+      "Axios",
+      "Snapshot Testing",
+      "RESTful API",
+      "Node.js",
+      "Styled-Components"
+    ],
     "deployedURL": "https://worldtourapp.netlify.app/",
     "ghRepoURL": "https://github.com/StefonSimmons/world-tour"
   }
-
 ]

@@ -134,8 +134,8 @@ export default function Projects() {
         <Divider />
         <HeaderTools>Tech</HeaderTools>
         <List>
-          {p.tech.map(tech =>
-            <Tech>{tech}</Tech>
+          {p.tech.map((tech,idx) =>
+            <Tech key={idx}>{tech}</Tech>
           )}
         </List>
       </Prj>
