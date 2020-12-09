@@ -55,9 +55,9 @@ const PaintDescription = styled.p`
 `
 
 export default function Painting() {
-  const paintings = paintingData.map(painting => {
+  const paintings = paintingData.map((painting,idx)=> {
     return (
-      <PaintContainer>
+      <PaintContainer key={idx}>
         <Image src={painting.image} alt={painting.name} />
         <Details>
           <PaintName>{painting.name}</PaintName>
