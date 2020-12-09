@@ -9,20 +9,36 @@ const Gallery = styled.div`
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
+  
+  @media(max-width: 1100px){
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 const PaintContainer = styled.div`
   display: flex;
+
+  @media(max-width: 587px){
+    flex-direction: column;
+  }
   
 `
 const PaintName = styled.h3`
   font-size: 28px;
   color: #e8eddf;
   text-transform: uppercase;
+
+  @media(max-width: 587px){
+    margin: 15px;
+  }
 `
 const Image = styled.img`
   height: 400px;
   margin: 0 15px;
+
+  @media(max-width: 470px){
+    height: 320px;
+  }
 `
 const Details = styled.section`
 
@@ -32,6 +48,10 @@ const PaintDescription = styled.p`
   font-size: 24px;
   color: #e8eddf;
   line-height: 1.5;
+
+  @media(max-width: 587px){
+    margin: 15px;
+  }
 `
 
 export default function Painting() {
