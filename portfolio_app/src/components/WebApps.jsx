@@ -18,11 +18,11 @@ const Prj = styled.div`
   width: 450px;
   padding: 15px 35px;
   margin: 0px 35px 50px 35px;
-  border-radius: 10px;
+  // border-radius: 10px;
   text-align: center;
   letter-spacing: 3px;
   font-family: 'Ubuntu Condensed', sans-serif;
-  box-shadow: 0px 0px 15px rgb(250,150,0);
+  // box-shadow: 0px 0px 15px rgb(250,150,0);
   
   @media(max-width: 455px){
     width: 319px;
@@ -34,6 +34,7 @@ const PrjName = styled.h1`
 `
 const Thumbnail = styled.img`
   width: 350px;
+  height: 250px;
   margin: 15px 0;
 
   @media(max-width: 455px){

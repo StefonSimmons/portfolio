@@ -1,5 +1,19 @@
 [
   {
+    "name": "Room",
+    "description": "A purely frontend responsive CSS Grid-based landing page w/ a Bootstrap carousel. My solution to an intermediate level frontendmentor.io challenge.",
+    "image": "https://imgur.com/LnPyKBw.png",
+    "tech": [
+      "Hugo",
+      "Bootstrap",
+      "Sass",
+      "Javascript",
+      "Golang"
+    ],
+    "deployedURL": "https://frontend-room.vercel.app/",
+    "ghRepoURL": "https://github.com/StefonSimmons/frontend_homepage_room"
+  },
+  {
     "name": "Ashlea A. Morgan (Website)",
     "description": "Ashlea is a Neuroscientist, Ph.D Candidate, and Writer. This website establishes her professional brand in these areas. The site is responsive to mobile, tablet, and desktop devices.",
     "image": "https://imgur.com/XneYr8b.png",
