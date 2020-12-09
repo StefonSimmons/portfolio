@@ -67,6 +67,15 @@ const Linked = styled(Link)`
   padding: 3px;
   border: solid grey .5px
 `
+const ArtLink = styled(Link)`
+  background: #e8eddf;
+  color: rgb(200,100,0);
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 5px;
+  padding: 3px;
+  border: solid grey .5px
+`
 const TechSection = styled.section`
   margin: 1em 0 8em 0;
   border-radius: 10px;
@@ -113,7 +122,7 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an artist and organizational skills as an administrator are reasons why I thrive within <br></br><Code>software development</Code>. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, creative and ambitious. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
+            Welcome to my home online! <br></br><br></br>I’m a self-motivated artist and administrator. My creativity as an <ArtLink to='/myart'>artist</ArtLink> and organizational skills as an administrator are reasons why I thrive within <br></br><Link to='/webapps'><Code>software development</Code></Link>. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, creative and ambitious. I have an adaptive mindset for new processes and technology.<br></br><br></br>So, feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
           </Statement>
         </AboutSection>
         <Divider />
