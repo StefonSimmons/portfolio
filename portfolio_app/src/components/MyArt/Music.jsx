@@ -9,7 +9,7 @@ const ArtSection = styled.section`
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
-const HeaderTwo = styled.h2`
+export const HeaderTwo = styled.h2`
   margin: 15px 0px;
   text-align: center;
   font-size: 24px;

@@ -19,7 +19,7 @@ const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: rgb(82,150,250)
+  color: ${({ activeTab }) => activeTab ? '#e8eddf' : 'rgb(82,150,250)'}
 `
 const Tabs = styled.div`
   display: flex;
@@ -28,8 +28,7 @@ const Tabs = styled.div`
 `
 const Tab = styled.div`
   width: 50%;
-  background-color: #e8eddf;
-  border-left: ${({ barLeft }) => barLeft ? 'solid rgb(82,150,250) 2px' : null};
+  background-color: ${({ activeTab }) => activeTab ? 'grey' : '#e8eddf'};
   cursor: pointer;
 
   &:active{
@@ -47,7 +46,7 @@ export default function MyArt({ changeRole }) {
 
   useEffect(() => {
     if (window.location.pathname === '/myart') {
-      changeRole('Singer')
+      changeRole('Artist')
     }
     return () => {
       changeRole('Software Engineer')
@@ -59,7 +58,7 @@ export default function MyArt({ changeRole }) {
       music: false,
       paint: false
     })
-    updateTabs( prevTabs => ({
+    updateTabs(prevTabs => ({
       ...prevTabs,
       [tabName]: !prevTabs[tabName]
     }))
@@ -70,11 +69,15 @@ export default function MyArt({ changeRole }) {
       <ArtContainer>
         <Header>My Art</Header>
         <Tabs>
-          <Tab onClick={()=> handleClick('music')}>
-            <Header>Music</Header>
+          <Tab activeTab={tabs.music} onClick={() => handleClick('music')}>
+            <Header activeTab={tabs.music}>Music</Header>
           </Tab>
-          <Tab barLeft={true} onClick={()=> handleClick('paint')}>
-            <Header>Painting</Header>
+          <Tab activeTab={tabs.paint} onClick={() => {
+            handleClick('paint')
+            changeRole('Painter')
+          }
+          }>
+            <Header activeTab={tabs.paint}>Painting</Header>
           </Tab>
         </Tabs>
         {tabs.music && <Music />}
