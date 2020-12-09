@@ -72,11 +72,7 @@ export default function MyArt({ changeRole }) {
           <Tab activeTab={tabs.music} onClick={() => handleClick('music')}>
             <Header activeTab={tabs.music}>Music</Header>
           </Tab>
-          <Tab activeTab={tabs.paint} onClick={() => {
-            handleClick('paint')
-            changeRole('Painter')
-          }
-          }>
+          <Tab activeTab={tabs.paint} onClick={() => handleClick('paint')}>
             <Header activeTab={tabs.paint}>Painting</Header>
           </Tab>
         </Tabs>

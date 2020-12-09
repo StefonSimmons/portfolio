@@ -3,7 +3,7 @@
   // the array comes from a paragraph parsed by a period '.'
 
 const softwareEngTAPhrases =
-  "Analyze and debug code produced by a team of up to 30 web developers in an online remote learning environment; Foster a results-driven community for web development that encourages well-documented and efficient production code; Teach web developers the basic implementation of HTML, CSS, JavaScript, React, Ruby on Rails, MongoDB and SQL"
+  "Analyze and debug code produced by a team of up to 30 web developers in an online remote learning environment; Teach data structures, algorithms, HTML, CSS, JavaScript, React, Ruby on Rails, MongoDB and SQL to web developers; Foster a results-driven community for web development that encourages well-documented and efficient production code"
 
 const softwareEngPhrases =
   "Successfully designed, developed, and deployed 4 responsive web applications within strict one-week due dates; Dedicated over 800 hours in 3 months towards developing my skills in planning and deploying web applications; Leveraged fluent knowledge of HTML, CSS, JavaScript, React, Ruby, MongoDB and API calls in order to build well-documented professional and dynamic full-stack web applications"

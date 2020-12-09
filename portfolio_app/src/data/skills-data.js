@@ -3,7 +3,7 @@
 export const skills = [
   "React.js",
   "Express.js",
-  "Styled Components",
+  "Hugo",
   "JavaScript",
   "Node.js",
   "Jest Testing",
