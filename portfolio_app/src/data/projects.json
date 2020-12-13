@@ -1,5 +1,19 @@
 [
   {
+    "name": "Will-Do App",
+    "description": "Write down what you want to do and then do it with this user-friendly feature-rich app. Built with full CRUD to facilitate your editorial desires and hand-made draggable tasks for prioritizing your future.",
+    "image": "https://media.giphy.com/media/9MTkmttl7YxIXZZZ9P/giphy.gif",
+    "tech": [
+      "React.js",
+      "Airtable",
+      "Express.js",
+      "BCrypt",
+      "JSON Web Token",
+      "Axios"
+    ],
+    "deployedURL": "https://will-do.netlify.app/",
+    "ghRepoURL": "https://github.com/StefonSimmons/todo-app"
+  },{
     "name": "Room",
     "description": "A purely frontend responsive CSS Grid-based landing page w/ a Bootstrap carousel. My solution to an intermediate level frontendmentor.io challenge.",
     "image": "https://imgur.com/LnPyKBw.png",

@@ -34,10 +34,7 @@ const Tab = styled.div`
   width: 50%;
   background-color: ${({ activeTab }) => activeTab ? 'grey' : '#e8eddf'};
   cursor: pointer;
-
-  &:active{
-    transform: scale(.94)
-  }
+  transform: ${({ activeTab }) => activeTab ? 'scale(.92)' : 'scale(1)'};
 `
 
 
