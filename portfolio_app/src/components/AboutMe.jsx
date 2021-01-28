@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
+// import stefonProfile from '../images/stefon.jpg'
+
 const AboutContainer = styled.main`
   display: flex;
   justify-content: center;
@@ -118,7 +120,6 @@ export default function AboutMe() {
   return (
     <>
       <AboutContainer>
-
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
@@ -127,7 +128,7 @@ export default function AboutMe() {
         </AboutSection>
         <Divider />
         <TechSection>
-          <Header>Technical Utility Belt</Header>  
+          <Header>Technical Utility Belt</Header>
           <ToolBelt>
             <Icon className="devicon-react-plain-wordmark"></Icon>
             <Icon className="devicon-javascript-plain"></Icon>

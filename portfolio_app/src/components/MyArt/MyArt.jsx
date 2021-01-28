@@ -25,6 +25,7 @@ const Tabs = styled.div`
   display: flex;
   justify-content: center;
   width: 400px;
+  // z-index: 0;
 
   @media(max-width: 470px){
     width: 300px;

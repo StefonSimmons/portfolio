@@ -7,8 +7,10 @@ const Nav = styled.nav`
   background-color: rgb(0,39,101);
   top: 0;
   width: 100%;
+  z-index: 2;
   display: flex;
   justify-content: center;
+
 `
 const List = styled.ul`
   display: flex;

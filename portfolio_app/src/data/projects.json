@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sassy Landing Page",
+    "description": "A single-page React-app using Sass and CSS-Grid. My Github Repo ReadMe.md details a 2-hour lesson plan that I designed for my engineering students. I focused on a small set of features that Sass offers to frontend developers.",
+    "image": "https://imgur.com/L4bLSPB.png",
+    "tech": [
+      "React.js",
+      "Sass"
+    ],
+    "deployedURL": "https://sassy-landing.netlify.app/",
+    "ghRepoURL": "https://github.com/StefonSimmons/sassy-landing-page"
+  },{
     "name": "Will-Do App",
     "description": "Write down what you want to do and then do it with this user-friendly feature-rich app. Built with full CRUD to facilitate your editorial desires and hand-made draggable tasks for prioritizing your future.",
     "image": "https://media.giphy.com/media/9MTkmttl7YxIXZZZ9P/giphy.gif",
