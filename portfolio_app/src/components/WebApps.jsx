@@ -16,7 +16,7 @@ const Prj = styled.div`
   jusitfy-content: flex-end;
   background: #e8eddf;
   width: 450px;
-  padding: 15px 35px;
+  padding: 0px;
   margin: 0px 35px 50px 35px;
   text-align: center;
   letter-spacing: 3px;
@@ -31,9 +31,9 @@ const PrjName = styled.h1`
   font-size: 24px;
 `
 const Thumbnail = styled.img`
-  width: 350px;
+  width: 100%;
   height: 250px;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
 
   @media(max-width: 455px){
     width: 319px;
@@ -43,6 +43,7 @@ const Description = styled.p`
   font-size: 18px;
   text-align: left;
   line-height: 1.5;
+  margin: 0 35px;
 
   @media(max-width: 455px){
     padding: 10px;
@@ -53,6 +54,7 @@ const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 9px;
+  margin: 0 35px 15px 35px;
 
   @media(max-width: 455px){
     padding: 10px;
@@ -102,9 +104,8 @@ const Site = styled.a`
   }
 `
 const Divider = styled.hr`
-  background:black;
+  background: black;
   margin: 15px;
-  width: 100%;
 
   @media(max-width: 455px){
     width: 300px;
@@ -116,10 +117,10 @@ export default function Projects() {
   const projects = project.map((p, id) => {
     return (
       <Prj key={id}>
-        <PrjName>{p.name}</PrjName>
         <a href={p.deployedURL} target='_blank' rel="noopener noreferrer">
           <Thumbnail src={p.image} alt={p.name} />
         </a>
+        <PrjName>{p.name}</PrjName>
         <SiteContainer>
           {p.deployedURL ?
             <Site href={p.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
