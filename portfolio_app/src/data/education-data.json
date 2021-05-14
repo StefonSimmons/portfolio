@@ -11,15 +11,18 @@
     "institution": "Udemy",
     "location": null,
     "major": "JavaScript Algorithms and Data Structures Masterclass",
-    "major2": "The Ultimate MySQL Bootcamp",
-    "major3": "Microsoft SQL from A to Z",    
+    "major2": "Ethereum and Solidity: The Complete Developer's Guide",
+    "major3": "The Ultimate MySQL Bootcamp",
+    "major4": "Microsoft SQL from A to Z",    
     "GPA": null,
     "award": "Certificate of Completion",
     "award2": "Certificate of Completion",
     "award3": "Certificate of Completion",
+    "award4": "Certificate of Completion",
     "conferralDate": "In progress",
-    "conferralDate2": "August 2019",
-    "conferralDate3": "July 2019"
+    "conferralDate2": "In progress",
+    "conferralDate3": "August 2019",
+    "conferralDate4": "July 2019"
 
   },
   {

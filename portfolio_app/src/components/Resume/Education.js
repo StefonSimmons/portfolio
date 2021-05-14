@@ -24,6 +24,9 @@ export default function Education() {
           {ed.major3 ? <Phrase>{ed.major3} | {ed.award3}, {ed.conferralDate3}</Phrase> :
             null
           }
+          {ed.major4 ? <Phrase>{ed.major4} | {ed.award4}, {ed.conferralDate4}</Phrase> :
+            null
+          }
 
           {ed.GPA ?
             <Phrase>{ed.GPA}</Phrase> :

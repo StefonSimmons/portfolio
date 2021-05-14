@@ -12,9 +12,9 @@ export const skills = [
   "Git and GitHub",
   "HTML5 & CSS3",
   "Ruby / Ruby on Rails",
-  "Data Warehousing",
+  "Vue.js",
+  "Solidity (Smart Contracts)",
   "Interactive designing/prototyping",
   "APIs",
-  "SQL Server Integration Services for ETL",
 ]
 
