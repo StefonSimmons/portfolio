@@ -1,5 +1,16 @@
 [
   {
+    "name": "Cues App",
+    "description": "Get quick data regarding film, television, and theater production activity in New York City. Select a NYC borough and at the flip of a card, filter through date ranges and discover the most popular location and time of year for the dramatic arts' exclusive use of NYC properties.",
+    "image": "https://media.giphy.com/media/5jvn7RmwZTFSrOcw96/giphy.gif",
+    "tech": [
+      "javascript",
+      "html",
+      "css"
+    ],
+    "deployedURL": "https://stefonsimmons.github.io/Cues/",
+    "ghRepoURL": "https://github.com/StefonSimmons/cues"
+  },{
     "name": "Sassy Landing Page",
     "description": "A single-page React-app using Sass and CSS-Grid. My Github Repo README details a 2-hour lesson plan that I designed for my engineering students. I focused on a small set of features that Sass offers to frontend developers.",
     "image": "https://imgur.com/L4bLSPB.png",
