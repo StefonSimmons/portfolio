@@ -1,5 +1,16 @@
 [
   {
+    "name": "JamixByDesign (Website)",
+    "description": "JAMix By Design is an event planning, designing and decorating team. This site establishes the team's professional online presence. The site is responsive to mobile",
+    "image": "https://media.giphy.com/media/apdzv6M4svEoj9lX1Z/giphy.gif",
+    "tech": [
+      "React.js",
+      "Scss",
+      "animation keyframes"
+    ],
+    "deployedURL": "https://jamixbydesign.com/",
+    "ghRepoURL": "https://github.com/StefonSimmons/jamix-by-design"
+  },{
     "name": "Rock, Paper, Scissors",
     "description": "A classic hand game I built for mobile and desktop play. Fixed with animation keyframes and simulated loading, see how high you can score against the House/Computer.",
     "image": "https://media.giphy.com/media/IuIVDLdp0okozFXEcy/giphy.gif",
