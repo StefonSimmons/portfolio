@@ -2,8 +2,16 @@
   // title, company, start date, end date, an array of items
   // the array comes from a paragraph parsed by a period '.'
 
+
+  
+const softwareEngILPhrases =
+  "Prepared and led lessons in fullstack development - PSQL, Ruby on Rails and React.js"
+
+const softwareEngIAPhrases =
+  "Composed and coordinated morning exercises / lectures on intermediate data structures and algorithms 2-3 times per week; Interviewed software engineering fellows during technical mock interviews; Analyzed and debugged code produced by a team of up to 30 software engineer fellows in an online remote learning environment"
+  
 const softwareEngTAPhrases =
-  "Analyze and debug code produced by a team of up to 30 web developers in an online remote learning environment; Teach data structures, algorithms, HTML, CSS, JavaScript, React, Ruby on Rails, MongoDB and SQL to web developers; Foster a results-driven community for web development that encourages well-documented and efficient production code"
+  "Analyzed and debugged code produced by a team of up to 30 software engineer fellows in an online remote learning environment; Taught data structures, algorithms, HTML, CSS, JavaScript, React, Ruby on Rails, MongoDB and SQL to web developers; Fostered a results-driven community for web development that encourages well-documented and efficient production code"
 
 const softwareEngPhrases =
   "Successfully designed, developed, and deployed 4 responsive web applications within strict one-week due dates; Dedicated over 800 hours in 3 months towards developing my skills in planning and deploying web applications; Leveraged fluent knowledge of HTML, CSS, JavaScript, React, Ruby, MongoDB and API calls in order to build well-documented professional and dynamic full-stack web applications"
@@ -13,10 +21,28 @@ const registrarPhrases =
 
 
 const experience = [{
-  title: "software engineering teaching assistant",
+  title: "sofware engineer",
+  business: "Datadog",
+  startDate: "September 2021",
+  endDate: "Present",
+  phrases: "A monitoring service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform"
+},{
+  title: "instructional lead - sql, rails, react.js",
+  business: "GENERAL ASSEMBLY",
+  startDate: "July 2021",
+  endDate: "August 2021",
+  phrases: softwareEngILPhrases
+},{
+  title: "instructional associate (software engineering immersive)",
+  business: "GENERAL ASSEMBLY",
+  startDate: "February 2021",
+  endDate: "July 2021",
+  phrases: softwareEngIAPhrases
+},{
+  title: "teaching assistant (software engineering immersive)",
   business: "GENERAL ASSEMBLY",
   startDate: "July 2020",
-  endDate: "Present",
+  endDate: "February 2021",
   phrases: softwareEngTAPhrases
 }, {
   title: "software engineering fellow",
