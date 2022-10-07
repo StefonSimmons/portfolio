@@ -1,5 +1,17 @@
 [
   {
+    "name": "Spotify Playlist Buddy",
+    "description": "Terminal-based program that interacts with the Spotify API to control your Spotify player",
+    "image": "https://media.giphy.com/media/WjQYG5UBbdtcRzscAC/giphy.gif",
+    "tech": [
+      "Python",
+      "Bash Script",
+      "Spotify Web API",
+      "Javascript",
+      "Makefile"
+    ],
+    "ghRepoURL": "https://github.com/StefonSimmons/spotify_playlist_buddy"
+  },{
     "name": "JamixByDesign (Website)",
     "description": "JAMix By Design is an event planning, designing and decorating team. This site establishes the team's professional online presence. The site is responsive to mobile",
     "image": "https://media.giphy.com/media/apdzv6M4svEoj9lX1Z/giphy.gif",
