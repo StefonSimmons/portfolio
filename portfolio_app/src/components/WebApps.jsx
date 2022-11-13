@@ -149,7 +149,7 @@ export default function Projects() {
         <Divider />
         <HeaderTools>Tech</HeaderTools>
         <List>
-          {project.fields.tech.split(';').map((tech,idx) =>
+          {project.fields.tech?.split(';').map((tech,idx) =>
             <Tech key={idx}>{tech}</Tech>
           )}
         </List>
