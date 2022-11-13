@@ -1,7 +1,8 @@
 import React from 'react'
+import axios from 'axios'
 import { Header } from './AboutMe'
-import project from '../data/projects.json'
 import styled from 'styled-components'
+import { useEffect,useState } from 'react'
 
 
 const Main = styled.main`
@@ -114,27 +115,42 @@ const Divider = styled.hr`
 `
 export default function Projects() {
 
-  const projects = project.map((p, id) => {
+  const [airProjects, updateAirProjects] = useState(null)
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const config = {
+        headers:{
+          "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      }
+      console.log(process.env)
+      const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects`, config)
+      updateAirProjects(res.data.records)
+    }
+    getProjects()
+  }, [])
+  const projects = airProjects?.map((project, id) => {
     return (
       <Prj key={id}>
-        <a href={p.deployedURL} target='_blank' rel="noopener noreferrer">
-          <Thumbnail src={p.image} alt={p.name} />
+        <a href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">
+          <Thumbnail src={project.fields.image} alt={project.fields.name} />
         </a>
-        <PrjName>{p.name}</PrjName>
+        <PrjName>{project.fields.name}</PrjName>
         <SiteContainer>
-          {p.deployedURL ?
-            <Site href={p.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
+          {project.fields.deployedURL ?
+            <Site href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
             :
             null
           }
-          <Site href={p.ghRepoURL} target='_blank' rel="noopener noreferrer">Github</Site>
+          <Site href={project.fields.ghRepoURL} target='_blank' rel="noopener noreferrer">Github</Site>
         </SiteContainer>
         <Divider />
-        <Description>{p.description}</Description>
+        <Description>{project.fields.description}</Description>
         <Divider />
         <HeaderTools>Tech</HeaderTools>
         <List>
-          {p.tech.map((tech,idx) =>
+          {project.fields.tech.split(';').map((tech,idx) =>
             <Tech key={idx}>{tech}</Tech>
           )}
         </List>
