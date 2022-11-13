@@ -131,7 +131,7 @@ export default function Projects() {
   }, [])
   const projects = airProjects?.map((project, id) => {
     return (
-      <Prj key={id}>
+      project.fields.isLive && <Prj key={id}>
         <a href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">
           <Thumbnail src={project.fields.image} alt={project.fields.name} />
         </a>
