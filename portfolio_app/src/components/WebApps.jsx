@@ -124,7 +124,6 @@ export default function Projects() {
           "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       }
-      console.log(process.env)
       const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects`, config)
       updateAirProjects(res.data.records)
     }
