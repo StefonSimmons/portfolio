@@ -130,23 +130,36 @@ const Option = styled.div`
   display: flex;
   align-items: center;
   padding: 8px 0;
-  `
+`
 const Label = styled.label`
   font-family: 'Ubuntu Condensed', sans-serif;
   text-transform: uppercase;
   color: #e8eddf;
   padding-right: 8px;
   cursor: pointer
-  `
-const Checkbox = styled.input`
+`
+  const Checkbox = styled.input`
+  cursor: pointer;
   &:checked{
     appearance: none;
-    height: 14px;
-    width: 14px;
-    border-radius: 4px;
+    height: 13px;
+    width: 13px;
+    border-radius: 2px;
     border: 1px solid #e8eddf;
+    background-color: rgb(82,150,250);
+  }
+`
+const ClearBtn = styled.button`
+  font-family: 'Ubuntu Condensed', sans-serif;
+  border-radius: 4px;
+  margin-top: 4px;
+  border: 1px solid #e8eddf;
+  background-color: #e8eddf; 
+  transition: all .2s;
+  &:hover{
     background-color: rgb(0,39,101);
-    cursor: pointer
+    border: 1px solid rgb(0,39,101) ;
+    color: #e8eddf;
   }
 `
 export default function Projects() {
@@ -175,6 +188,12 @@ export default function Projects() {
   const handleChange = (idx) => {
     updateChecked(prevChecked => (
       prevChecked.map((checked, cid) => cid === idx ? !checked : checked)
+    ))
+  }
+
+  const clearFilters = () => {
+    updateChecked(prevChecked => (
+      prevChecked.map(_ => false)
     ))
   }
 
@@ -226,6 +245,7 @@ export default function Projects() {
       <Main>
         <FilterContainer>
           {technologies}
+          <ClearBtn onClick={clearFilters}>Clear All</ClearBtn>
         </FilterContainer>
         <Apps>
           {projects}
