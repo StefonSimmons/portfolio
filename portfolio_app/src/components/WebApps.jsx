@@ -11,6 +11,12 @@ const Main = styled.main`
   flex-wrap: wrap;
   margin-bottom: 60px
 `
+const Apps = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px
+`
 const Prj = styled.div`
   display: flex;
   flex-direction: column;
@@ -113,9 +119,41 @@ const Divider = styled.hr`
     margin: 0 auto;
   }
 `
+const FilterContainer = styled.section`
+  width: 75vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, 1fr);
+  margin-bottom: 32px
+`
+const Option = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  `
+const Label = styled.label`
+  font-family: 'Ubuntu Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #e8eddf;
+  padding-right: 8px;
+  cursor: pointer
+  `
+const Checkbox = styled.input`
+  &:checked{
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 4px;
+    border: 1px solid #e8eddf;
+    background-color: rgb(0,39,101);
+    cursor: pointer
+  }
+`
 export default function Projects() {
 
   const [airProjects, updateAirProjects] = useState(null)
+  const [airTech, updateAirTech] = useState(null)
+  const [isChecked, updateChecked] = useState(null)
 
   useEffect(() => {
     const getProjects = async () => {
@@ -124,11 +162,36 @@ export default function Projects() {
           "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       }
-      const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects`, config)
-      updateAirProjects(res.data.records)
+      const projRes = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects`, config)
+      updateAirProjects(projRes.data.records)
+      
+      const techRes = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/tech`, config)
+      updateAirTech(techRes.data.records)
+      updateChecked(new Array(techRes.data.records.length).fill(false))
     }
     getProjects()
   }, [])
+
+  const handleChange = (idx) => {
+    updateChecked(prevChecked => (
+      prevChecked.map((checked, cid) => cid === idx ? !checked : checked)
+    ))
+  }
+
+  const technologies = airTech?.map((tech, idx) => {
+    return(
+      <Option key={idx}>
+        <Label htmlFor={`tech-${idx}`}>{tech.fields?.name}</Label>
+        <Checkbox 
+          type="checkbox" 
+          name={tech.fields?.name} 
+          id={`tech-${idx}`} 
+          checked={isChecked && isChecked[idx]}
+          onChange={() => handleChange(idx)}
+          />
+      </Option>
+    )})
+
   const projects = airProjects?.map((project, id) => {
     return (
       project.fields.isLive && <Prj key={id}>
@@ -161,7 +224,12 @@ export default function Projects() {
     <>
       <Header>My Web Apps</Header>
       <Main>
-        {projects}
+        <FilterContainer>
+          {technologies}
+        </FilterContainer>
+        <Apps>
+          {projects}
+        </Apps>
       </Main>
     </>
   )
