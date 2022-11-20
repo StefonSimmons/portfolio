@@ -124,7 +124,7 @@ export default function Projects() {
           "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       }
-      const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects`, config)
+      const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects/?view=DateView`, config)
       updateAirProjects(res.data.records)
     }
     getProjects()
