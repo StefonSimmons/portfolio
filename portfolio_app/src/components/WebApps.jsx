@@ -7,8 +7,8 @@ import { useEffect,useState } from 'react'
 
 const Main = styled.main`
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 60px
 `
 const Apps = styled.div`
@@ -187,7 +187,9 @@ export default function Projects() {
 
   useEffect(() => {
     if(airTech){
-      clearFilters()
+      const techEntries = airTech?.map(tech => [tech.fields.name, false])
+      const techObj = Object.fromEntries(techEntries)
+      updateChecked(techObj)
     }
   }, [airTech])
 
@@ -199,17 +201,13 @@ export default function Projects() {
       }, [])
 
       const chosenProjects = airProjects.filter(prj => {
-        const everArr = chosenTech.every((tech) => {
-          return prj.fields?.tech.split(';').includes(tech)
-        })
-        if(everArr){
-          return prj
-        }
+        const everArr = chosenTech.every((tech) => prj.fields?.tech.split(';').includes(tech))
+        return everArr && prj
       })
 
       updateQueriedProjects(chosenProjects.length && chosenProjects)
     }
-  }, [isChecked])
+  }, [isChecked, airProjects])
 
   const handleChange = (techName) => {
     updateChecked(prevChecked => ({
@@ -218,7 +216,7 @@ export default function Projects() {
     }))
   }
 
-  function clearFilters () {
+  const clearFilters = () => {
     const techEntries = airTech?.map(tech => [tech.fields.name, false])
     const techObj = Object.fromEntries(techEntries)
     updateChecked(techObj)
