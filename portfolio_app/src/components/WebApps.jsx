@@ -165,6 +165,7 @@ const ClearBtn = styled.button`
 export default function Projects() {
 
   const [airProjects, updateAirProjects] = useState(null)
+  const [queriedProjects, updateQueriedProjects] = useState(null)
   const [airTech, updateAirTech] = useState(null)
   const [isChecked, updateChecked] = useState(null)
 
@@ -179,39 +180,66 @@ export default function Projects() {
       updateAirProjects(projRes.data.records)
       
       const techRes = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/tech`, config)
-      updateAirTech(techRes.data.records)
-      updateChecked(new Array(techRes.data.records.length).fill(false))
+      updateAirTech(techRes.data.records)      
     }
     getProjects()
   }, [])
 
-  const handleChange = (idx) => {
-    updateChecked(prevChecked => (
-      prevChecked.map((checked, cid) => cid === idx ? !checked : checked)
-    ))
+  useEffect(() => {
+    if(airTech){
+      clearFilters()
+    }
+  }, [airTech])
+
+  useEffect(() => {
+    if(isChecked){
+      const chosenTech = Object.entries(isChecked).reduce((acc, curr) => {
+        if(curr[1]){acc.push(curr[0])}
+        return acc
+      }, [])
+
+      const chosenProjects = airProjects.filter(prj => {
+        const everArr = chosenTech.every((tech) => {
+          return prj.fields?.tech.split(';').includes(tech)
+        })
+        if(everArr){
+          return prj
+        }
+      })
+
+      updateQueriedProjects(chosenProjects.length && chosenProjects)
+    }
+  }, [isChecked])
+
+  const handleChange = (techName) => {
+    updateChecked(prevChecked => ({
+      ...prevChecked,
+      [techName]: !prevChecked[techName]
+    }))
   }
 
-  const clearFilters = () => {
-    updateChecked(prevChecked => (
-      prevChecked.map(_ => false)
-    ))
+  function clearFilters () {
+    const techEntries = airTech?.map(tech => [tech.fields.name, false])
+    const techObj = Object.fromEntries(techEntries)
+    updateChecked(techObj)
   }
 
-  const technologies = airTech?.map((tech, idx) => {
+  const technologiesJSX = airTech?.map((tech, idx) => {
+    const techName = tech.fields?.name
     return(
       <Option key={idx}>
-        <Label htmlFor={`tech-${idx}`}>{tech.fields?.name}</Label>
+        <Label htmlFor={`tech-${idx}`}>{techName}</Label>
         <Checkbox 
           type="checkbox" 
-          name={tech.fields?.name} 
+          name={techName} 
           id={`tech-${idx}`} 
-          checked={isChecked && isChecked[idx]}
-          onChange={() => handleChange(idx)}
+          checked={isChecked && isChecked[techName]}
+          onChange={() => handleChange(techName)}
           />
       </Option>
     )})
 
-  const projects = airProjects?.map((project, id) => {
+  const projectsJSX = (queriedProjects || airProjects)?.map((project, id) => {
     return (
       project.fields.isLive && <Prj key={id}>
         <a href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">
@@ -244,11 +272,11 @@ export default function Projects() {
       <Header>My Web Apps</Header>
       <Main>
         <FilterContainer>
-          {technologies}
+          {technologiesJSX}
           <ClearBtn onClick={clearFilters}>Clear All</ClearBtn>
         </FilterContainer>
         <Apps>
-          {projects}
+          {projectsJSX}
         </Apps>
       </Main>
     </>
