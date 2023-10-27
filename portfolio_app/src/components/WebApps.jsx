@@ -1,13 +1,24 @@
 import React from 'react'
 import axios from 'axios'
 import { Header } from './AboutMe'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import { useEffect,useState } from 'react'
 
+const breatheAnimation = keyframes`
+  0% { height: 0px; width: 0px; opacity: 0.3; border-width: 45px; border-color: rgb(255,255,255) }
+  10% { height: 30px; width: 30px; opacity: 0.3; border-width: 25px }
+  20% { height: 60px; width: 60px; opacity: 0.6; border-width: 5px; border-color: rgb(0,39,101)}
+  50% { height: 100px; width: 100px; opacity: 1;}
+  80% { height: 60px; width: 60px; opacity: 0.6; border-width: 5px; border-color: rgb(0,39,101) }
+  90% { height: 30px; width: 30px; opacity: 0.3; border-width: 25px }
+  100% { height: 0px; width: 0px; opacity: 0.3; border-width: 45px; border-color: rgb(255,255,255) }
+`
 
 const Main = styled.main`
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 200px;
   flex-wrap: wrap;
   margin-bottom: 60px
 `
@@ -113,9 +124,23 @@ const Divider = styled.hr`
     margin: 0 auto;
   }
 `
+const Loader = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: white solid 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  animation: ${breatheAnimation} 2s linear infinite
+`
+
 export default function Projects() {
 
   const [airProjects, updateAirProjects] = useState(null)
+  const [loaderMsg, updateLoaderMsg] = useState('Getting')
 
   useEffect(() => {
     const getProjects = async () => {
@@ -128,6 +153,20 @@ export default function Projects() {
       updateAirProjects(res.data.records)
     }
     getProjects()
+
+    // Loader message
+    const loadAnimationInterval = setInterval(() => {
+      updateLoaderMsg(prevState => {
+        if(prevState === "Getting"){
+          return "Projects"
+        }else{
+          return "Getting"
+        }
+      })
+    }, 2000)
+
+    return () => clearInterval(loadAnimationInterval)
+
   }, [])
   const projects = airProjects?.map((project, id) => {
     return (
@@ -157,12 +196,17 @@ export default function Projects() {
     )
   })
 
+  
   return (
-    <>
-      <Header>My Web Apps</Header>
-      <Main>
-        {projects}
-      </Main>
-    </>
+  <>
+    <Header>My Web Apps</Header>
+    <Main>
+      {
+        projects?.length ? 
+        projects : 
+        <Loader>{loaderMsg}</Loader> 
+      }
+    </Main>
+  </>
   )
 }
