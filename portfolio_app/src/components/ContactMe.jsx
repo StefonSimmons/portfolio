@@ -36,7 +36,7 @@ const Word = styled.h3`
 export default function ContactMe() {
   return (
     <>
-      <Header>Contact Me</Header>
+      <Header>Connect</Header>
 
       <Contact>
         <Block>

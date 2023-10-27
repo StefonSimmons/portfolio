@@ -110,7 +110,7 @@ export default function Navigation() {
             </Hamburger>
             <NavLink to={`/about`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>About</NavItem></NavLink>
 
-            <NavLink to={`/contact`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Contact Me</NavItem></NavLink>
+            <NavLink to={`/contact`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Connect</NavItem></NavLink>
 
             <NavLink to={`/webapps`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Web Apps</NavItem></NavLink>
 
