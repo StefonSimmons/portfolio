@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
 // import stefonProfile from '../images/stefon.jpg'
 
 const AboutContainer = styled.main`
@@ -116,6 +115,24 @@ const Divider = styled.hr`
 
 export default function AboutMe() {
 
+  const [years, setYears] = React.useState()
+  React.useEffect(() => {
+    
+    setYears(getYear())
+  }, [])
+
+  function getYear(){
+    // gets the number of years from my start date at datadog.
+    const startDate = new Date('9/13/2021')
+    const today = new Date()
+    const timeDiff = Math.abs(today - startDate)
+    const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24))
+
+    const numOfYears = dayDiff / 365
+    const whole = Math.floor(numOfYears)
+    const mod = numOfYears % whole
+    return whole + (mod >= .5 && .5 )
+  }
 
   return (
     <>
@@ -123,7 +140,7 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a self-motivated <ArtLink to='/myart'>creative</ArtLink> with over 8 years experience working as an admin and teacher in higher education / higher education alternative institutions.<br></br><Link to='/webapps'><Code>Software development</Code></Link> lives as a media for my artisty and organization skills. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, creative and ambitious. I have an adaptive mindset for new processes and technology.<br></br><br></br>Feel free to <Linked to='/contact'>Reach Out</Linked> so we can work together on your project / goals!
+            Welcome to my home online! <br></br><br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>website development</Code></Link>, education, and the arts. <br></br><br></br>My journey consists of 6.5 years as a Registrar at a post-secondary school for film and television, followed by a year as a Software Engineer Instructor at a distinguished software engineering bootcamp. Over the last {years} years, I’ve been an integral Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
           </Statement>
         </AboutSection>
         <Divider />

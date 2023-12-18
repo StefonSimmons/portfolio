@@ -126,7 +126,7 @@ export default function Resume() {
           onMouseLeave={() => updateDisplay(false)}
         >
           {display ?
-            <Download href="https://drive.google.com/file/d/1QvVW-Mu9Cmn4vtSoBIYqzFjkO5IZczz-/view" target="_blank" rel="noopener noreferrer">
+            <Download href="https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub" target="_blank" rel="noopener noreferrer">
               Download my Resume <Arrow>⬇</Arrow>
             </Download>
             : ''

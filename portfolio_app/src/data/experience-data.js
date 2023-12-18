@@ -25,7 +25,7 @@ const experience = [{
   business: "Datadog",
   startDate: "September 2021",
   endDate: "Present",
-  phrases: "A monitoring service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform"
+  phrases: "Datadog is a SaaS-based data analytics platform for cloud-scale applications. I build websites that promote Datadog's products, events, teams and culture."
 },{
   title: "instructional lead - sql, rails, react.js",
   business: "GENERAL ASSEMBLY",
