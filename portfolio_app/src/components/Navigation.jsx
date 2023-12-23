@@ -45,6 +45,17 @@ const NavLink = styled(Link)`
     transition: display 400ms
   }
 `
+const ResumeLink = styled.a`
+  text-decoration: none;
+  font-size: 21px;
+  letter-spacing: 3.5px;
+
+  @media(max-width: 700px){
+    display: none;
+    border-right: none;
+    transition: display 400ms
+  }
+`
 const NavItem = styled.li`
   padding: 10px;
   margin: 0 30px;
@@ -114,7 +125,7 @@ export default function Navigation() {
 
             <NavLink to={`/webapps`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Web Apps</NavItem></NavLink>
 
-            <NavLink to={`/resume`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Resume</NavItem></NavLink>
+            <ResumeLink href={`https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub`} target="_blank" rel="noopener noreferrer" onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Resume</NavItem></ResumeLink>
 
             <NavLink to={`/myart`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Art</NavItem></NavLink>
           </DropDownMenu>

@@ -5,7 +5,7 @@ import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import WebApps from './components/WebApps'
 import ContactMe from './components/ContactMe'
-import Resume from './components/Resume/Resume'
+// import Resume from './components/Resume/Resume'
 import Footer from './components/Footer'
 import MyArt from './components/MyArt/MyArt';
 
@@ -37,9 +37,9 @@ function App() {
           <ContactMe />
         </Route>
 
-        <Route path='/resume' exact>
+        {/* <Route path='/resume' exact>
           <Resume />
-        </Route>
+        </Route> */}
 
         <Route path='/myart' exact>
           <MyArt
