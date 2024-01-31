@@ -17,7 +17,7 @@ const breatheAnimation = keyframes`
 const Main = styled.main`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   min-height: 200px;
   flex-wrap: wrap;
   margin-bottom: 60px
@@ -118,7 +118,6 @@ const Site = styled.a`
 const Divider = styled.hr`
   background: black;
   margin: 15px;
-
   @media(max-width: 455px){
     width: 300px;
     margin: 0 auto;
