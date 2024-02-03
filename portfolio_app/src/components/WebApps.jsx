@@ -17,7 +17,7 @@ const breatheAnimation = keyframes`
 const Main = styled.main`
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: ${({projects}) => projects ? 'start':'center'};
   min-height: 200px;
   flex-wrap: wrap;
   margin-bottom: 60px
@@ -199,7 +199,7 @@ export default function Projects() {
   return (
   <>
     <Header>My Web Apps</Header>
-    <Main>
+    <Main projects={projects?.length}>
       {
         projects?.length ? 
         projects : 
