@@ -3,6 +3,8 @@ import phoenix2 from '../images/phoenix2.jpg'
 import groot from '../images/groot.jpg'
 import hummingBird from '../images/humming-bird.jpg'
 import fist from '../images/fist.jpg'
+import committed from '../images/committed.jpeg'
+import fof from '../images/FoF.jpeg'
 
 export const paintingData = [
   {
@@ -29,5 +31,15 @@ export const paintingData = [
     name: "fist from ground",
     image: fist,
     about: "free-hand. transparent paint on canvas. sterilized soil on sealer."
+  },
+  {
+    name: "the committed",
+    image: committed,
+    about: "free-hand. oil painting on canvas. cover art for 'The Committed' musical works."
+  },
+  {
+    name: "fight or flight",
+    image: fof,
+    about: "free-hand. spray painted and paint brushed on cardboard. cover art for 'The Fight or Flight Project' musical works."
   },
 ]

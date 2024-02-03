@@ -67,21 +67,18 @@ export default function MyArt({ changeRole }) {
   }
 
   return (
-    <div>
-      <ArtContainer>
-        <Header>My Art</Header>
-        <Tabs>
-          <Tab activeTab={tabs.music} onClick={() => handleClick('music')}>
-            <Header activeTab={tabs.music}>Music</Header>
-          </Tab>
-          <Tab activeTab={tabs.paint} onClick={() => handleClick('paint')}>
-            <Header activeTab={tabs.paint}>Painting</Header>
-          </Tab>
-        </Tabs>
-        {tabs.music && <Music />}
-        {tabs.paint && <Painting />}
-      </ArtContainer>
-
-    </div>
+    <ArtContainer>
+      <Header>My Art</Header>
+      <Tabs>
+        <Tab activeTab={tabs.music} onClick={() => handleClick('music')}>
+          <Header activeTab={tabs.music}>Music</Header>
+        </Tab>
+        <Tab activeTab={tabs.paint} onClick={() => handleClick('paint')}>
+          <Header activeTab={tabs.paint}>Painting</Header>
+        </Tab>
+      </Tabs>
+      {tabs.music && <Music />}
+      {tabs.paint && <Painting />}
+    </ArtContainer>
   )
 }

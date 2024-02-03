@@ -9,6 +9,7 @@ const Gallery = styled.div`
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
+  margin-bottom: 50px;
   
   @media(max-width: 1100px){
     grid-template-columns: repeat(1, 1fr);
