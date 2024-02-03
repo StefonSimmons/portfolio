@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from "react-router-dom";
+
 import Music from './Music'
 import Painting from './Painting'
 
@@ -19,7 +21,7 @@ const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: ${({ activeTab }) => activeTab ? '#e8eddf' : 'rgb(82,150,250)'}
+  color: ${({ activeTab }) => activeTab ? '#a7a2a2' : 'rgb(82,150,250)'}
 `
 const Tabs = styled.div`
   display: flex;
@@ -40,7 +42,7 @@ const Tab = styled.div`
 
 
 export default function MyArt({ changeRole }) {
-
+  const history = useHistory();
   const [tabs, updateTabs] = useState({
     music: true,
     paint: false
@@ -50,10 +52,24 @@ export default function MyArt({ changeRole }) {
     if (window.location.pathname === '/myart') {
       changeRole('Artist')
     }
+  
     return () => {
       changeRole('Software Engineer')
     }
   })
+
+  useEffect(() => {
+    if(window.location.search){
+      updateTabs(() => {
+        const tabName = window.location.search.match(/\?tab=(\w+)/)?.[1]
+        return {
+          music: false, 
+          paint: false,
+          [tabName]: true
+        }
+      }) 
+    }
+  }, [])
 
   const handleClick = (tabName) => {
     updateTabs({
@@ -64,6 +80,7 @@ export default function MyArt({ changeRole }) {
       ...prevTabs,
       [tabName]: !prevTabs[tabName]
     }))
+    history.push(`/myart/?tab=${tabName}`)
   }
 
   return (
