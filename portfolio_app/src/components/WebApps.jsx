@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Header } from './AboutMe'
 import styled, {keyframes} from 'styled-components'
 import { useEffect,useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const breatheAnimation = keyframes`
   0% { height: 0px; width: 0px; opacity: 0.3; border-width: 45px; border-color: rgb(255,255,255) }
@@ -115,6 +116,7 @@ const Site = styled.a`
     background: #c6cbbd;  
   }
 `
+
 const Divider = styled.hr`
   background: black;
   margin: 15px;
@@ -148,8 +150,16 @@ export default function Projects() {
           "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       }
-      const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects/?view=DateView`, config)
-      updateAirProjects(res.data.records)
+      try {
+        const res = await axios.get(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/projects/?view=DateView`, config)
+        updateAirProjects(res.data.records)
+      } catch (error) {
+        console.error('Error::', error)
+
+        updateAirProjects([{
+          fields: {isLive: true, name: "Sorry. There's an error getting Stefon's web apps", tech:`${error.message}`}
+        }])
+      }
     }
     getProjects()
 
@@ -180,7 +190,14 @@ export default function Projects() {
             :
             null
           }
-          <Site href={project.fields.ghRepoURL} target='_blank' rel="noopener noreferrer">Github</Site>
+          {project.fields.ghRepoURL ?
+            <Site href={project.fields.ghRepoURL} target='_blank' rel="noopener noreferrer" disabled>Github</Site>
+            :
+            null
+          }
+          {!project.fields.ghRepoURL && !project.fields.deployedURL &&
+            <Site href='https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub' target='_blank' rel="noopener noreferrer">Resume</Site>
+          }
         </SiteContainer>
         <Divider />
         <Description>{project.fields.description}</Description>
