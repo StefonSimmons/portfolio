@@ -3,7 +3,6 @@ import axios from 'axios'
 import { Header } from './AboutMe'
 import styled, {keyframes} from 'styled-components'
 import { useEffect,useState } from 'react'
-import { Link } from 'react-router-dom'
 
 const breatheAnimation = keyframes`
   0% { height: 0px; width: 0px; opacity: 0.3; border-width: 45px; border-color: rgb(255,255,255) }
