@@ -31,8 +31,8 @@ export const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: rgb(82,150,250);
-
+  // color: rgb(82,150,250);
+  color:  #e8eddf;
   @media(max-width: 620px){
     font-size: 28px;
   }
@@ -140,12 +140,12 @@ export default function AboutMe() {
         <AboutSection>
           <Header>About Me</Header>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>website development</Code></Link>, education, and the arts. <br></br><br></br>My journey consists of 6.5 years as a Registrar at a post-secondary school for film and television, followed by a year as a Software Engineer Instructor at a distinguished software engineering bootcamp. Over the last {years} years, I’ve been an integral Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
+            Welcome to my home online! <br></br><br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>website development</Code></Link>, education, and the arts. <br></br><br></br>My journey consists of 6.5 years as a Registrar at a post-secondary school for film and television, followed by a year as a Software Engineer Instructor at a distinguished software engineering bootcamp. Over the last {years} years, I’ve been a valued Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
           </Statement>
         </AboutSection>
         <Divider />
         <TechSection>
-          <Header>Technical Utility Belt</Header>
+          <Header style={{color: 'rgb(82,150,250)'}}>Technical Utility Belt</Header>
           <ToolBelt>
             <Icon className="devicon-react-plain-wordmark"></Icon>
             <Icon className="devicon-javascript-plain"></Icon>

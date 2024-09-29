@@ -64,6 +64,7 @@ const NavItem = styled.li`
   &:hover{
     background-color: rgb(232, 237, 220);
     color: #111111;
+    transition: all ease .25s
   }
 
   @media(max-width: 940px){
