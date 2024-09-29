@@ -7,6 +7,7 @@ const Contact = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;  
+  height: 100vh;
 
   @media(max-width: 375px){
     margin-bottom: 50px;

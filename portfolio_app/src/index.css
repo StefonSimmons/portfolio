@@ -1,9 +1,8 @@
 html, body{ 
-  height: 100vh; 
   width: 100%; 
   padding: 0; 
   margin: 0; 
-  background-color: #111111
+  background-image: linear-gradient(#111111,rgb(10, 0, 27));
 
 }
 

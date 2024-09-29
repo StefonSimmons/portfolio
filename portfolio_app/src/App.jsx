@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
-import WebApps from './components/WebApps'
+import Apps from './components/Apps'
 import ContactMe from './components/ContactMe'
 // import Resume from './components/Resume/Resume'
 import Footer from './components/Footer'
@@ -29,8 +29,8 @@ function App() {
           <AboutMe />
         </Route>
 
-        <Route path='/webapps' exact>
-          <WebApps />
+        <Route path={['/apps', '/web-apps']} exact>
+          <Apps />
         </Route>
 
         <Route path='/contact' exact>

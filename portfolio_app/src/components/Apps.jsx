@@ -18,7 +18,7 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: ${({projects}) => projects ? 'start':'center'};
-  min-height: 200px;
+  min-height: 100vh;
   flex-wrap: wrap;
   margin-bottom: 60px
 `
@@ -26,9 +26,10 @@ const Prj = styled.div`
   display: flex;
   flex-direction: column;
   jusitfy-content: flex-end;
-  background: #e8eddf;
+  background: rgb(232, 237, 220);
+  border-radius: 5px;
   width: 450px;
-  padding: 0px;
+  padding: 2.5px;
   margin: 0px 35px 50px 35px;
   text-align: center;
   letter-spacing: 3px;
@@ -39,18 +40,43 @@ const Prj = styled.div`
     padding: 15px 0px;
   }
 `
+const PrjContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: rgb(232, 237, 220);
+    padding-top: 15px;
+`
+
 const PrjName = styled.h1`
   font-size: 24px;
 `
+const ThumbContainer = styled.div`
+    position: relative;
+`
+
 const Thumbnail = styled.img`
   width: 100%;
   height: 250px;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
+  border-radius: 5px 5px 0 0;
 
   @media(max-width: 455px){
     width: 319px;
   }
 `
+const Overlay = styled.div`
+    position: absolute;
+    bottom: 0 ;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0), 
+        rgba(232, 237, 220,.3) 33%,
+        rgba(232, 237, 220,.75) 66%,
+        rgba(232, 237, 220,1)
+        );
+`
+
 const Description = styled.p`
   font-size: 18px;
   text-align: left;
@@ -179,34 +205,39 @@ export default function Projects() {
   const projects = airProjects?.map((project, id) => {
     return (
       project.fields.isLive && <Prj key={id}>
-        <a href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">
-          <Thumbnail src={project.fields.image} alt={project.fields.name} />
-        </a>
-        <PrjName>{project.fields.name}</PrjName>
-        <SiteContainer>
-          {project.fields.deployedURL ?
-            <Site href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
-            :
-            null
-          }
-          {project.fields.ghRepoURL ?
-            <Site href={project.fields.ghRepoURL} target='_blank' rel="noopener noreferrer" disabled>Github</Site>
-            :
-            null
-          }
-          {!project.fields.ghRepoURL && !project.fields.deployedURL &&
-            <Site href='https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub' target='_blank' rel="noopener noreferrer">Resume</Site>
-          }
-        </SiteContainer>
-        <Divider />
-        <Description>{project.fields.description}</Description>
-        <Divider />
-        <HeaderTools>Tech</HeaderTools>
-        <List>
-          {project.fields.tech?.split(';').map((tech,idx) =>
-            <Tech key={idx}>{tech}</Tech>
-          )}
-        </List>
+        <ThumbContainer>
+            <a href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">
+            <Thumbnail src={project.fields.image} alt={project.fields.name} />
+            <Overlay></Overlay>
+            </a>
+        </ThumbContainer>
+        <PrjContent>
+            <PrjName>{project.fields.name}</PrjName>
+            <SiteContainer>
+            {project.fields.deployedURL ?
+                <Site href={project.fields.deployedURL} target='_blank' rel="noopener noreferrer">Live</Site>
+                :
+                null
+            }
+            {project.fields.ghRepoURL ?
+                <Site href={project.fields.ghRepoURL} target='_blank' rel="noopener noreferrer" disabled>Github</Site>
+                :
+                null
+            }
+            {!project.fields.ghRepoURL && !project.fields.deployedURL &&
+                <Site href='https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub' target='_blank' rel="noopener noreferrer">Resume</Site>
+            }
+            </SiteContainer>
+            <Divider />
+            <Description>{project.fields.description}</Description>
+            <Divider />
+            <HeaderTools>Tech</HeaderTools>
+            <List>
+            {project.fields.tech?.split(';').map((tech,idx) =>
+                <Tech key={idx}>{tech}</Tech>
+            )}
+            </List>
+        </PrjContent>
       </Prj>
     )
   })
@@ -214,7 +245,7 @@ export default function Projects() {
   
   return (
   <>
-    <Header>My Web Apps</Header>
+    <Header>My Apps</Header>
     <Main projects={projects?.length}>
       {
         projects?.length ? 

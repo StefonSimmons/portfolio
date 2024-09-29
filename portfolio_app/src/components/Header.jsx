@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const HeaderContainer = styled.div`
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 `
 const Lnk = styled(Link)`
   text-decoration: none;
