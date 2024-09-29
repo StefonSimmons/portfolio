@@ -214,7 +214,7 @@ export default function Projects() {
   
   return (
   <>
-    <Header>My Web Apps</Header>
+    <Header>My Apps</Header>
     <Main projects={projects?.length}>
       {
         projects?.length ? 
