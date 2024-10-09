@@ -40,10 +40,10 @@ export default function ContactMe() {
       <Header>Connect</Header>
 
       <Contact>
-        <Block>
+        {/* <Block>
           <a href="mailto: stefonsimmons1@gmail.com" target='_blank' rel="noopener noreferrer"><Icon src="https://imgur.com/tZFVFMn.png" alt="email" /></a>
           <Word>Email</Word>
-        </Block>
+        </Block> */}
         <Block>
           <a href="https://www.linkedin.com/in/stefonsimmons/" target='_blank' rel="noopener noreferrer"><Icon src="https://imgur.com/GRoNllq.png" alt="linkedin" /></a>
           <Word>LinkedIn</Word>

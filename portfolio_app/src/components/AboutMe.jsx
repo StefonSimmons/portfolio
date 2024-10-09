@@ -85,7 +85,7 @@ const TechSection = styled.section`
 `
 const ToolBelt = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 35px;
 
   @media(max-width: 620px){
@@ -147,18 +147,16 @@ export default function AboutMe() {
         <TechSection>
           <Header style={{color: 'rgb(82,150,250)'}}>Technical Utility Belt</Header>
           <ToolBelt>
-            <Icon className="devicon-react-plain-wordmark"></Icon>
             <Icon className="devicon-javascript-plain"></Icon>
             <Icon className="devicon-python-plain-wordmark"></Icon>
+            <Icon className="devicon-ruby-plain"></Icon>
             <Icon className="devicon-html5-plain-wordmark"></Icon>
             <Icon className="devicon-css3-plain-wordmark"></Icon>
+            <Icon className="devicon-react-plain-wordmark"></Icon>
             <Icon className="devicon-nodejs-plain-wordmark"></Icon>
             <Icon className="devicon-express-original-wordmark"></Icon>
             <Icon className="devicon-postgresql-plain-wordmark"></Icon>
-            <Icon className="devicon-mongodb-plain-wordmark"></Icon>
             <Icon className="devicon-visualstudio-plain-wordmark"></Icon>
-            <Icon className="devicon-git-plain-wordmark"></Icon>
-            <Icon className="devicon-github-plain-wordmark"></Icon>
           </ToolBelt>
         </TechSection>
 
