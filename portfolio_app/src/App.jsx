@@ -41,7 +41,7 @@ function App() {
           <Resume />
         </Route> */}
 
-        <Route path='/myart' exact>
+        <Route path={['/myart', '/art']} exact>
           <MyArt
             changeRole={changeRole}
           />

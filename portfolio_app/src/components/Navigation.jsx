@@ -124,11 +124,11 @@ export default function Navigation() {
 
             <NavLink to={`/contact`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Connect</NavItem></NavLink>
 
-            <NavLink to={`/apps`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Apps</NavItem></NavLink>
+            <NavLink to={`/apps`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Apps</NavItem></NavLink>
 
             <ResumeLink href={`https://docs.google.com/document/d/e/2PACX-1vSvbZ-StlnP1y2xOn_JGw3WhErcAfwlaEXpsmP0z7TDtBpVmjxMS35ePotYHvjZ8yB3DDqz-7KkE5m8/pub`} target="_blank" rel="noopener noreferrer" onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Resume</NavItem></ResumeLink>
 
-            <NavLink to={`/myart`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>My Art</NavItem></NavLink>
+            <NavLink to={`/art`} onClick={toggleHamburgerMenu} style={menu ? { display: 'block', margin: '25px 0'} : { display: '' }}><NavItem>Art</NavItem></NavLink>
           </DropDownMenu>
         </List>
       </Nav>
