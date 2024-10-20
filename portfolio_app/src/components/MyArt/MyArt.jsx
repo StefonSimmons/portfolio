@@ -8,10 +8,11 @@ import styled from 'styled-components'
 
 export const ArtContainer = styled.main`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   font-family: 'Ubuntu Condensed', sans-serif;
+  min-height: 100vh;
 `
 
 const Header = styled.h1`
@@ -49,7 +50,7 @@ export default function MyArt({ changeRole }) {
   })
 
   useEffect(() => {
-    if (window.location.pathname === '/myart') {
+    if (window.location.pathname.match(/\/(\w+|)art(\/|)/)) {
       changeRole('Artist')
     }
   

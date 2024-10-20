@@ -35,6 +35,11 @@ const Word = styled.h3`
 `
 
 export default function ContactMe() {
+
+  React.useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+
   return (
     <>
       <Header>Connect</Header>

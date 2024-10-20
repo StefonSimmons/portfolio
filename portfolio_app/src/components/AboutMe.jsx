@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-// import stefonProfile from '../images/stefon.jpg'
+// import stefonAI from '../images/stefon.jpg'
+// import stefonAI from '../images/steflogo1.webp'
+import stefonAI from '../images/steflogo2.webp'
+// import stefonAI from '../images/steflogo3.webp'
 
 const AboutContainer = styled.main`
   display: flex;
@@ -11,6 +14,10 @@ const AboutContainer = styled.main`
   font-family: 'Ubuntu Condensed', sans-serif;
 `
 const AboutSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 600px;
   padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;
@@ -24,6 +31,22 @@ const AboutSection = styled.section`
     width: 300px
   }
 `
+// const AboutSectionBG = styled.div`
+//   width: 400px;
+//   height: 400px;
+//   border-radius: 180%;
+//   position: absolute;
+//   top: 30%;
+//   left: 18%;
+//   z-index: -1;
+//   filter: grayscale(80%);
+//   background-image: url(${stefonAI});
+//   background-size: 400px 400px;
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+
+// `
+
 export const Header = styled.h1`
   margin: 15px 0px;
   text-align: center;
@@ -57,7 +80,7 @@ const Code = styled.span`
   font-weight: 900;
   border-radius: 5px;
   padding: 3px 6px;
-  border: solid grey .5px
+  border: solid grey .5px;
 `
 const Linked = styled(Link)`
   background: #e8eddf;
@@ -111,13 +134,20 @@ const Icon = styled.i`
 const Divider = styled.hr`
   margin: 15px;
   width: 8%
+` 
+
+const Logo = styled.img`
+  border-radius: 180%;
+  margin-top: 8px;
+  filter: grayscale(70%);
 `
 
 export default function AboutMe() {
 
   const [years, setYears] = React.useState()
+
   React.useEffect(() => {
-    
+
     setYears(getYear())
   }, [])
 
@@ -138,10 +168,13 @@ export default function AboutMe() {
     <>
       <AboutContainer>
         <AboutSection>
-          <Header>About Me</Header>
+          <Header>Welcome to my home online!</Header>
+          
+          <Logo src={stefonAI} alt="stef" srcset=""  width="350" height="350"/>
           <Statement>
-            Welcome to my home online! <br></br><br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>website development</Code></Link>, education, and the arts. <br></br><br></br>My journey consists of 6.5 years as a Registrar at a post-secondary school for film and television, followed by a year as a Software Engineer Instructor at a distinguished software engineering bootcamp. Over the last {years} years, I’ve been a valued Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
+            <br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>web development</Code></Link>, education, and the arts. <br></br><br></br>Over the last {years} years, I’ve been a valued Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
           </Statement>
+          {/* <AboutSectionBG></AboutSectionBG> */}
         </AboutSection>
         <Divider />
         <TechSection>

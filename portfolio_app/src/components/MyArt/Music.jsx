@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { ArtContainer } from './MyArt'
 
 const ArtSection = styled.section`
+  margin-bottom: 8em; 
   padding: 10px 15px 0 15px;
   letter-spacing: 1.5px;
   line-height: 1.5;
@@ -53,7 +54,7 @@ const StoreLogo = styled.img`
   }
 `
 const ListingSection = styled.section`
-  margin: 1em 0 8em 0;
+  margin: 1em 0 1em 0;
   border-radius: 10px;
   padding: 5px;
 `
@@ -74,10 +75,21 @@ const DividerArt = styled.hr`
 export default function Music() {
   return (
     <ArtContainer>
+
+      <ListingSection>
+        <HeaderTwo>Listen to my "Appreciated" EP (2017)</HeaderTwo>
+        <ToolBelt>
+          <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
+          <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' />
+          <CDDescription />
+        </ToolBelt>
+      </ListingSection>
+      
+      <DividerArt />
+
       <ArtSection>
-        <HeaderTwo>Listen to my "Appreciated" EP</HeaderTwo>
         <AppreciatedEP>
-          <EPArt src='https://i.imgur.com/chpYvXn.png' alt='appreciated ep' />
+          {/* <EPArt src='https://i.imgur.com/chpYvXn.png' alt='appreciated ep' /> */}
 
           <StoreSection>
             <StoreLnk href='https://itunes.apple.com/us/album/appreciated-ep/id1238965226' target='_blank' rel='noopener noreferrer'>
@@ -100,16 +112,7 @@ export default function Music() {
         </AppreciatedEP>
 
       </ArtSection>
-      <DividerArt />
-
-      <ListingSection>
-        <HeaderTwo>Appreciated Track Listing</HeaderTwo>
-        <ToolBelt>
-          <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
-          <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' />
-          <CDDescription />
-        </ToolBelt>
-      </ListingSection>
+     
     </ArtContainer>
   )
 }

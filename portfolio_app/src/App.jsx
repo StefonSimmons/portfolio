@@ -29,7 +29,7 @@ function App() {
           <AboutMe />
         </Route>
 
-        <Route path={['/apps', '/web-apps']} exact>
+        <Route path={['/apps', '/web-apps', '/webapps']} exact>
           <Apps />
         </Route>
 
