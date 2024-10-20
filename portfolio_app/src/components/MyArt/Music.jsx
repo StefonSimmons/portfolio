@@ -27,13 +27,7 @@ const AppreciatedEP = styled.div`
   margin-bottom: 20px;
   color: #e8eddf
 `
-const EPArt = styled.img`
-  width: 400px;
 
-  @media(max-width: 415px){
-    width: 300px;
-  }
-`
 const StoreSection = styled.div`
   display: flex;
   flex-wrap: wrap;
