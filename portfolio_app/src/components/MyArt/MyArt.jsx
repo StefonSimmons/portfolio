@@ -22,7 +22,10 @@ const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: ${({ activeTab }) => !activeTab ? '#505060' : '#5296fa'}
+  color: ${({ activeTab }) => !activeTab ? '#505060' : '#5296fa'};
+  &:hover {
+    transform: ${({ activeTab }) => !activeTab ? 'scale(.9)': '' }
+  }
 `
 const Tabs = styled.div`
   display: flex;
