@@ -4,9 +4,12 @@ import CDDescription from './CDDescription'
 import styled from 'styled-components'
 import { ArtContainer } from './MyArt'
 
+import soundProject from '../../images/sound_project.jpg'
+import bandcamp from '../../images/bandcamp-logo.png'
+
 const ArtSection = styled.section`
-  margin-bottom: 8em; 
-  padding: 10px 15px 0 15px;
+  margin-bottom: 4em; 
+  padding: 10px 15px 0 15px;t
   letter-spacing: 1.5px;
   line-height: 1.5;
 `
@@ -26,6 +29,7 @@ const AppreciatedEP = styled.div`
   text-align: center;
   margin-bottom: 20px;
   color: #e8eddf
+
 `
 
 const StoreSection = styled.div`
@@ -42,6 +46,7 @@ const StoreLogo = styled.img`
   border-radius: 10px;
   width: 200px;
   transition: transform .5s;
+  border: ${({borderw}) => borderw ? "solid white 1px": "none"};
 
   &:hover{
     transform: scale(1.25)
@@ -57,6 +62,7 @@ const ToolBelt = styled.div`
   
   @media(max-width: 770px){
     flex-direction: column;
+    align-items: center;
   }
 `
 const CDCover = styled.img`
@@ -64,23 +70,21 @@ const CDCover = styled.img`
 `
 const DividerArt = styled.hr`
   margin: 15px;
-  width: 8%
+  width: 32%
 `
 export default function Music() {
   return (
     <ArtContainer>
 
       <ListingSection>
-        <HeaderTwo>Listen to my "Appreciated" EP (2017)</HeaderTwo>
+        <HeaderTwo>"Appreciated" EP (2017)</HeaderTwo>
         <ToolBelt>
           <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
-          <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' />
+          {/* <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' /> */}
           <CDDescription />
         </ToolBelt>
       </ListingSection>
-      
-      <DividerArt />
-
+    
       <ArtSection>
         <AppreciatedEP>
           {/* <EPArt src='https://i.imgur.com/chpYvXn.png' alt='appreciated ep' /> */}
@@ -106,7 +110,30 @@ export default function Music() {
         </AppreciatedEP>
 
       </ArtSection>
+      <DividerArt />
+
+
+      <ListingSection>
+        <HeaderTwo>"A Sound Project" (2013)</HeaderTwo>
+        <ToolBelt>
+          <CDCover src={soundProject} alt='a sound project front cover' />
+          <CDDescription sound={true}/>
+        </ToolBelt>
+      </ListingSection>
+    
+      <ArtSection>
+        <AppreciatedEP>
+
+          <StoreSection>
+            <StoreLnk href='https://stefonsimmons.bandcamp.com/album/a-sound-project-the-covers' target='_blank' rel='noopener noreferrer'>
+              <StoreLogo src={bandcamp} alt="bandcamp" borderw={true} />
+            </StoreLnk>
+          </StoreSection>
+
+        </AppreciatedEP>
+
+      </ArtSection>
      
     </ArtContainer>
-  )
+    )
 }

@@ -12,33 +12,32 @@ export const ArtContainer = styled.main`
   align-items: center;
   flex-direction: column;
   font-family: 'Ubuntu Condensed', sans-serif;
-  min-height: 100vh;
+  // min-height: 100vh;
 `
 
 const Header = styled.h1`
-  margin: 15px 0px;
+  margin: 8px 0px;
   text-align: center;
   font-size: 32px;
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: ${({ activeTab }) => activeTab ? '#a7a2a2' : 'rgb(82,150,250)'}
+  color: ${({ activeTab }) => activeTab ? '#505060' : '#5296fa'}
 `
 const Tabs = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 400px;
-  // z-index: 0;
 
   @media(max-width: 470px){
     width: 300px;
   }
 `
 const Tab = styled.div`
-  width: 50%;
-  background-color: ${({ activeTab }) => activeTab ? 'grey' : '#e8eddf'};
+  width: 40%;
+  border-bottom: ${({ activeTab }) => activeTab ? 'none' : 'solid 1px rgb(82,150,250)'};
   cursor: pointer;
-  transform: ${({ activeTab }) => activeTab ? 'scale(.92)' : 'scale(1)'};
+  transform: ${({ activeTab }) => activeTab ? 'scale(.75)' : 'scale(1)'};
 `
 
 

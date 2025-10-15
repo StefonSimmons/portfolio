@@ -87,7 +87,7 @@ export default function Painting() {
   })
   return (
     <>
-      <HeaderTwo>Here's my Paint Gallery</HeaderTwo>
+      <HeaderTwo>My Paint Gallery</HeaderTwo>
       <Gallery>
         {paintings}
       </Gallery>
