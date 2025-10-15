@@ -80,7 +80,7 @@ export default function Music() {
         <HeaderTwo>"Appreciated" EP (2017)</HeaderTwo>
         <ToolBelt>
           <CDCover src='https://imgur.com/AhVFued.png' alt='appreciated front cover' />
-          {/* <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' /> */}
+          <CDCover src='https://imgur.com/9LVYiwt.png' alt='appreciated back cover' />
           <CDDescription />
         </ToolBelt>
       </ListingSection>
