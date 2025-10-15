@@ -22,7 +22,7 @@ const Header = styled.h1`
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: ${({ activeTab }) => activeTab ? '#505060' : '#5296fa'}
+  color: ${({ activeTab }) => !activeTab ? '#505060' : '#5296fa'}
 `
 const Tabs = styled.div`
   display: flex;
@@ -35,9 +35,9 @@ const Tabs = styled.div`
 `
 const Tab = styled.div`
   width: 40%;
-  border-bottom: ${({ activeTab }) => activeTab ? 'none' : 'solid 1px rgb(82,150,250)'};
+  border-bottom: ${({ activeTab }) => !activeTab ? 'none' : 'solid 1px rgb(82,150,250)'};
   cursor: pointer;
-  transform: ${({ activeTab }) => activeTab ? 'scale(.75)' : 'scale(1)'};
+  transform: ${({ activeTab }) => !activeTab ? 'scale(.75)' : 'scale(1)'};
 `
 
 
