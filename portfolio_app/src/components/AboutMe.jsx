@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import {keyframes} from 'styled-components'
 import { Link } from 'react-router-dom'
 // import stefonAI from '../images/stefon.jpg'
-// import stefonAI from '../images/steflogo1.webp'
-import stefonAI from '../images/steflogo2.webp'
+import stefonLogo from '../images/steflogo2.webp'
+import stefonAI from '../images/stefon25.jpg'
 // import stefonAI from '../images/steflogo3.webp'
 
 const AboutContainer = styled.main`
@@ -136,11 +137,65 @@ const Divider = styled.hr`
   width: 8%
 ` 
 
+const interference = keyframes `
+    0% {
+        transform: skewX(0)
+    }
+
+    31% {
+        transform: skewX(0)
+    }
+
+    31.5% {
+        transform: skewX(89deg)
+    }
+
+    32% {
+        transform: skewX(89deg)
+    }
+
+    32.1% {
+        transform: skewX(0)
+    }
+
+    33% {
+        transform: skewX(0)
+    }
+
+    50% {
+        transform: skewX(0deg)
+    }
+
+    94% {
+  
+        transform: skewX(0)
+    }
+
+    95.1% {
+        transform: skewX(20deg)
+    }
+
+    95.2% {
+        transform: skewX(89deg)
+    }
+
+    95.3% {
+        transform: skewX(-10deg)
+    }
+
+    100% {
+        transform: skewX(0)
+    }
+`
+
 const Logo = styled.img`
   border-radius: 180%;
   margin-top: 8px;
   filter: grayscale(70%);
+  object-fit: cover;
+  animation: ${interference} 1s 4;
 `
+
 
 export default function AboutMe() {
 
@@ -149,7 +204,18 @@ export default function AboutMe() {
   React.useEffect(() => {
 
     setYears(getYear())
+    changeLogo()
   }, [])
+
+  function changeLogo(){
+    // change the logo after 5 seconds to a different image.
+    
+    setTimeout(() => {
+      const logo = document.querySelector('#logo')
+      logo.src = stefonLogo
+    }, 3500)
+
+  }
 
   function getYear(){
     // gets the number of years from my start date at datadog.
@@ -168,13 +234,12 @@ export default function AboutMe() {
     <>
       <AboutContainer>
         <AboutSection>
-          <Header>Welcome to my home online!</Header>
           
-          <Logo src={stefonAI} alt="stef" srcset=""  width="350" height="350"/>
+          <Logo id="logo" src={stefonAI} alt="image representing Stefon"  width="350" height="350"/>
           <Statement>
-            <br></br>I’m a multifaceted professional with a decade-long career trajectory encompassing roles in <Link to='/webapps'><Code>web development</Code></Link>, education, and the arts. <br></br><br></br>Over the last {years} years, I’ve been a valued Web Developer on Datadog's Websites Team, leveraging my expertise in JavaScript, HTML, CSS, and API integrations.<br></br><br></br>Beyond the tech realm, I bring an artistic touch to my initiatives as a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. This combination of technical proficiency and creative flair enables me to hone my skills in versatile problem-solving. <br></br><br></br> People I've collaborated with say that I'm a strong problem-solver, who demonstrates initiative, and pays close attention to detail. I have an adaptive mindset for new processes and love to create.<br></br><br></br>Let's <Linked to='/contact'>connect</Linked> and expand our network!
+            <br></br>I’m a multidisciplinary developer and creative with a background spanning <Link to='/webapps'><Code>web development</Code></Link>, education, music, and visual art. My work sits at the intersection of systems thinking, technical execution, and creative expression.<br></br><br></br>For the past {years} years, I’ve worked on the Websites Team at Datadog, building and improving web infrastructure, backend functionality, and developer-facing experiences using JavaScript, HTML, CSS, APIs, and cloud technologies. I enjoy solving complex problems, optimizing systems, and creating scalable solutions that balance reliability with usability.<br></br><br></br>Outside of tech, I’m a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. Creativity plays a central role in how I approach development — not just aesthetically, but structurally. Whether I’m designing workflows, building tools, writing music, or troubleshooting infrastructure, I’m driven by curiosity, adaptability, and a desire to understand how systems work beneath the surface.<br></br><br></br>People I’ve collaborated with describe me as analytical, detail-oriented, proactive, and highly adaptable. I enjoy building things that are thoughtful, functional, and lasting.
+
           </Statement>
-          {/* <AboutSectionBG></AboutSectionBG> */}
         </AboutSection>
         <Divider />
         <TechSection>
