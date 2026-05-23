@@ -75,14 +75,6 @@ const Statement = styled.p`
     font-size: 18px
   }
 `
-const Code = styled.span`
-  background: #e8eddf;
-  color: rgb(210, 40, 90);
-  font-weight: 900;
-  border-radius: 5px;
-  padding: 3px 6px;
-  border: solid grey .5px;
-`
 const Linked = styled(Link)`
   background: #e8eddf;
   color: rgb(0,150,250);
@@ -237,7 +229,7 @@ export default function AboutMe() {
           
           <Logo id="logo" src={stefonAI} alt="image representing Stefon"  width="350" height="350"/>
           <Statement>
-            <br></br>I’m a multidisciplinary developer and creative with a background spanning <Link to='/webapps'><Code>web development</Code></Link>, education, music, and visual art. My work sits at the intersection of systems thinking, technical execution, and creative expression.<br></br><br></br>For the past {years} years, I’ve worked on the Websites Team at Datadog, building and improving web infrastructure, backend functionality, and developer-facing experiences using JavaScript, HTML, CSS, APIs, and cloud technologies. I enjoy solving complex problems, optimizing systems, and creating scalable solutions that balance reliability with usability.<br></br><br></br>Outside of tech, I’m a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. Creativity plays a central role in how I approach development — not just aesthetically, but structurally. Whether I’m designing workflows, building tools, writing music, or troubleshooting infrastructure, I’m driven by curiosity, adaptability, and a desire to understand how systems work beneath the surface.<br></br><br></br>People I’ve collaborated with describe me as analytical, detail-oriented, proactive, and highly adaptable. I enjoy building things that are thoughtful, functional, and lasting.
+            <br></br>I’m a multidisciplinary developer and creative with a background spanning <Linked to='/webapps'>web development</Linked>, education, music, and visual art. My work sits at the intersection of systems thinking, technical execution, and creative expression.<br></br><br></br>For the past {years} years, I’ve worked on the Websites Team at Datadog, building and improving web infrastructure, backend functionality, and developer-facing experiences using JavaScript, HTML, CSS, APIs, and cloud technologies. I enjoy solving complex problems, optimizing systems, and creating scalable solutions that balance reliability with usability.<br></br><br></br>Outside of tech, I’m a <ArtLink to='/myart'>singer, songwriter and painter</ArtLink>. Creativity plays a central role in how I approach development — not just aesthetically, but structurally. Whether I’m designing workflows, building tools, writing music, or troubleshooting infrastructure, I’m driven by curiosity, adaptability, and a desire to understand how systems work beneath the surface.<br></br><br></br>People I’ve collaborated with describe me as analytical, detail-oriented, proactive, and highly adaptable. I enjoy building things that are thoughtful, functional, and lasting.
 
           </Statement>
         </AboutSection>
